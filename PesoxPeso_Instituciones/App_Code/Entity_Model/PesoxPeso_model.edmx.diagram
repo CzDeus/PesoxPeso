@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d75e34d0e52a4c09a1c23c373d130f7f" Name="Diagram1" ZoomLevel="112" >
+        <EntityTypeShape EntityType="PesoxPeso_model.Catalogo_Entidad_Federativa" Width="1.5" PointX="2.125" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Catalogo_Instituciones" Width="1.5" PointX="11.875" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.tb_Generales_Accesos" Width="1.5" PointX="8.625" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.tb_Generales_Accesos_Usuarios" Width="1.5" PointX="5.375" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.tb_Generales_Usuarios" Width="1.5" PointX="10.25" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.tb_Generales_Usuarios_Contraseñas" Width="1.5" PointX="7" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Archivos_Instituciones" Width="1.5" PointX="2.125" PointY="2" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Archivos_Adjuntos" Width="1.5" PointX="5.375" PointY="2.25" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Estatus_Registros" Width="1.5" PointX="3.75" PointY="4.875" />
+        <EntityTypeShape EntityType="PesoxPeso_model.tb_Generales_Parametros" Width="1.5" PointX="7" PointY="2.375" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Registro_Usuarios" Width="1.5" PointX="3.75" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Observaciones_Verificacion" Width="1.5" PointX="2.125" PointY="3.875" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Formulario_Estandar" Width="1.5" PointX="0.5" PointY="0.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PesoxPeso_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Archivos_Adjuntos">
+          <Key>
+            <PropertyRef Name="id_archivo_adjunto" />
+          </Key>
+          <Property Name="id_archivo_adjunto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_registro_solicitud" Type="int" Nullable="false" />
+          <Property Name="numero_requisito" Type="int" Nullable="false" />
+          <Property Name="descripcion_archivo" Type="text" Nullable="false" />
+          <Property Name="url_archivo" Type="varchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Archivos_Instituciones">
+          <Key>
+            <PropertyRef Name="id_documentacion" />
+          </Key>
+          <Property Name="id_documentacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_institucion" Type="int" />
+          <Property Name="acta_constitutiva" Type="varbinary(max)" />
+          <Property Name="registro_federal_contribuyente" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Catalogo_Entidad_Federativa">
+          <Key>
+            <PropertyRef Name="id_entidad_federativa" />
+          </Key>
+          <Property Name="id_entidad_federativa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_entidad" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Catalogo_Instituciones">
+          <Key>
+            <PropertyRef Name="id_institucion" />
+          </Key>
+          <Property Name="id_institucion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre_institucion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="sucursal" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nombre_director" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="direccion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="id_ciudad" Type="int" Nullable="false" />
+          <Property Name="rfc" Type="nvarchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estatus_Registros">
+          <Key>
+            <PropertyRef Name="id_estatus_registro" />
+          </Key>
+          <Property Name="id_estatus_registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_institucion" Type="int" />
+          <Property Name="id_registro" Type="int" />
+          <Property Name="fecha" Type="date" />
+          <Property Name="estatus" Type="int" />
+        </EntityType>
+        <EntityType Name="Formulario_Estandar">
+          <Key>
+            <PropertyRef Name="id_formulario_estandar" />
+          </Key>
+          <Property Name="id_formulario_estandar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_institucion" Type="int" Nullable="false" />
+          <Property Name="año_registro" Type="int" Nullable="false" />
+          <Property Name="num_folio" Type="int" Nullable="false" />
+          <Property Name="fecha_recepcion" Type="date" Nullable="false" />
+          <Property Name="nombre_dominio" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="nombre_programa" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="objetivo_social_programa" Type="text" Nullable="false" />
+          <Property Name="fecha_constitucion" Type="date" Nullable="false" />
+          <Property Name="num_personas_laborando" Type="int" Nullable="false" />
+          <Property Name="remunerados" Type="int" Nullable="false" />
+          <Property Name="voluntarios" Type="int" Nullable="false" />
+          <Property Name="areas_atencion" Type="text" Nullable="false" />
+          <Property Name="areas_apoyo" Type="text" Nullable="false" />
+          <Property Name="año_actual" Type="int" Nullable="false" />
+          <Property Name="año_anterior" Type="int" Nullable="false" />
+          <Property Name="total_ingresos" Type="float" Nullable="false" />
+          <Property Name="total_donativos" Type="float" Nullable="false" />
+          <Property Name="total_egresos" Type="float" Nullable="false" />
+          <Property Name="monto_solicitado" Type="float" Nullable="false" />
+          <Property Name="denominacion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="siglas" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="correo_electronico" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="pagina_web" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="red_social_institucion" Type="text" Nullable="false" />
+          <Property Name="calle_numero" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="id_municipio" Type="int" Nullable="false" />
+          <Property Name="colonia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CP" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="celular" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="telefonos" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="correo_dom_fiscal" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="id_personalidad_juridica" Type="int" Nullable="false" />
+          <Property Name="otro_personalidad_juridica" Type="text" Nullable="false" />
+          <Property Name="num_escritura" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="volumen_num_escritura" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_escritura" Type="date" Nullable="false" />
+          <Property Name="nombre_notario_publico" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="numero_notario_publico" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="lugar_notario_publico" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="registro_propiedad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="volumen_registro_propiedad" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="fecha_registro_propiedad" Type="date" Nullable="false" />
+          <Property Name="permiso_expedir_recibos" Type="int" Nullable="false" />
+          <Property Name="fecha_permiso" Type="date" Nullable="false" />
+          <Property Name="fecha_ultima_publicacion" Type="date" Nullable="false" />
+          <Property Name="seccion" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="pagina" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="id_organo_supremo" Type="int" Nullable="false" />
+          <Property Name="otro_organo_supremo" Type="text" Nullable="false" />
+          <Property Name="nombre_representante_legal" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="calle_representante_legal" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="numero_representante_legal" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="colonia_representante_legal" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="id_ciudad_representante_legal" Type="int" Nullable="false" />
+          <Property Name="telefono_representante_legal" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="celular_representante_legal" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="correo_representante" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="rfc_representante" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="descripcion_programa" Type="text" Nullable="false" />
+          <Property Name="meta_programa" Type="text" Nullable="false" />
+          <Property Name="diagnostico_situacional" Type="text" Nullable="false" />
+          <Property Name="nombre_enlace" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="telefono_enlace" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="correo_enlace" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="justificacion_programa" Type="text" Nullable="false" />
+          <Property Name="poblacion_minima" Type="int" Nullable="false" />
+          <Property Name="poblacion_maxima" Type="int" Nullable="false" />
+          <Property Name="poblacion_actual" Type="int" Nullable="false" />
+          <Property Name="tipo_ingreso_poblacion" Type="int" Nullable="false" />
+          <Property Name="nivel_ingreso_poblacion" Type="int" Nullable="false" />
+          <Property Name="rezago_educativo" Type="int" Nullable="false" />
+          <Property Name="porcentaje_poblacion_atendida" Type="float" Nullable="false" />
+          <Property Name="personas_hasta_15" Type="int" Nullable="false" />
+          <Property Name="personas_hasta_1982" Type="int" Nullable="false" />
+          <Property Name="personas_apartir_1982" Type="int" Nullable="false" />
+          <Property Name="piso" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="piso_otro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="techo" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="techo_otro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="muros" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="muro_otro" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="promedio_personas_viviendo" Type="int" Nullable="false" />
+          <Property Name="num_habitaciones" Type="int" Nullable="false" />
+          <Property Name="observaciones_acceso" Type="text" Nullable="false" />
+          <Property Name="patrimonio_institucion" Type="int" Nullable="false" />
+          <Property Name="propiedades_inmuebles" Type="int" Nullable="false" />
+          <Property Name="valor_aproximado_inmuebles" Type="float" Nullable="false" />
+          <Property Name="inversiones" Type="int" Nullable="false" />
+          <Property Name="valor_aproximado_inversiones" Type="float" Nullable="false" />
+          <Property Name="fideicomisos" Type="int" Nullable="false" />
+          <Property Name="valor_aproximado_fideicomisos" Type="float" Nullable="false" />
+          <Property Name="total_principales_fuentes" Type="float" Nullable="false" />
+          <Property Name="total_principales_egresos" Type="float" Nullable="false" />
+          <Property Name="impuesto_federal" Type="int" Nullable="false" />
+          <Property Name="adeudos_fiscales" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Observaciones_Verificacion">
+          <Key>
+            <PropertyRef Name="id_observaciones_verificacion" />
+          </Key>
+          <Property Name="id_observaciones_verificacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_formulario" Type="int" Nullable="false" />
+          <Property Name="fecha_obsevaciones" Type="date" Nullable="false" />
+          <Property Name="observaciones" Type="text" Nullable="false" />
+          <Property Name="id_verificador" Type="int" Nullable="false" />
+          <Property Name="estatus" Type="bit" Nullable="false" />
+          <Property Name="tipo_persona" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Registro_Usuarios">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_formulario_estandar" Type="int" Nullable="false" />
+          <Property Name="nombre_institucion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="sucursal" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="rfc_institucion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="responsable" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="contraseña" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="fecha_registro" Type="date" Nullable="false" />
+          <Property Name="id_institucion" Type="int" Nullable="false" />
+          <Property Name="GUID" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="id_verificador" Type="int" Nullable="false" />
+          <Property Name="estatu_actual_registro" Type="int" Nullable="false" />
+          <Property Name="fecha_asignada" Type="date" Nullable="false" />
+          <Property Name="fecha_verificada" Type="date" Nullable="false" />
+          <Property Name="fecha_autorizada" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Accesos">
+          <Key>
+            <PropertyRef Name="id_General_Acceso" />
+          </Key>
+          <Property Name="id_General_Acceso" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="funcion" Type="nchar" MaxLength="5" />
+          <Property Name="orden" Type="nchar" MaxLength="15" />
+          <Property Name="nombre_acceso" Type="nchar" MaxLength="50" />
+          <Property Name="imagen_acceso" Type="nchar" MaxLength="50" />
+          <Property Name="url" Type="nchar" MaxLength="100" />
+          <Property Name="nombre_sistema" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Accesos_Usuarios">
+          <Key>
+            <PropertyRef Name="id_General_Acceso_Usuario" />
+          </Key>
+          <Property Name="id_General_Acceso_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_General_Usuario" Type="int" Nullable="false" />
+          <Property Name="id_General_Acceso" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="tb_Generales_Parametros">
+          <Key>
+            <PropertyRef Name="año_registro" />
+            <PropertyRef Name="correo_servidorSMTP" />
+            <PropertyRef Name="correo_emailUsuario" />
+            <PropertyRef Name="correo_emailPassword" />
+            <PropertyRef Name="correo_correoReminente" />
+            <PropertyRef Name="correo_nombreMostrar" />
+            <PropertyRef Name="correo_puerto" />
+            <PropertyRef Name="correo_ssl" />
+          </Key>
+          <Property Name="año_registro" Type="int" Nullable="false" />
+          <Property Name="correo_servidorSMTP" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="correo_emailUsuario" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="correo_emailPassword" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="correo_correoReminente" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="correo_nombreMostrar" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="correo_puerto" Type="int" Nullable="false" />
+          <Property Name="correo_ssl" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Usuarios">
+          <Key>
+            <PropertyRef Name="id_General_Usuario" />
+          </Key>
+          <Property Name="id_General_Usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nombre" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="estatus" Type="int" Nullable="false" />
+          <Property Name="correo" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Usuarios_Contraseñas">
+          <Key>
+            <PropertyRef Name="id_General_Usuario_Contraseña" />
+          </Key>
+          <Property Name="id_General_Usuario_Contraseña" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_General_Usuario" Type="int" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="GUID" Type="nvarchar" MaxLength="40" />
+        </EntityType>
+        <Function Name="sp_Buscar_Instituciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_buscar_institucion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_institucion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Realiza_Cambio_Contraseña_Usuario_Institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="contraseña" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Realiza_Cambio_GUID_Institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Registro_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_institucion" Type="varchar" Mode="In" />
+          <Parameter Name="responsable" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="rfc" Type="nvarchar" Mode="In" />
+          <Parameter Name="sucursal" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Valida_Acceso_Sistema_Usuario_Institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+          <Parameter Name="contraseña" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_valida_correo_usuario_institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_agrega_acceso_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+          <Parameter Name="id_General_Acceso" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_borra_accesos_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_Cambia_Variable_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_accesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spr_Generales_lee_accesos_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+          <Parameter Name="ver_no_visualizar" Type="bit" Mode="In" />
+          <Parameter Name="sistema" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_accesos_por_usuario_catalogo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_correo_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_funciones_instituciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spr_Generales_lee_funciones_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_usuarios_por_estatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estatus" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Realiza_Cambio_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Realiza_Cambio_GUID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_general_usuario" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_Acceso_Sistema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_usuario" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_Correo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_GUID_Cambio_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_general_usuario" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_Nombre_Correo_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_usuario" Type="nvarchar" Mode="In" />
+          <Parameter Name="id_general_usuario" Type="int" Mode="In" />
+          <Parameter Name="correo_usuario" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="PesoxPeso_modelStoreContainer">
+          <EntitySet Name="Archivos_Adjuntos" EntityType="Self.Archivos_Adjuntos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Archivos_Instituciones" EntityType="Self.Archivos_Instituciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Catalogo_Entidad_Federativa" EntityType="Self.Catalogo_Entidad_Federativa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Catalogo_Instituciones" EntityType="Self.Catalogo_Instituciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estatus_Registros" EntityType="Self.Estatus_Registros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Formulario_Estandar" EntityType="Self.Formulario_Estandar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Observaciones_Verificacion" EntityType="Self.Observaciones_Verificacion" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registro_Usuarios" EntityType="Self.Registro_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Generales_Accesos" EntityType="Self.tb_Generales_Accesos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Generales_Accesos_Usuarios" EntityType="Self.tb_Generales_Accesos_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Generales_Usuarios" EntityType="Self.tb_Generales_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Generales_Usuarios_Contraseñas" EntityType="Self.tb_Generales_Usuarios_Contraseñas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_Generales_Parametros" EntityType="Self.tb_Generales_Parametros" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [tb_Generales_Parametros].[año_registro] AS [año_registro], 
+    [tb_Generales_Parametros].[correo_servidorSMTP] AS [correo_servidorSMTP], 
+    [tb_Generales_Parametros].[correo_emailUsuario] AS [correo_emailUsuario], 
+    [tb_Generales_Parametros].[correo_emailPassword] AS [correo_emailPassword], 
+    [tb_Generales_Parametros].[correo_correoReminente] AS [correo_correoReminente], 
+    [tb_Generales_Parametros].[correo_nombreMostrar] AS [correo_nombreMostrar], 
+    [tb_Generales_Parametros].[correo_puerto] AS [correo_puerto], 
+    [tb_Generales_Parametros].[correo_ssl] AS [correo_ssl]
+    FROM [dbo].[tb_Generales_Parametros] AS [tb_Generales_Parametros]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="PesoxPeso_model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="PesoxPeso_modelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Catalogo_Entidad_Federativa" EntityType="PesoxPeso_model.Catalogo_Entidad_Federativa" />
+          <FunctionImport Name="sp_Buscar_Instituciones" ReturnType="Collection(PesoxPeso_model.sp_Buscar_Instituciones_Result)">
+          <Parameter Name="nombre_buscar_institucion" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Catalogo_Instituciones" EntityType="PesoxPeso_model.Catalogo_Instituciones" />
+          <FunctionImport Name="sp_eliminar_institucion">
+          <Parameter Name="id_institucion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Registro_Usuario">
+            <Parameter Name="nombre_institucion" Mode="In" Type="String" />
+            <Parameter Name="responsable" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="rfc" Mode="In" Type="String" />
+            <Parameter Name="sucursal" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_agrega_acceso_por_usuario">
+            <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+            <Parameter Name="id_General_Acceso" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_borra_accesos_por_usuario">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_Cambia_Variable_Contraseña">
+          <Parameter Name="id_usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_accesos" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_accesos_Result)" />
+          <FunctionImport Name="spr_Generales_lee_accesos_por_usuario" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_Result)">
+            <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+            <Parameter Name="ver_no_visualizar" Mode="In" Type="Boolean" />
+            <Parameter Name="sistema" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_accesos_por_usuario_catalogo" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_catalogo_Result)">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_correo_usuario">
+          <Parameter Name="id_usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_funciones_usuario" ReturnType="Collection(String)">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_usuarios_por_estatus" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_usuarios_por_estatus_Result)">
+          <Parameter Name="estatus" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Realiza_Cambio_Contraseña">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Realiza_Cambio_GUID">
+            <Parameter Name="id_general_usuario" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_Acceso_Sistema" ReturnType="Collection(PesoxPeso_model.spr_Valida_Acceso_Sistema_Result)">
+            <Parameter Name="nombre_usuario" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_Correo" ReturnType="Collection(Int32)">
+          <Parameter Name="correo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_eliminar_usuario" ReturnType="Collection(Int32)">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_GUID_Cambio_Contraseña" ReturnType="Collection(Int32)">
+            <Parameter Name="id_general_usuario" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_Nombre_Correo_Usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="nombre_usuario" Mode="In" Type="String" />
+            <Parameter Name="id_general_usuario" Mode="In" Type="Int32" />
+            <Parameter Name="correo_usuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="tb_Generales_Accesos" EntityType="PesoxPeso_model.tb_Generales_Accesos" />
+          <EntitySet Name="tb_Generales_Accesos_Usuarios" EntityType="PesoxPeso_model.tb_Generales_Accesos_Usuarios" />
+          <EntitySet Name="tb_Generales_Usuarios" EntityType="PesoxPeso_model.tb_Generales_Usuarios" />
+          <EntitySet Name="tb_Generales_Usuarios_Contraseñas" EntityType="PesoxPeso_model.tb_Generales_Usuarios_Contraseñas" />
+          <FunctionImport Name="spr_Generales_lee_funciones_instituciones" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_funciones_instituciones_Result)" />
+          <FunctionImport Name="sp_valida_correo_usuario_institucion" ReturnType="Collection(Int32)">
+          <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Realiza_Cambio_GUID_Institucion">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" ReturnType="Collection(Int32)">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Realiza_Cambio_Contraseña_Usuario_Institucion">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Valida_Acceso_Sistema_Usuario_Institucion" ReturnType="Collection(PesoxPeso_model.sp_Valida_Acceso_Sistema_Usuario_Institucion_Result)">
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Archivos_Instituciones" EntityType="PesoxPeso_model.Archivos_Instituciones" />
+          <EntitySet Name="Archivos_Adjuntos" EntityType="PesoxPeso_model.Archivos_Adjuntos" />
+          <EntitySet Name="Estatus_Registros" EntityType="PesoxPeso_model.Estatus_Registros" />
+          <EntitySet Name="tb_Generales_Parametros" EntityType="PesoxPeso_model.tb_Generales_Parametros" />
+          <EntitySet Name="Registro_Usuarios" EntityType="PesoxPeso_model.Registro_Usuarios" />
+          <EntitySet Name="Observaciones_Verificacion" EntityType="PesoxPeso_model.Observaciones_Verificacion" />
+          <EntitySet Name="Formulario_Estandar" EntityType="PesoxPeso_model.Formulario_Estandar" />
+        </EntityContainer>
+        <EntityType Name="Catalogo_Entidad_Federativa">
+          <Key>
+            <PropertyRef Name="id_entidad_federativa" />
+          </Key>
+          <Property Name="id_entidad_federativa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_entidad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="sp_Buscar_Instituciones_Result">
+          <Property Type="Int32" Name="id_institucion" Nullable="false" />
+          <Property Type="String" Name="nombre_institucion" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <EntityType Name="Catalogo_Instituciones">
+          <Key>
+            <PropertyRef Name="id_institucion" />
+          </Key>
+          <Property Name="id_institucion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre_institucion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nombre_director" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="telefono" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="id_ciudad" Type="Int32" Nullable="false" />
+          <Property Name="rfc" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="sucursal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <ComplexType Name="spr_Generales_lee_accesos_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_accesos_por_usuario_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="url" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_accesos_por_usuario_catalogo_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="url" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_usuarios_por_estatus_Result">
+          <Property Type="Int32" Name="id_General_Usuario" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="spr_Valida_Acceso_Sistema_Result">
+          <Property Type="Int32" Name="id_General_Usuario" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="tb_Generales_Accesos">
+          <Key>
+            <PropertyRef Name="id_General_Acceso" />
+          </Key>
+          <Property Name="id_General_Acceso" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="funcion" Type="String" MaxLength="5" FixedLength="true" Unicode="true" />
+          <Property Name="orden" Type="String" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Name="nombre_acceso" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="imagen_acceso" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+          <Property Name="url" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+          <Property Name="nombre_sistema" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Accesos_Usuarios">
+          <Key>
+            <PropertyRef Name="id_General_Acceso_Usuario" />
+          </Key>
+          <Property Name="id_General_Acceso_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_General_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="id_General_Acceso" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Usuarios">
+          <Key>
+            <PropertyRef Name="id_General_Usuario" />
+          </Key>
+          <Property Name="id_General_Usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nombre" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="estatus" Type="Int32" Nullable="false" />
+          <Property Name="correo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Usuarios_Contraseñas">
+          <Key>
+            <PropertyRef Name="id_General_Usuario_Contraseña" />
+          </Key>
+          <Property Name="id_General_Usuario_Contraseña" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_General_Usuario" Type="Int32" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="GUID" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <ComplexType Name="spr_Generales_lee_funciones_instituciones_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="funcion" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="url" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_Valida_Acceso_Sistema_Usuario_Institucion_Result">
+          <Property Type="Int32" Name="id_registro" Nullable="false" />
+          <Property Type="String" Name="responsable" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="Archivos_Instituciones">
+          <Key>
+            <PropertyRef Name="id_documentacion" />
+          </Key>
+          <Property Name="id_documentacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_institucion" Type="Int32" />
+          <Property Name="acta_constitutiva" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="registro_federal_contribuyente" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Archivos_Adjuntos">
+          <Key>
+            <PropertyRef Name="id_archivo_adjunto" />
+          </Key>
+          <Property Name="id_archivo_adjunto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_registro_solicitud" Type="Int32" Nullable="false" />
+          <Property Name="numero_requisito" Type="Int32" Nullable="false" />
+          <Property Name="descripcion_archivo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="url_archivo" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Estatus_Registros">
+          <Key>
+            <PropertyRef Name="id_estatus_registro" />
+          </Key>
+          <Property Name="id_estatus_registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_institucion" Type="Int32" />
+          <Property Name="id_registro" Type="Int32" />
+          <Property Name="fecha" Type="DateTime" Precision="0" />
+          <Property Name="estatus" Type="Int32" />
+        </EntityType>
+        <EntityType Name="tb_Generales_Parametros">
+          <Key>
+            <PropertyRef Name="año_registro" />
+            <PropertyRef Name="correo_servidorSMTP" />
+            <PropertyRef Name="correo_emailUsuario" />
+            <PropertyRef Name="correo_emailPassword" />
+            <PropertyRef Name="correo_correoReminente" />
+            <PropertyRef Name="correo_nombreMostrar" />
+            <PropertyRef Name="correo_puerto" />
+            <PropertyRef Name="correo_ssl" />
+          </Key>
+          <Property Name="año_registro" Type="Int32" Nullable="false" />
+          <Property Name="correo_servidorSMTP" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="correo_emailUsuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="correo_emailPassword" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="correo_correoReminente" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="correo_nombreMostrar" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="correo_puerto" Type="Int32" Nullable="false" />
+          <Property Name="correo_ssl" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Registro_Usuarios">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_formulario_estandar" Type="Int32" Nullable="false" />
+          <Property Name="nombre_institucion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="rfc_institucion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="responsable" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="contraseña" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="correo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_registro" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_institucion" Type="Int32" Nullable="false" />
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="id_verificador" Type="Int32" Nullable="false" />
+          <Property Name="estatu_actual_registro" Type="Int32" Nullable="false" />
+          <Property Name="fecha_asignada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_verificada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_autorizada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="sucursal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Observaciones_Verificacion">
+          <Key>
+            <PropertyRef Name="id_observaciones_verificacion" />
+          </Key>
+          <Property Name="id_observaciones_verificacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_formulario" Type="Int32" Nullable="false" />
+          <Property Name="fecha_obsevaciones" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="observaciones" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="id_verificador" Type="Int32" Nullable="false" />
+          <Property Name="estatus" Type="Boolean" Nullable="false" />
+          <Property Name="tipo_persona" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Formulario_Estandar">
+          <Key>
+            <PropertyRef Name="id_formulario_estandar" />
+          </Key>
+          <Property Name="id_formulario_estandar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_institucion" Type="Int32" Nullable="false" />
+          <Property Name="año_registro" Type="Int32" Nullable="false" />
+          <Property Name="num_folio" Type="Int32" Nullable="false" />
+          <Property Name="fecha_recepcion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="nombre_dominio" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="nombre_programa" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="objetivo_social_programa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_constitucion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="num_personas_laborando" Type="Int32" Nullable="false" />
+          <Property Name="remunerados" Type="Int32" Nullable="false" />
+          <Property Name="voluntarios" Type="Int32" Nullable="false" />
+          <Property Name="areas_atencion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="areas_apoyo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="año_actual" Type="Int32" Nullable="false" />
+          <Property Name="año_anterior" Type="Int32" Nullable="false" />
+          <Property Name="total_ingresos" Type="Double" Nullable="false" />
+          <Property Name="total_donativos" Type="Double" Nullable="false" />
+          <Property Name="total_egresos" Type="Double" Nullable="false" />
+          <Property Name="monto_solicitado" Type="Double" Nullable="false" />
+          <Property Name="denominacion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="siglas" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="correo_electronico" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="pagina_web" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="red_social_institucion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="calle_numero" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="id_municipio" Type="Int32" Nullable="false" />
+          <Property Name="colonia" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CP" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="celular" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="telefonos" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="correo_dom_fiscal" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="id_personalidad_juridica" Type="Int32" Nullable="false" />
+          <Property Name="otro_personalidad_juridica" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="num_escritura" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="volumen_num_escritura" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fecha_escritura" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="nombre_notario_publico" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="numero_notario_publico" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="lugar_notario_publico" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="registro_propiedad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="volumen_registro_propiedad" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="fecha_registro_propiedad" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="permiso_expedir_recibos" Type="Int32" Nullable="false" />
+          <Property Name="fecha_permiso" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_ultima_publicacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="seccion" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="pagina" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="id_organo_supremo" Type="Int32" Nullable="false" />
+          <Property Name="otro_organo_supremo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nombre_representante_legal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="calle_representante_legal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="numero_representante_legal" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="colonia_representante_legal" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="id_ciudad_representante_legal" Type="Int32" Nullable="false" />
+          <Property Name="telefono_representante_legal" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="celular_representante_legal" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="correo_representante" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="rfc_representante" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="descripcion_programa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="meta_programa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="diagnostico_situacional" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="nombre_enlace" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="telefono_enlace" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="correo_enlace" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="justificacion_programa" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="poblacion_minima" Type="Int32" Nullable="false" />
+          <Property Name="poblacion_maxima" Type="Int32" Nullable="false" />
+          <Property Name="poblacion_actual" Type="Int32" Nullable="false" />
+          <Property Name="tipo_ingreso_poblacion" Type="Int32" Nullable="false" />
+          <Property Name="nivel_ingreso_poblacion" Type="Int32" Nullable="false" />
+          <Property Name="rezago_educativo" Type="Int32" Nullable="false" />
+          <Property Name="porcentaje_poblacion_atendida" Type="Double" Nullable="false" />
+          <Property Name="personas_hasta_15" Type="Int32" Nullable="false" />
+          <Property Name="personas_hasta_1982" Type="Int32" Nullable="false" />
+          <Property Name="personas_apartir_1982" Type="Int32" Nullable="false" />
+          <Property Name="piso" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="piso_otro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="techo" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="techo_otro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="muros" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="muro_otro" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="promedio_personas_viviendo" Type="Int32" Nullable="false" />
+          <Property Name="num_habitaciones" Type="Int32" Nullable="false" />
+          <Property Name="observaciones_acceso" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="patrimonio_institucion" Type="Int32" Nullable="false" />
+          <Property Name="propiedades_inmuebles" Type="Int32" Nullable="false" />
+          <Property Name="valor_aproximado_inmuebles" Type="Double" Nullable="false" />
+          <Property Name="inversiones" Type="Int32" Nullable="false" />
+          <Property Name="valor_aproximado_inversiones" Type="Double" Nullable="false" />
+          <Property Name="fideicomisos" Type="Int32" Nullable="false" />
+          <Property Name="valor_aproximado_fideicomisos" Type="Double" Nullable="false" />
+          <Property Name="total_principales_fuentes" Type="Double" Nullable="false" />
+          <Property Name="total_principales_egresos" Type="Double" Nullable="false" />
+          <Property Name="impuesto_federal" Type="Int32" Nullable="false" />
+          <Property Name="adeudos_fiscales" Type="Int32" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="PesoxPeso_model" />
+        <Alias Key="Target" Value="PesoxPeso_model.Store" />
+        <EntityContainerMapping CdmEntityContainer="PesoxPeso_modelContainer" StorageEntityContainer="PesoxPeso_modelStoreContainer">
+          <EntitySetMapping Name="Catalogo_Entidad_Federativa">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Catalogo_Entidad_Federativa">
+              <MappingFragment StoreEntitySet="Catalogo_Entidad_Federativa">
+                <ScalarProperty Name="nombre_entidad" ColumnName="nombre_entidad" />
+                <ScalarProperty Name="id_entidad_federativa" ColumnName="id_entidad_federativa" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_Buscar_Instituciones" FunctionName="PesoxPeso_model.Store.sp_Buscar_Instituciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.sp_Buscar_Instituciones_Result">
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="nombre_institucion" ColumnName="nombre_institucion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Catalogo_Instituciones">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Catalogo_Instituciones">
+              <MappingFragment StoreEntitySet="Catalogo_Instituciones">
+                <ScalarProperty Name="sucursal" ColumnName="sucursal" />
+                <ScalarProperty Name="rfc" ColumnName="rfc" />
+                <ScalarProperty Name="id_ciudad" ColumnName="id_ciudad" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="direccion" ColumnName="direccion" />
+                <ScalarProperty Name="nombre_director" ColumnName="nombre_director" />
+                <ScalarProperty Name="nombre_institucion" ColumnName="nombre_institucion" />
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="sp_eliminar_institucion" FunctionName="PesoxPeso_model.Store.sp_eliminar_institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Registro_Usuario" FunctionName="PesoxPeso_model.Store.sp_Registro_Usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_agrega_acceso_por_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_agrega_acceso_por_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_borra_accesos_por_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_borra_accesos_por_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_Cambia_Variable_Contraseña" FunctionName="PesoxPeso_model.Store.spr_Generales_Cambia_Variable_Contraseña" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_accesos" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_accesos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_accesos_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_accesos_por_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_accesos_por_usuario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_accesos_por_usuario_catalogo" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_accesos_por_usuario_catalogo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_catalogo_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_correo_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_correo_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_funciones_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_funciones_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_usuarios_por_estatus" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_usuarios_por_estatus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_usuarios_por_estatus_Result">
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Realiza_Cambio_Contraseña" FunctionName="PesoxPeso_model.Store.spr_Realiza_Cambio_Contraseña" />
+          <FunctionImportMapping FunctionImportName="spr_Realiza_Cambio_GUID" FunctionName="PesoxPeso_model.Store.spr_Realiza_Cambio_GUID" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_Acceso_Sistema" FunctionName="PesoxPeso_model.Store.spr_Valida_Acceso_Sistema">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Valida_Acceso_Sistema_Result">
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Valida_Correo" FunctionName="PesoxPeso_model.Store.spr_Valida_Correo" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_eliminar_usuario" FunctionName="PesoxPeso_model.Store.spr_Valida_eliminar_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_GUID_Cambio_Contraseña" FunctionName="PesoxPeso_model.Store.spr_Valida_GUID_Cambio_Contraseña" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_Nombre_Correo_Usuario" FunctionName="PesoxPeso_model.Store.spr_Valida_Nombre_Correo_Usuario" />
+          <EntitySetMapping Name="tb_Generales_Accesos">
+            <EntityTypeMapping TypeName="PesoxPeso_model.tb_Generales_Accesos">
+              <MappingFragment StoreEntitySet="tb_Generales_Accesos">
+                <ScalarProperty Name="nombre_sistema" ColumnName="nombre_sistema" />
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="imagen_acceso" ColumnName="imagen_acceso" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="funcion" ColumnName="funcion" />
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Generales_Accesos_Usuarios">
+            <EntityTypeMapping TypeName="PesoxPeso_model.tb_Generales_Accesos_Usuarios">
+              <MappingFragment StoreEntitySet="tb_Generales_Accesos_Usuarios">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+                <ScalarProperty Name="id_General_Acceso_Usuario" ColumnName="id_General_Acceso_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Generales_Usuarios">
+            <EntityTypeMapping TypeName="PesoxPeso_model.tb_Generales_Usuarios">
+              <MappingFragment StoreEntitySet="tb_Generales_Usuarios">
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Generales_Usuarios_Contraseñas">
+            <EntityTypeMapping TypeName="PesoxPeso_model.tb_Generales_Usuarios_Contraseñas">
+              <MappingFragment StoreEntitySet="tb_Generales_Usuarios_Contraseñas">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+                <ScalarProperty Name="id_General_Usuario_Contraseña" ColumnName="id_General_Usuario_Contraseña" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_funciones_instituciones" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_funciones_instituciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_funciones_instituciones_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="funcion" ColumnName="funcion" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_valida_correo_usuario_institucion" FunctionName="PesoxPeso_model.Store.sp_valida_correo_usuario_institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Realiza_Cambio_GUID_Institucion" FunctionName="PesoxPeso_model.Store.sp_Realiza_Cambio_GUID_Institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" FunctionName="PesoxPeso_model.Store.sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Realiza_Cambio_Contraseña_Usuario_Institucion" FunctionName="PesoxPeso_model.Store.sp_Realiza_Cambio_Contraseña_Usuario_Institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Valida_Acceso_Sistema_Usuario_Institucion" FunctionName="PesoxPeso_model.Store.sp_Valida_Acceso_Sistema_Usuario_Institucion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.sp_Valida_Acceso_Sistema_Usuario_Institucion_Result">
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+                <ScalarProperty Name="responsable" ColumnName="responsable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Archivos_Instituciones">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Archivos_Instituciones">
+              <MappingFragment StoreEntitySet="Archivos_Instituciones">
+                <ScalarProperty Name="registro_federal_contribuyente" ColumnName="registro_federal_contribuyente" />
+                <ScalarProperty Name="acta_constitutiva" ColumnName="acta_constitutiva" />
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="id_documentacion" ColumnName="id_documentacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Archivos_Adjuntos">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Archivos_Adjuntos">
+              <MappingFragment StoreEntitySet="Archivos_Adjuntos">
+                <ScalarProperty Name="url_archivo" ColumnName="url_archivo" />
+                <ScalarProperty Name="descripcion_archivo" ColumnName="descripcion_archivo" />
+                <ScalarProperty Name="numero_requisito" ColumnName="numero_requisito" />
+                <ScalarProperty Name="id_registro_solicitud" ColumnName="id_registro_solicitud" />
+                <ScalarProperty Name="id_archivo_adjunto" ColumnName="id_archivo_adjunto" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estatus_Registros">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Estatus_Registros">
+              <MappingFragment StoreEntitySet="Estatus_Registros">
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="fecha" ColumnName="fecha" />
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="id_estatus_registro" ColumnName="id_estatus_registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_Generales_Parametros">
+            <EntityTypeMapping TypeName="PesoxPeso_model.tb_Generales_Parametros">
+              <MappingFragment StoreEntitySet="tb_Generales_Parametros">
+                <ScalarProperty Name="correo_ssl" ColumnName="correo_ssl" />
+                <ScalarProperty Name="correo_puerto" ColumnName="correo_puerto" />
+                <ScalarProperty Name="correo_nombreMostrar" ColumnName="correo_nombreMostrar" />
+                <ScalarProperty Name="correo_correoReminente" ColumnName="correo_correoReminente" />
+                <ScalarProperty Name="correo_emailPassword" ColumnName="correo_emailPassword" />
+                <ScalarProperty Name="correo_emailUsuario" ColumnName="correo_emailUsuario" />
+                <ScalarProperty Name="correo_servidorSMTP" ColumnName="correo_servidorSMTP" />
+                <ScalarProperty Name="año_registro" ColumnName="año_registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registro_Usuarios">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Registro_Usuarios">
+              <MappingFragment StoreEntitySet="Registro_Usuarios">
+                <ScalarProperty Name="sucursal" ColumnName="sucursal" />
+                <ScalarProperty Name="fecha_autorizada" ColumnName="fecha_autorizada" />
+                <ScalarProperty Name="fecha_verificada" ColumnName="fecha_verificada" />
+                <ScalarProperty Name="fecha_asignada" ColumnName="fecha_asignada" />
+                <ScalarProperty Name="estatu_actual_registro" ColumnName="estatu_actual_registro" />
+                <ScalarProperty Name="id_verificador" ColumnName="id_verificador" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="responsable" ColumnName="responsable" />
+                <ScalarProperty Name="rfc_institucion" ColumnName="rfc_institucion" />
+                <ScalarProperty Name="nombre_institucion" ColumnName="nombre_institucion" />
+                <ScalarProperty Name="id_formulario_estandar" ColumnName="id_formulario_estandar" />
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Observaciones_Verificacion">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Observaciones_Verificacion">
+              <MappingFragment StoreEntitySet="Observaciones_Verificacion">
+                <ScalarProperty Name="tipo_persona" ColumnName="tipo_persona" />
+                <ScalarProperty Name="estatus" ColumnName="estatus" />
+                <ScalarProperty Name="id_verificador" ColumnName="id_verificador" />
+                <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+                <ScalarProperty Name="fecha_obsevaciones" ColumnName="fecha_obsevaciones" />
+                <ScalarProperty Name="id_formulario" ColumnName="id_formulario" />
+                <ScalarProperty Name="id_observaciones_verificacion" ColumnName="id_observaciones_verificacion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Formulario_Estandar">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Formulario_Estandar">
+              <MappingFragment StoreEntitySet="Formulario_Estandar">
+                <ScalarProperty Name="adeudos_fiscales" ColumnName="adeudos_fiscales" />
+                <ScalarProperty Name="impuesto_federal" ColumnName="impuesto_federal" />
+                <ScalarProperty Name="total_principales_egresos" ColumnName="total_principales_egresos" />
+                <ScalarProperty Name="total_principales_fuentes" ColumnName="total_principales_fuentes" />
+                <ScalarProperty Name="valor_aproximado_fideicomisos" ColumnName="valor_aproximado_fideicomisos" />
+                <ScalarProperty Name="fideicomisos" ColumnName="fideicomisos" />
+                <ScalarProperty Name="valor_aproximado_inversiones" ColumnName="valor_aproximado_inversiones" />
+                <ScalarProperty Name="inversiones" ColumnName="inversiones" />
+                <ScalarProperty Name="valor_aproximado_inmuebles" ColumnName="valor_aproximado_inmuebles" />
+                <ScalarProperty Name="propiedades_inmuebles" ColumnName="propiedades_inmuebles" />
+                <ScalarProperty Name="patrimonio_institucion" ColumnName="patrimonio_institucion" />
+                <ScalarProperty Name="observaciones_acceso" ColumnName="observaciones_acceso" />
+                <ScalarProperty Name="num_habitaciones" ColumnName="num_habitaciones" />
+                <ScalarProperty Name="promedio_personas_viviendo" ColumnName="promedio_personas_viviendo" />
+                <ScalarProperty Name="muro_otro" ColumnName="muro_otro" />
+                <ScalarProperty Name="muros" ColumnName="muros" />
+                <ScalarProperty Name="techo_otro" ColumnName="techo_otro" />
+                <ScalarProperty Name="techo" ColumnName="techo" />
+                <ScalarProperty Name="piso_otro" ColumnName="piso_otro" />
+                <ScalarProperty Name="piso" ColumnName="piso" />
+                <ScalarProperty Name="personas_apartir_1982" ColumnName="personas_apartir_1982" />
+                <ScalarProperty Name="personas_hasta_1982" ColumnName="personas_hasta_1982" />
+                <ScalarProperty Name="personas_hasta_15" ColumnName="personas_hasta_15" />
+                <ScalarProperty Name="porcentaje_poblacion_atendida" ColumnName="porcentaje_poblacion_atendida" />
+                <ScalarProperty Name="rezago_educativo" ColumnName="rezago_educativo" />
+                <ScalarProperty Name="nivel_ingreso_poblacion" ColumnName="nivel_ingreso_poblacion" />
+                <ScalarProperty Name="tipo_ingreso_poblacion" ColumnName="tipo_ingreso_poblacion" />
+                <ScalarProperty Name="poblacion_actual" ColumnName="poblacion_actual" />
+                <ScalarProperty Name="poblacion_maxima" ColumnName="poblacion_maxima" />
+                <ScalarProperty Name="poblacion_minima" ColumnName="poblacion_minima" />
+                <ScalarProperty Name="justificacion_programa" ColumnName="justificacion_programa" />
+                <ScalarProperty Name="correo_enlace" ColumnName="correo_enlace" />
+                <ScalarProperty Name="telefono_enlace" ColumnName="telefono_enlace" />
+                <ScalarProperty Name="nombre_enlace" ColumnName="nombre_enlace" />
+                <ScalarProperty Name="diagnostico_situacional" ColumnName="diagnostico_situacional" />
+                <ScalarProperty Name="meta_programa" ColumnName="meta_programa" />
+                <ScalarProperty Name="descripcion_programa" ColumnName="descripcion_programa" />
+                <ScalarProperty Name="rfc_representante" ColumnName="rfc_representante" />
+                <ScalarProperty Name="correo_representante" ColumnName="correo_representante" />
+                <ScalarProperty Name="celular_representante_legal" ColumnName="celular_representante_legal" />
+                <ScalarProperty Name="telefono_representante_legal" ColumnName="telefono_representante_legal" />
+                <ScalarProperty Name="id_ciudad_representante_legal" ColumnName="id_ciudad_representante_legal" />
+                <ScalarProperty Name="colonia_representante_legal" ColumnName="colonia_representante_legal" />
+                <ScalarProperty Name="numero_representante_legal" ColumnName="numero_representante_legal" />
+                <ScalarProperty Name="calle_representante_legal" ColumnName="calle_representante_legal" />
+                <ScalarProperty Name="nombre_representante_legal" ColumnName="nombre_representante_legal" />
+                <ScalarProperty Name="otro_organo_supremo" ColumnName="otro_organo_supremo" />
+                <ScalarProperty Name="id_organo_supremo" ColumnName="id_organo_supremo" />
+                <ScalarProperty Name="pagina" ColumnName="pagina" />
+                <ScalarProperty Name="seccion" ColumnName="seccion" />
+                <ScalarProperty Name="fecha_ultima_publicacion" ColumnName="fecha_ultima_publicacion" />
+                <ScalarProperty Name="fecha_permiso" ColumnName="fecha_permiso" />
+                <ScalarProperty Name="permiso_expedir_recibos" ColumnName="permiso_expedir_recibos" />
+                <ScalarProperty Name="fecha_registro_propiedad" ColumnName="fecha_registro_propiedad" />
+                <ScalarProperty Name="volumen_registro_propiedad" ColumnName="volumen_registro_propiedad" />
+                <ScalarProperty Name="registro_propiedad" ColumnName="registro_propiedad" />
+                <ScalarProperty Name="lugar_notario_publico" ColumnName="lugar_notario_publico" />
+                <ScalarProperty Name="numero_notario_publico" ColumnName="numero_notario_publico" />
+                <ScalarProperty Name="nombre_notario_publico" ColumnName="nombre_notario_publico" />
+                <ScalarProperty Name="fecha_escritura" ColumnName="fecha_escritura" />
+                <ScalarProperty Name="volumen_num_escritura" ColumnName="volumen_num_escritura" />
+                <ScalarProperty Name="num_escritura" ColumnName="num_escritura" />
+                <ScalarProperty Name="otro_personalidad_juridica" ColumnName="otro_personalidad_juridica" />
+                <ScalarProperty Name="id_personalidad_juridica" ColumnName="id_personalidad_juridica" />
+                <ScalarProperty Name="correo_dom_fiscal" ColumnName="correo_dom_fiscal" />
+                <ScalarProperty Name="telefonos" ColumnName="telefonos" />
+                <ScalarProperty Name="celular" ColumnName="celular" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="colonia" ColumnName="colonia" />
+                <ScalarProperty Name="id_municipio" ColumnName="id_municipio" />
+                <ScalarProperty Name="calle_numero" ColumnName="calle_numero" />
+                <ScalarProperty Name="red_social_institucion" ColumnName="red_social_institucion" />
+                <ScalarProperty Name="pagina_web" ColumnName="pagina_web" />
+                <ScalarProperty Name="correo_electronico" ColumnName="correo_electronico" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="siglas" ColumnName="siglas" />
+                <ScalarProperty Name="denominacion" ColumnName="denominacion" />
+                <ScalarProperty Name="monto_solicitado" ColumnName="monto_solicitado" />
+                <ScalarProperty Name="total_egresos" ColumnName="total_egresos" />
+                <ScalarProperty Name="total_donativos" ColumnName="total_donativos" />
+                <ScalarProperty Name="total_ingresos" ColumnName="total_ingresos" />
+                <ScalarProperty Name="año_anterior" ColumnName="año_anterior" />
+                <ScalarProperty Name="año_actual" ColumnName="año_actual" />
+                <ScalarProperty Name="areas_apoyo" ColumnName="areas_apoyo" />
+                <ScalarProperty Name="areas_atencion" ColumnName="areas_atencion" />
+                <ScalarProperty Name="voluntarios" ColumnName="voluntarios" />
+                <ScalarProperty Name="remunerados" ColumnName="remunerados" />
+                <ScalarProperty Name="num_personas_laborando" ColumnName="num_personas_laborando" />
+                <ScalarProperty Name="fecha_constitucion" ColumnName="fecha_constitucion" />
+                <ScalarProperty Name="objetivo_social_programa" ColumnName="objetivo_social_programa" />
+                <ScalarProperty Name="nombre_programa" ColumnName="nombre_programa" />
+                <ScalarProperty Name="nombre_dominio" ColumnName="nombre_dominio" />
+                <ScalarProperty Name="fecha_recepcion" ColumnName="fecha_recepcion" />
+                <ScalarProperty Name="num_folio" ColumnName="num_folio" />
+                <ScalarProperty Name="año_registro" ColumnName="año_registro" />
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="id_formulario_estandar" ColumnName="id_formulario_estandar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

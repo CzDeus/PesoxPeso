@@ -1,0 +1,5 @@
+﻿.spaced input[type="radio"]
+{
+   /*margin-right: 10px; /* Or any other value */
+   margin-left: 10px;
+}

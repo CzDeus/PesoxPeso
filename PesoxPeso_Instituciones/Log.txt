@@ -1,0 +1,1680 @@
+﻿
+21/11/2016 15:16. El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 53
+
+21/11/2016 15:18. El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 53
+
+21/11/2016 15:21. Procedure or function 'spr_Realiza_Cambio_Contraseña' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 144
+   en ResetPassword.btnConfirmarContraseña_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\ResetPassword.aspx.cs:línea 134
+
+21/11/2016 15:21. Procedure or function 'spr_Realiza_Cambio_Contraseña' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 144
+   en ResetPassword.btnConfirmarContraseña_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\ResetPassword.aspx.cs:línea 134
+
+21/11/2016 16:03. No hay ninguna fila en la posición 0.   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ResetPassword.btnConfirmarContraseña_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\ResetPassword.aspx.cs:línea 142
+
+21/11/2016 16:04. No hay ninguna fila en la posición 0.   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ResetPassword.btnConfirmarContraseña_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\ResetPassword.aspx.cs:línea 142
+
+21/11/2016 16:17. No hay ninguna fila en la posición 0.   en System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   en System.Data.DataRowCollection.get_Item(Int32 index)
+   en ResetPassword.btnConfirmarContraseña_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\ResetPassword.aspx.cs:línea 142
+
+
+
+21/11/2016 16:25. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+21/11/2016 16:29. Procedure or function 'spr_Valida_GUID_Cambio_Contraseña_Institucion' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 144
+   en ResetPassword.VerificarGUID(Int32 id_general_usuario, String guid, Int32& result) en c:\Users\User\Desktop\PesoxPeso_Instituciones\ResetPassword.aspx.cs:línea 196
+
+21/11/2016 16:30. El servidor SMTP requiere una conexión segura o el cliente no se autenticó. La respuesta del servidor fue: 5.5.1 Authentication Required. Learn more at   en System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   en System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   en System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 53
+
+22/11/2016 9:49. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 9:51. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 10:17. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1310
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1352
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1352
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1352
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1352
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1352
+
+22/11/2016 10:25. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1352
+
+22/11/2016 13:56. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 20:47. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 22:13. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 22:57. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 22:58. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 23:15. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 23:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+22/11/2016 23:45. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 7:50. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 7:59. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 8:38. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 8:55. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 10:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 10:46. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+23/11/2016 13:17. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 8:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 9:16. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 9:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 9:50. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 10:26. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 11:00. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 11:13. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 11:26. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 13:10. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.201.109 (173.194.201.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+24/11/2016 13:10. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.201.109 (173.194.201.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+24/11/2016 13:12. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 14:42. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+24/11/2016 14:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+25/11/2016 8:05. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+25/11/2016 8:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+25/11/2016 9:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+25/11/2016 9:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:54. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:58. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+25/11/2016 9:59. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+25/11/2016 9:59. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+25/11/2016 9:59. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+25/11/2016 9:59. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+25/11/2016 9:59. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+25/11/2016 9:59. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+25/11/2016 10:34. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+26/11/2016 10:24. Error al enviar correo.   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 53
+
+26/11/2016 10:25. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+26/11/2016 12:38. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+26/11/2016 13:37. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 64.233.179.108 (64.233.179.108:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+26/11/2016 13:38. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 64.233.179.108 (64.233.179.108:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+26/11/2016 13:38. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 64.233.179.108 (64.233.179.108:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+26/11/2016 13:40. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+26/11/2016 13:41. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+26/11/2016 14:16. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+28/11/2016 9:01. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+28/11/2016 13:17. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+28/11/2016 14:29. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 8:53. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 9:04. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 12:46. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 12:48. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado_TextBox_TextChanged(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 909
+
+29/11/2016 12:48. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado_TextBox_TextChanged(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 909
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1366
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+29/11/2016 12:56. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1408
+
+29/11/2016 13:30. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 13:38. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:39. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:39. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:39. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:39. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:39. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 958
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:40. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:41. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:41. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:41. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:41. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:41. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:41. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:43. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:43. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:44. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:44. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:44. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 956
+
+29/11/2016 13:45. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 13:50. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1456
+
+29/11/2016 13:50. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1456
+
+29/11/2016 13:50. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1456
+
+29/11/2016 14:12. No se puede reconocer la cadena como valor DateTime válido.   en System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   en System.Convert.ToDateTime(String value)
+   en Forms_Formulario_Estandar.Guardar_Detalle_Tiempo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 859
+
+29/11/2016 14:23. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Importe_Promedio_Anual_TextBox_TextChanged(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1449
+
+29/11/2016 14:24. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Importe_Promedio_Anual_TextBox_TextChanged(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1449
+
+29/11/2016 14:34. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+29/11/2016 14:37. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+30/11/2016 8:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+1/12/2016 8:32. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+1/12/2016 14:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+1/12/2016 14:58. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+1/12/2016 16:46. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 9:10. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 9:58. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 10:04. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 10:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 11:08. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 11:20. Cannot insert explicit value for identity column in table 'Detalles_Tiempo_Estimado' when IDENTITY_INSERT is set to OFF.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Detalle_Tiempo_Estimado() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 928
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1546
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1633
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1633
+
+2/12/2016 11:26. Divide by zero error encountered.
+The statement has been terminated.   en Data.ExecuteSPNonQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 195
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1633
+
+2/12/2016 12:52. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 12:56. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 13:06. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1627
+
+2/12/2016 13:07. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1627
+
+2/12/2016 13:08. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1627
+
+2/12/2016 13:42. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 14:07. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/12/2016 14:18. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 8:34. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 9:42. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 9:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 9:57. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 10:38. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 10:40. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 10:42. Invalid column name 'nombre_razon'.
+Invalid column name 'domicilio_fiscal'.
+Invalid column name 'clave_registro'.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 144
+   en csReporteHandler.Imprimir(csReporte Reporte) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csReporteHandler.cs:línea 66
+
+3/12/2016 10:43. Invalid column name 'nombre_razon'.
+Invalid column name 'domicilio_fiscal'.
+Invalid column name 'clave_registro'.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 144
+   en csReporteHandler.Imprimir(csReporte Reporte) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csReporteHandler.cs:línea 66
+
+3/12/2016 10:53. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 10:53. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 10:56. Invalid column name 'nombre_razon'.
+Invalid column name 'domicilio_fiscal'.
+Invalid column name 'clave_registro'.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\SQLConnection\Data.cs:línea 144
+   en csReporteHandler.Imprimir(csReporte Reporte) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csReporteHandler.cs:línea 66
+
+3/12/2016 10:58. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 11:10. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/12/2016 13:06. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+8/12/2016 11:10. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+2/1/2017 13:36. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+3/1/2017 14:32. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+4/1/2017 14:23. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+10/1/2017 11:34. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+10/1/2017 11:34. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+13/1/2017 10:04. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+13/1/2017 10:12. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+13/1/2017 11:20. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+13/1/2017 11:26. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 47
+
+13/1/2017 11:58. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 12:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:08. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:23. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:28. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:28. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:28. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:29. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:29. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:29. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:30. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:30. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:32. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:35. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:41. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:41. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:42. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 13:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:20. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.64.109 (173.194.64.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/1/2017 14:22. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.64.109 (173.194.64.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/1/2017 14:23. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.64.109 (173.194.64.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/1/2017 14:23. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.64.109 (173.194.64.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/1/2017 14:31. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:32. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:32. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.64.108 (173.194.64.108:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/1/2017 14:33. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 173.194.64.108 (173.194.64.108:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/1/2017 14:37. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:37. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:38. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:42. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/1/2017 14:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 8:07. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 8:14. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 8:19. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 8:20. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 8:32. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 8:56. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 9:02. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 9:04. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 9:14. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 10:05. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 10:15. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 10:23. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 10:23. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+14/1/2017 13:03. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+16/1/2017 8:11. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+16/1/2017 13:51. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+16/1/2017 14:44. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+16/1/2017 14:45. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+17/1/2017 11:14. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+17/1/2017 11:15. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+17/1/2017 11:15. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 9:58. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 74.125.127.109 (74.125.127.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+25/1/2017 9:58. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 74.125.127.109 (74.125.127.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+25/1/2017 9:59. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 74.125.127.109 (74.125.127.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+25/1/2017 10:00. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 74.125.127.108 (74.125.127.108:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+25/1/2017 10:00. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 10:02. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 10:40. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 11:26. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 11:32. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 11:39. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 11:54. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 12:21. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+25/1/2017 13:01. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49

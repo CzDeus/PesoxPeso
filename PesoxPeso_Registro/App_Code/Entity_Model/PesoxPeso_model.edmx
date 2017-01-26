@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PesoxPeso_model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Registro_Usuarios">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_formulario_estandar" Type="int" Nullable="false" />
+          <Property Name="nombre_institucion" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="sucursal" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="rfc_institucion" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="responsable" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="telefono" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="contraseña" Type="nvarchar" MaxLength="25" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="fecha_registro" Type="date" Nullable="false" />
+          <Property Name="id_institucion" Type="int" Nullable="false" />
+          <Property Name="GUID" Type="nvarchar" MaxLength="40" Nullable="false" />
+          <Property Name="id_verificador" Type="int" Nullable="false" />
+          <Property Name="estatu_actual_registro" Type="int" Nullable="false" />
+          <Property Name="fecha_asignada" Type="date" Nullable="false" />
+          <Property Name="fecha_verificada" Type="date" Nullable="false" />
+          <Property Name="fecha_autorizada" Type="date" Nullable="false" />
+        </EntityType>
+        <Function Name="sp_Buscar_Instituciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_buscar_institucion" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_eliminar_institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_institucion" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_Realiza_Cambio_Contraseña_Usuario_Institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="contraseña" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Realiza_Cambio_GUID_Institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Registro_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_institucion" Type="varchar" Mode="In" />
+          <Parameter Name="responsable" Type="varchar" Mode="In" />
+          <Parameter Name="telefono" Type="nvarchar" Mode="In" />
+          <Parameter Name="correo" Type="varchar" Mode="In" />
+          <Parameter Name="rfc" Type="nvarchar" Mode="In" />
+          <Parameter Name="sucursal" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Valida_Acceso_Sistema_Usuario_Institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+          <Parameter Name="contraseña" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_valida_correo_usuario_institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_agrega_acceso_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+          <Parameter Name="id_General_Acceso" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_borra_accesos_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_Cambia_Variable_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_accesos" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spr_Generales_lee_accesos_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+          <Parameter Name="ver_no_visualizar" Type="bit" Mode="In" />
+          <Parameter Name="sistema" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_accesos_por_usuario_catalogo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_correo_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_funciones_instituciones" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spr_Generales_lee_funciones_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Generales_lee_usuarios_por_estatus" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="estatus" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Realiza_Cambio_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_registro" Type="int" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Realiza_Cambio_GUID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_general_usuario" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_Acceso_Sistema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_usuario" Type="nvarchar" Mode="In" />
+          <Parameter Name="password" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_Correo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="correo" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_eliminar_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_GUID_Cambio_Contraseña" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_general_usuario" Type="int" Mode="In" />
+          <Parameter Name="guid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="spr_Valida_Nombre_Correo_Usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="nombre_usuario" Type="nvarchar" Mode="In" />
+          <Parameter Name="id_general_usuario" Type="int" Mode="In" />
+          <Parameter Name="correo_usuario" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="PesoxPeso_modelStoreContainer">
+          <EntitySet Name="Registro_Usuarios" EntityType="Self.Registro_Usuarios" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="PesoxPeso_model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="PesoxPeso_modelContainer" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_Buscar_Instituciones" ReturnType="Collection(PesoxPeso_model.sp_Buscar_Instituciones_Result)">
+          <Parameter Name="nombre_buscar_institucion" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_eliminar_institucion">
+          <Parameter Name="id_institucion" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Registro_Usuario">
+            <Parameter Name="nombre_institucion" Mode="In" Type="String" />
+            <Parameter Name="responsable" Mode="In" Type="String" />
+            <Parameter Name="telefono" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="rfc" Mode="In" Type="String" />
+            <Parameter Name="sucursal" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_agrega_acceso_por_usuario">
+            <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+            <Parameter Name="id_General_Acceso" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_borra_accesos_por_usuario">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_Cambia_Variable_Contraseña">
+          <Parameter Name="id_usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_accesos" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_accesos_Result)" />
+          <FunctionImport Name="spr_Generales_lee_accesos_por_usuario" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_Result)">
+            <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+            <Parameter Name="ver_no_visualizar" Mode="In" Type="Boolean" />
+            <Parameter Name="sistema" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_accesos_por_usuario_catalogo" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_catalogo_Result)">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_correo_usuario">
+          <Parameter Name="id_usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_funciones_usuario" ReturnType="Collection(String)">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_usuarios_por_estatus" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_usuarios_por_estatus_Result)">
+          <Parameter Name="estatus" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Realiza_Cambio_Contraseña">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Realiza_Cambio_GUID">
+            <Parameter Name="id_general_usuario" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_Acceso_Sistema" ReturnType="Collection(PesoxPeso_model.spr_Valida_Acceso_Sistema_Result)">
+            <Parameter Name="nombre_usuario" Mode="In" Type="String" />
+            <Parameter Name="password" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_Correo" ReturnType="Collection(Int32)">
+          <Parameter Name="correo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_eliminar_usuario" ReturnType="Collection(Int32)">
+          <Parameter Name="id_General_Usuario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_GUID_Cambio_Contraseña" ReturnType="Collection(Int32)">
+            <Parameter Name="id_general_usuario" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Valida_Nombre_Correo_Usuario" ReturnType="Collection(Int32)">
+            <Parameter Name="nombre_usuario" Mode="In" Type="String" />
+            <Parameter Name="id_general_usuario" Mode="In" Type="Int32" />
+            <Parameter Name="correo_usuario" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spr_Generales_lee_funciones_instituciones" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_funciones_instituciones_Result)" />
+          <FunctionImport Name="sp_valida_correo_usuario_institucion" ReturnType="Collection(Int32)">
+          <Parameter Name="correo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Realiza_Cambio_GUID_Institucion">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" ReturnType="Collection(Int32)">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="guid" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Realiza_Cambio_Contraseña_Usuario_Institucion">
+            <Parameter Name="id_registro" Mode="In" Type="Int32" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_Valida_Acceso_Sistema_Usuario_Institucion" ReturnType="Collection(PesoxPeso_model.sp_Valida_Acceso_Sistema_Usuario_Institucion_Result)">
+            <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="contraseña" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="Registro_Usuarios" EntityType="PesoxPeso_model.Registro_Usuarios" />
+          </EntityContainer>
+        <ComplexType Name="sp_Buscar_Instituciones_Result">
+          <Property Type="Int32" Name="id_institucion" Nullable="false" />
+          <Property Type="String" Name="nombre_institucion" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_accesos_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_accesos_por_usuario_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="13" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="url" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_accesos_por_usuario_catalogo_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="url" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_usuarios_por_estatus_Result">
+          <Property Type="Int32" Name="id_General_Usuario" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="spr_Valida_Acceso_Sistema_Result">
+          <Property Type="Int32" Name="id_General_Usuario" Nullable="false" />
+          <Property Type="String" Name="nombre" Nullable="false" MaxLength="30" />
+        </ComplexType>
+        <ComplexType Name="spr_Generales_lee_funciones_instituciones_Result">
+          <Property Type="Int32" Name="id_General_Acceso" Nullable="false" />
+          <Property Type="String" Name="orden" Nullable="true" MaxLength="15" />
+          <Property Type="String" Name="nombre_acceso" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="funcion" Nullable="true" MaxLength="5" />
+          <Property Type="String" Name="url" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="sp_Valida_Acceso_Sistema_Usuario_Institucion_Result">
+          <Property Type="Int32" Name="id_registro" Nullable="false" />
+          <Property Type="String" Name="responsable" Nullable="true" MaxLength="30" />
+        </ComplexType>
+        <EntityType Name="Registro_Usuarios">
+          <Key>
+            <PropertyRef Name="id_registro" />
+          </Key>
+          <Property Name="id_registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_formulario_estandar" Type="Int32" Nullable="false" />
+          <Property Name="nombre_institucion" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="sucursal" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rfc_institucion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="responsable" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="telefono" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="contraseña" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="correo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_registro" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="id_institucion" Type="Int32" Nullable="false" />
+          <Property Name="GUID" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="id_verificador" Type="Int32" Nullable="false" />
+          <Property Name="estatu_actual_registro" Type="Int32" Nullable="false" />
+          <Property Name="fecha_asignada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_verificada" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="fecha_autorizada" Type="DateTime" Nullable="false" Precision="0" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="PesoxPeso_model" />
+        <Alias Key="Target" Value="PesoxPeso_model.Store" />
+        <EntityContainerMapping CdmEntityContainer="PesoxPeso_modelContainer" StorageEntityContainer="PesoxPeso_modelStoreContainer">
+          <FunctionImportMapping FunctionImportName="sp_Buscar_Instituciones" FunctionName="PesoxPeso_model.Store.sp_Buscar_Instituciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.sp_Buscar_Instituciones_Result">
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="nombre_institucion" ColumnName="nombre_institucion" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_eliminar_institucion" FunctionName="PesoxPeso_model.Store.sp_eliminar_institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Registro_Usuario" FunctionName="PesoxPeso_model.Store.sp_Registro_Usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_agrega_acceso_por_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_agrega_acceso_por_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_borra_accesos_por_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_borra_accesos_por_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_Cambia_Variable_Contraseña" FunctionName="PesoxPeso_model.Store.spr_Generales_Cambia_Variable_Contraseña" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_accesos" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_accesos">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_accesos_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_accesos_por_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_accesos_por_usuario">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_accesos_por_usuario_catalogo" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_accesos_por_usuario_catalogo">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_accesos_por_usuario_catalogo_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_correo_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_correo_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_funciones_usuario" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_funciones_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_usuarios_por_estatus" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_usuarios_por_estatus">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_usuarios_por_estatus_Result">
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Realiza_Cambio_Contraseña" FunctionName="PesoxPeso_model.Store.spr_Realiza_Cambio_Contraseña" />
+          <FunctionImportMapping FunctionImportName="spr_Realiza_Cambio_GUID" FunctionName="PesoxPeso_model.Store.spr_Realiza_Cambio_GUID" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_Acceso_Sistema" FunctionName="PesoxPeso_model.Store.spr_Valida_Acceso_Sistema">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Valida_Acceso_Sistema_Result">
+                <ScalarProperty Name="id_General_Usuario" ColumnName="id_General_Usuario" />
+                <ScalarProperty Name="nombre" ColumnName="nombre" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spr_Valida_Correo" FunctionName="PesoxPeso_model.Store.spr_Valida_Correo" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_eliminar_usuario" FunctionName="PesoxPeso_model.Store.spr_Valida_eliminar_usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_GUID_Cambio_Contraseña" FunctionName="PesoxPeso_model.Store.spr_Valida_GUID_Cambio_Contraseña" />
+          <FunctionImportMapping FunctionImportName="spr_Valida_Nombre_Correo_Usuario" FunctionName="PesoxPeso_model.Store.spr_Valida_Nombre_Correo_Usuario" />
+          <FunctionImportMapping FunctionImportName="spr_Generales_lee_funciones_instituciones" FunctionName="PesoxPeso_model.Store.spr_Generales_lee_funciones_instituciones">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Generales_lee_funciones_instituciones_Result">
+                <ScalarProperty Name="id_General_Acceso" ColumnName="id_General_Acceso" />
+                <ScalarProperty Name="orden" ColumnName="orden" />
+                <ScalarProperty Name="nombre_acceso" ColumnName="nombre_acceso" />
+                <ScalarProperty Name="funcion" ColumnName="funcion" />
+                <ScalarProperty Name="url" ColumnName="url" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_valida_correo_usuario_institucion" FunctionName="PesoxPeso_model.Store.sp_valida_correo_usuario_institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Realiza_Cambio_GUID_Institucion" FunctionName="PesoxPeso_model.Store.sp_Realiza_Cambio_GUID_Institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" FunctionName="PesoxPeso_model.Store.sp_Valida_GUID_Cambio_Contraseña_usuario_institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Realiza_Cambio_Contraseña_Usuario_Institucion" FunctionName="PesoxPeso_model.Store.sp_Realiza_Cambio_Contraseña_Usuario_Institucion" />
+          <FunctionImportMapping FunctionImportName="sp_Valida_Acceso_Sistema_Usuario_Institucion" FunctionName="PesoxPeso_model.Store.sp_Valida_Acceso_Sistema_Usuario_Institucion">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.sp_Valida_Acceso_Sistema_Usuario_Institucion_Result">
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+                <ScalarProperty Name="responsable" ColumnName="responsable" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Registro_Usuarios">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Registro_Usuarios">
+              <MappingFragment StoreEntitySet="Registro_Usuarios">
+                <ScalarProperty Name="fecha_autorizada" ColumnName="fecha_autorizada" />
+                <ScalarProperty Name="fecha_verificada" ColumnName="fecha_verificada" />
+                <ScalarProperty Name="fecha_asignada" ColumnName="fecha_asignada" />
+                <ScalarProperty Name="estatu_actual_registro" ColumnName="estatu_actual_registro" />
+                <ScalarProperty Name="id_verificador" ColumnName="id_verificador" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
+                <ScalarProperty Name="fecha_registro" ColumnName="fecha_registro" />
+                <ScalarProperty Name="correo" ColumnName="correo" />
+                <ScalarProperty Name="contraseña" ColumnName="contraseña" />
+                <ScalarProperty Name="telefono" ColumnName="telefono" />
+                <ScalarProperty Name="responsable" ColumnName="responsable" />
+                <ScalarProperty Name="rfc_institucion" ColumnName="rfc_institucion" />
+                <ScalarProperty Name="sucursal" ColumnName="sucursal" />
+                <ScalarProperty Name="nombre_institucion" ColumnName="nombre_institucion" />
+                <ScalarProperty Name="id_formulario_estandar" ColumnName="id_formulario_estandar" />
+                <ScalarProperty Name="id_registro" ColumnName="id_registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
