@@ -1501,7 +1501,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 //Email.mensaje = observaciones;
                 Email.mensaje = "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/' y favor de revisar los siguientes puntos de su formulario estandar: " + observaciones;
 
-                if ((new csEmailHandler()).SendEmail_DIF(Email))
+                if ((new csEmailHandler()).SendEmail(Email))
                 {
                     error = true;
                 }
@@ -1537,4 +1537,5 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     {
         Response.Redirect("Documentos_Institucion.aspx");
     }
+
 }

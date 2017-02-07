@@ -66,7 +66,7 @@
                     <div id="botones_administrador" runat="server" class="col-lg-12">
                         <br />
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                            <asp:Button ID="Regresar_Validador_Button" runat="server" Text="Regresar a validar" CssClass="btn btn-danger" CommandName="" CommandArgument="" OnCommand="Regresar_Validador_Button_Command"/>
+                            <asp:Button ID="Regresar_Validador_Button" runat="server" Text="Regresar a validar" CssClass="btn btn-danger" CommandName="" CommandArgument="" OnCommand="Regresar_Validador_Button_Command" />
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <asp:Button ID="Historial_Observaciones_Button" runat="server" CssClass="btn btn-primary" Text="Historial Observaciones" OnClick="Historial_Observaciones_Button_Click" />
@@ -86,12 +86,17 @@
 
             <%--onkeyup="this.value=cpf(this.value);" --%>
 
-              <%--1--%>
+            <%--1--%>
             <div id="div_registro_P1" class="modal fade" tabindex="-1" role="dialog" data-backdrop="static">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button48" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_registro_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -124,7 +129,7 @@
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Sector_Rubros_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_sector_rubro" 
+                                        <asp:GridView ID="Sector_Rubros_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_sector_rubro"
                                             DataSourceID="Detalles_Sector_Rubros_SqlDataSource" CssClass="table table-hover table-bordered" Enabled="false">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_sector_rubro" HeaderText="Tipos" SortExpression="nombre_sector_rubro" />
@@ -162,7 +167,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button47" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_registro_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -193,19 +203,19 @@
                                         <asp:Label ID="Label2" runat="server" Text="Remunerados:"></asp:Label>
                                         <asp:TextBox ID="Remunerados_TextBox" runat="server" CssClass="form-control"
                                             onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" ReadOnly="True"
-                                            MaxLength="7" ></asp:TextBox>
+                                            MaxLength="7"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-3">
                                         <asp:Label ID="Label3" runat="server" Text="Voluntarios:"></asp:Label>
                                         <asp:TextBox ID="Voluntarios_TextBox" runat="server" CssClass="form-control"
                                             onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" ReadOnly="True"
-                                            MaxLength="7" ></asp:TextBox>
+                                            MaxLength="7"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-6">
                                         <asp:Label ID="Label1" runat="server" Text="Número de personas que laboran en la institución:"></asp:Label>
                                         <asp:TextBox ID="Num_Personas_Laborando_TextBox" runat="server" CssClass="form-control"
                                             onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"
-                                            MaxLength="7"  ReadOnly="true">0</asp:TextBox>
+                                            MaxLength="7" ReadOnly="true">0</asp:TextBox>
                                     </div>
                                     <div class="col-lg-12">
                                         <asp:Label ID="Label4" runat="server" Text="Mencionar las áreas de atención en la institución:"></asp:Label>
@@ -244,7 +254,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Observaciones_Button" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_registro_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -271,7 +286,7 @@
                                             <asp:Label ID="Año_Anterior_Label" runat="server" Text="Poblacion año Anterior:"></asp:Label>
                                             <asp:TextBox ID="Año_Anterior_TextBox" runat="server" class="form-control"
                                                 onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"
-                                                ReadOnly="True" MaxLength="7" ></asp:TextBox>
+                                                ReadOnly="True" MaxLength="7"></asp:TextBox>
                                         </div>
                                     </div>
                                 </div>
@@ -306,7 +321,7 @@
                                             <span class="input-group-addon">$</span>
                                             <asp:TextBox ID="Total_Egresos_TextBox" runat="server" class="form-control"
                                                 onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" ReadOnly="True"
-                                                onkeyup="this.value=cpf(this.value);" MaxLength="10" ></asp:TextBox>
+                                                onkeyup="this.value=cpf(this.value);" MaxLength="10"></asp:TextBox>
 
                                         </div>
 
@@ -349,8 +364,13 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
-                            <h2>2. DATOS QUE ACREDITAN LA EXISTENCIA DE LA PERSONALIDAD JURÍDICA</h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                                <h2>2. DATOS QUE ACREDITAN LA EXISTENCIA DE LA PERSONALIDAD JURÍDICA</h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Observaciones_4_Button" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_acreditar_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -363,7 +383,7 @@
                                     <br />
                                     <div class="col-lg-12">
                                         <asp:Label ID="Nombre_Institucion_Label" runat="server" Text="Nombre de la institución/nombre comercial:"></asp:Label>
-                                        <asp:TextBox ID="Nombre_Institucion_TextBox" runat="server" class="form-control" ReadOnly="True" ></asp:TextBox>
+                                        <asp:TextBox ID="Nombre_Institucion_TextBox" runat="server" class="form-control" ReadOnly="True"></asp:TextBox>
 
                                         <asp:Label ID="Denominacion_Label" runat="server" Text="Denominación o razón social de la institución:"></asp:Label>
                                         <asp:TextBox ID="Denominacion_TextBox" runat="server" class="form-control" ReadOnly="True"></asp:TextBox>
@@ -430,7 +450,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button36" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_acreditar_P4" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -537,7 +562,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button35" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_acreditar_P4" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -550,7 +580,7 @@
                                     <br />
                                     <div class="col-lg-8">
                                         <asp:Label ID="Label24" runat="server" Text="No. de la escritura pública en la que consta su acta constitutiva, como IAP, IAC u otra institución no gubernamental:"></asp:Label>
-                                        <asp:TextBox ID="Num_Escritura_TextBox" runat="server" class="form-control" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" 
+                                        <asp:TextBox ID="Num_Escritura_TextBox" runat="server" class="form-control" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"
                                             ReadOnly="True"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-4">
@@ -669,7 +699,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button34" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_acreditar_P4" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -736,8 +771,9 @@
                                     <br />
                                     <div class="col-lg-8">
                                         <asp:Label ID="Label49" runat="server" Text="Seleccione un opción:"></asp:Label>
-                                        <asp:DropDownList ID="Organo_Supremo_DropDownList" runat="server" class="form-control" ReadOnly="True" 
-                                            DataSourceID="Organos_Supremos_SqlDataSource" DataTextField="nombre_organo_supremo" DataValueField="id_organo_supremo"></asp:DropDownList>
+                                        <asp:DropDownList ID="Organo_Supremo_DropDownList" runat="server" class="form-control" ReadOnly="True"
+                                            DataSourceID="Organos_Supremos_SqlDataSource" DataTextField="nombre_organo_supremo" DataValueField="id_organo_supremo">
+                                        </asp:DropDownList>
                                     </div>
                                     <div class="col-lg-4">
                                         <asp:Label ID="Label50" runat="server" Text="Describa cual:"></asp:Label>
@@ -768,6 +804,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button32" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_acreditar_P5" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row col-lg-12" style="text-align: center">
@@ -860,8 +902,13 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
-                            <h2>3. PRESENTACIÓN DEL PROYECTO</h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                                <h2>3. PRESENTACIÓN DEL PROYECTO</h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button31" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -979,7 +1026,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button30" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P6" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -1021,7 +1073,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button29" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P6" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -1074,7 +1131,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button28" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P6" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -1184,7 +1246,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button27" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P6" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -1276,7 +1343,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button26" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P6" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -1323,7 +1395,7 @@
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Tipo_Poblacion_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_tipo_poblacion" DataSourceID="Detalle_Tipo_Poblacion_SqlDataSource" 
+                                        <asp:GridView ID="Tipo_Poblacion_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_tipo_poblacion" DataSourceID="Detalle_Tipo_Poblacion_SqlDataSource"
                                             CssClass="table table-hover table-bordered" Enabled="false">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_tipo_poblacion" HeaderText="Tipo Poblacion" SortExpression="nombre_tipo_poblacion" />
@@ -1361,7 +1433,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button33" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P6" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -1423,6 +1500,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button12" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P10" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -1482,6 +1565,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button11" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P10" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -1588,6 +1677,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button37" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P10" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -1606,7 +1701,7 @@
                                         </asp:SqlDataSource>
                                         <br />
 
-                                        <asp:GridView ID="Servicio_Salud_GridView" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered" 
+                                        <asp:GridView ID="Servicio_Salud_GridView" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered"
                                             DataKeyNames="id_servicio_salud" DataSourceID="Detalle_Servicios_Salud_SqlDataSource" Enabled="false">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_servicio_salud" HeaderText="Servicio Salud" SortExpression="nombre_servicio_salud" ItemStyle-Width="80%" />
@@ -1674,6 +1769,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button38" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P11" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -1718,7 +1819,7 @@
                                         </div>
 
                                         <div class="col-lg-4" style="text-align: center">
-                                            <asp:SqlDataSource ID="Detalle_Techo_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>" 
+                                            <asp:SqlDataSource ID="Detalle_Techo_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>"
                                                 SelectCommand="spr_lee_detalle_techo" SelectCommandType="StoredProcedure">
                                                 <SelectParameters>
                                                     <asp:ControlParameter ControlID="Id_Formulario_HiddenField" DefaultValue="0" Name="id_formulario" PropertyName="Value" Type="Int32" />
@@ -1749,7 +1850,7 @@
                                         </div>
 
                                         <div class="col-lg-4" style="text-align: center">
-                                            <asp:SqlDataSource ID="Detalle_Muro_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>" 
+                                            <asp:SqlDataSource ID="Detalle_Muro_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>"
                                                 SelectCommand="spr_lee_detalle_muro" SelectCommandType="StoredProcedure">
                                                 <SelectParameters>
                                                     <asp:ControlParameter ControlID="Id_Formulario_HiddenField" DefaultValue="0" Name="id_formulario" PropertyName="Value" Type="Int32" />
@@ -1809,7 +1910,7 @@
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Servicios_Basicos_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_servicios_basicos" 
+                                        <asp:GridView ID="Servicios_Basicos_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_servicios_basicos"
                                             DataSourceID="Detalle_Servicios_Basicos_SqlDataSource" CssClass="table table-hover table-bordered" Enabled="false">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_servicios_basicos" HeaderText="Servicio Basico" SortExpression="nombre_servicios_basicos" ItemStyle-Width="80%" />
@@ -1846,6 +1947,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button39" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P12" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -1858,14 +1965,14 @@
                                     <br />
                                     <%-- Consumo al Dia --%>
                                     <div class="col-lg-offset-1 col-lg-10" style="text-align: center">
-                                        <asp:SqlDataSource ID="Detalle_Consumo_Dia_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>" 
+                                        <asp:SqlDataSource ID="Detalle_Consumo_Dia_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>"
                                             SelectCommand="spr_lee_detalle_consumo_dia" SelectCommandType="StoredProcedure">
                                             <SelectParameters>
                                                 <asp:ControlParameter ControlID="Id_Formulario_HiddenField" DefaultValue="0" Name="id_formulario" PropertyName="Value" Type="Int32" />
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Consumo_Dia_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_consumo_dia" 
+                                        <asp:GridView ID="Consumo_Dia_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_consumo_dia"
                                             DataSourceID="Detalle_Consumo_Dia_SqlDataSource" CssClass="table table-hover table-bordered" Enabled="false">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_consumo_dia" HeaderText="Consumo Por Dia" SortExpression="Consumo Por Dia" ItemStyle-Width="80%" />
@@ -1894,8 +2001,8 @@
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Acceso_Comunicacion_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_acceso_comunicacion" Enabled="false" 
-                                            DataSourceID="Detalle_Acesso_Comunicacion_SqlDataSource" CssClass="table table-hover table-bordered" >
+                                        <asp:GridView ID="Acceso_Comunicacion_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_acceso_comunicacion" Enabled="false"
+                                            DataSourceID="Detalle_Acesso_Comunicacion_SqlDataSource" CssClass="table table-hover table-bordered">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_acceso_comunicacion" HeaderText="Acceso Comunicación" SortExpression="nombre_acceso_comunicacion" ItemStyle-Width="80%" />
                                                 <asp:TemplateField HeaderText="Seleccionar">
@@ -1937,6 +2044,12 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button40" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_presentacion_P13" />
+                            </div>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -1955,7 +2068,7 @@
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Oficinas_Relacion_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_oficina_relacion" 
+                                        <asp:GridView ID="Oficinas_Relacion_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_oficina_relacion"
                                             DataSourceID="Detalle_Oficinas_Relacion_SqlDataSource" CssClass="table table-hover table-bordered" Enabled="true">
                                             <Columns>
                                                 <asp:TemplateField HeaderText="Institución ">
@@ -2000,8 +2113,13 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
-                            <h2>4. SITUACIÓN FINANCIERA DE LA INSTITUCIÓN</h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                                <h2>4. SITUACIÓN FINANCIERA DE LA INSTITUCIÓN</h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button41" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_situacion_financiera_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -2115,12 +2233,17 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button42" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_situacion_financiera_P2" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
                             <div class="row">
-                                <div class="row col-lg-12" style="text-align: center" >
+                                <div class="row col-lg-12" style="text-align: center">
                                     <asp:Label ID="Label108" runat="server" Text="4.5 Principales fuentes de financiamientos utilizadas para la institución, utilizando como muestra el promedio anual, tomando como base los últimos tres años:" CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
                                 </div>
 
@@ -2200,7 +2323,12 @@
                     <div class="modal-content">
 
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button43" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_situacion_financiera_P3" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -2286,8 +2414,13 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header" style="text-align: center">
-                            <h2><b>FORMULARIO ESTÁNDAR</b></h2>
-                            <h2>5. CUMPLIMIENTO DE LAS OBLIGACIONES FISCALES</h2>
+                            <div class="col-lg-10">
+                                <h2><b>FORMULARIO ESTÁNDAR</b></h2>
+                                <h2>5. CUMPLIMIENTO DE LAS OBLIGACIONES FISCALES</h2>
+                            </div>
+                            <div class="col-lg-2">
+                                <asp:Button ID="Button44" runat="server" class="btn btn-warning" Text="Observaciones" OnCommand="Observaciones_Button_Command" CommandArgument="div_cumplimiento_P1" />
+                            </div>
                         </div>
 
                         <div class="modal-body">
@@ -2406,6 +2539,8 @@
                     </div>
                 </div>
             </div>
+
+
 
             <%-- Modal Ver Observaciones --%>
             <div class="modal fade" role="dialog" id="div_ver_observaciones" data-backdrop="static">

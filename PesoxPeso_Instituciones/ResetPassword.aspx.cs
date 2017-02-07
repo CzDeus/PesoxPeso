@@ -93,7 +93,7 @@ public partial class ResetPassword : System.Web.UI.Page
                 Email.correoDestinatario = txtCorreoElectronico.Text;
                 Email.nombreMostrar = datos_correo.correo_nombreMostrar;
                 Email.asunto = "Sistema Peso por Peso - Cambio de Contraseña";
-                //Email.mensaje = "Dar click <a href='http://localhost:18658/ResetPassword.aspx?request=" + id_encrypt_institucion + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
+                //Email.mensaje = "Dar click <a href='http://localhost:60997/ResetPassword.aspx?request=" + id_encrypt_institucion + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
                 Email.mensaje = "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/ResetPassword.aspx?request=" + id_encrypt_institucion + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
 
                 if ((new csEmailHandler()).SendEmail_DIF(Email))
@@ -149,7 +149,7 @@ public partial class ResetPassword : System.Web.UI.Page
                 Email.correoReminente = datos_correo.correo_correoReminente;
                 Email.correoDestinatario = dt.Rows[0].ItemArray[0].ToString();
                 Email.nombreMostrar = datos_correo.correo_nombreMostrar;
-                //Email.asunto = "Sistema Peso por Peso - Confirmación Cambio de Contraseña";
+                Email.asunto = "Sistema Peso por Peso - Confirmación Cambio de Contraseña";
                 //Email.mensaje = "Cambio de contraseña completada. \n" +
                 //    "Usuario: " + dt.Rows[0].ItemArray[0].ToString() + "\n" +
                 //    "Contraseña: " + txtContraseña_1.Text + "<br><br>" + "Dar click <a href='http://localhost:18658/Default.aspx'>Aquí</a> para accesar al sistema y continuar con el registro de la solicitud.";

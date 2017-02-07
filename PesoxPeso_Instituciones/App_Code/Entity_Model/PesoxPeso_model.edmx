@@ -44,6 +44,35 @@
           <Property Name="id_ciudad" Type="int" Nullable="false" />
           <Property Name="rfc" Type="nvarchar" MaxLength="25" Nullable="false" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'db_Peso_x_Peso.dbo.Detalle_Poblacion_Atendida' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Detalle_Poblacion_Atendida">
+          <Key>
+            <PropertyRef Name="id_formulario" />
+            <PropertyRef Name="id_poblacion_atendida" />
+            <PropertyRef Name="cantidad_hombres" />
+            <PropertyRef Name="cantidad_mujeres" />
+          </Key>
+          <Property Name="id_formulario" Type="int" Nullable="false" />
+          <Property Name="id_poblacion_atendida" Type="int" Nullable="false" />
+          <Property Name="cantidad_hombres" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cantidad_mujeres" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Detalles_Oficinas_Operativas">
+          <Key>
+            <PropertyRef Name="id_oficina_operativa" />
+          </Key>
+          <Property Name="id_oficina_operativa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_formulario" Type="int" Nullable="false" />
+          <Property Name="calle_oficina_operativa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="numero_oficina_operativa" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="colonia_oficina_operativa" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="cp_oficina_operativa" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="entre_calles_oficina_operativa" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="id_municipio_oficinas_operativas" Type="int" Nullable="false" />
+          <Property Name="telelefono_oficinas_operativas" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="horarios" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
         <EntityType Name="Estatus_Registros">
           <Key>
             <PropertyRef Name="id_estatus_registro" />
@@ -321,6 +350,9 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <Parameter Name="id_general_usuario" Type="int" Mode="In" />
           <Parameter Name="guid" Type="nvarchar" Mode="In" />
         </Function>
+        <Function Name="spr_Sumar_Hombres_Mujeres" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_formulario" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_Valida_Acceso_Sistema" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="nombre_usuario" Type="nvarchar" Mode="In" />
           <Parameter Name="password" Type="nvarchar" Mode="In" />
@@ -345,6 +377,7 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <EntitySet Name="Archivos_Instituciones" EntityType="Self.Archivos_Instituciones" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Catalogo_Entidad_Federativa" EntityType="Self.Catalogo_Entidad_Federativa" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Catalogo_Instituciones" EntityType="Self.Catalogo_Instituciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Detalles_Oficinas_Operativas" EntityType="Self.Detalles_Oficinas_Operativas" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Estatus_Registros" EntityType="Self.Estatus_Registros" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Formulario_Estandar" EntityType="Self.Formulario_Estandar" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Observaciones_Verificacion" EntityType="Self.Observaciones_Verificacion" Schema="dbo" store:Type="Tables" />
@@ -353,6 +386,14 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <EntitySet Name="tb_Generales_Accesos_Usuarios" EntityType="Self.tb_Generales_Accesos_Usuarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Generales_Usuarios" EntityType="Self.tb_Generales_Usuarios" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tb_Generales_Usuarios_Contraseñas" EntityType="Self.tb_Generales_Usuarios_Contraseñas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Detalle_Poblacion_Atendida" EntityType="Self.Detalle_Poblacion_Atendida" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Detalle_Poblacion_Atendida].[id_formulario] AS [id_formulario], 
+    [Detalle_Poblacion_Atendida].[id_poblacion_atendida] AS [id_poblacion_atendida], 
+    [Detalle_Poblacion_Atendida].[cantidad_hombres] AS [cantidad_hombres], 
+    [Detalle_Poblacion_Atendida].[cantidad_mujeres] AS [cantidad_mujeres]
+    FROM [dbo].[Detalle_Poblacion_Atendida] AS [Detalle_Poblacion_Atendida]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="tb_Generales_Parametros" EntityType="Self.tb_Generales_Parametros" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [tb_Generales_Parametros].[año_registro] AS [año_registro], 
@@ -448,7 +489,7 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <EntitySet Name="tb_Generales_Usuarios_Contraseñas" EntityType="PesoxPeso_model.tb_Generales_Usuarios_Contraseñas" />
           <FunctionImport Name="spr_Generales_lee_funciones_instituciones" ReturnType="Collection(PesoxPeso_model.spr_Generales_lee_funciones_instituciones_Result)" />
           <FunctionImport Name="sp_valida_correo_usuario_institucion" ReturnType="Collection(Int32)">
-          <Parameter Name="correo" Mode="In" Type="String" />
+            <Parameter Name="correo" Mode="In" Type="String" />
             <Parameter Name="id_registro" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="sp_Realiza_Cambio_GUID_Institucion">
@@ -474,6 +515,11 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <EntitySet Name="Registro_Usuarios" EntityType="PesoxPeso_model.Registro_Usuarios" />
           <EntitySet Name="Observaciones_Verificacion" EntityType="PesoxPeso_model.Observaciones_Verificacion" />
           <EntitySet Name="Formulario_Estandar" EntityType="PesoxPeso_model.Formulario_Estandar" />
+          <FunctionImport Name="spr_Sumar_Hombres_Mujeres" ReturnType="Collection(PesoxPeso_model.spr_Sumar_Hombres_Mujeres_Result)">
+          <Parameter Name="id_formulario" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="Detalle_Poblacion_Atendida" EntityType="PesoxPeso_model.Detalle_Poblacion_Atendida" />
+          <EntitySet Name="Detalles_Oficinas_Operativas" EntityType="PesoxPeso_model.Detalles_Oficinas_Operativas" />
         </EntityContainer>
         <EntityType Name="Catalogo_Entidad_Federativa">
           <Key>
@@ -757,6 +803,37 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <Property Name="total_principales_egresos" Type="Double" Nullable="false" />
           <Property Name="impuesto_federal" Type="Int32" Nullable="false" />
           <Property Name="adeudos_fiscales" Type="Int32" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="spr_Sumar_Hombres_Mujeres_Result">
+          <Property Type="Int32" Name="Hombres" Nullable="true" />
+          <Property Type="Int32" Name="Mujeres" Nullable="true" />
+        </ComplexType>
+        <EntityType Name="Detalle_Poblacion_Atendida">
+          <Key>
+            <PropertyRef Name="id_formulario" />
+            <PropertyRef Name="id_poblacion_atendida" />
+            <PropertyRef Name="cantidad_hombres" />
+            <PropertyRef Name="cantidad_mujeres" />
+          </Key>
+          <Property Name="id_formulario" Type="Int32" Nullable="false" />
+          <Property Name="id_poblacion_atendida" Type="Int32" Nullable="false" />
+          <Property Name="cantidad_hombres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cantidad_mujeres" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Detalles_Oficinas_Operativas">
+          <Key>
+            <PropertyRef Name="id_oficina_operativa" />
+          </Key>
+          <Property Name="id_oficina_operativa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_formulario" Type="Int32" Nullable="false" />
+          <Property Name="calle_oficina_operativa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="numero_oficina_operativa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="colonia_oficina_operativa" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="cp_oficina_operativa" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="entre_calles_oficina_operativa" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="id_municipio_oficinas_operativas" Type="Int32" Nullable="false" />
+          <Property Name="telelefono_oficinas_operativas" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="horarios" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1101,6 +1178,40 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
                 <ScalarProperty Name="año_registro" ColumnName="año_registro" />
                 <ScalarProperty Name="id_institucion" ColumnName="id_institucion" />
                 <ScalarProperty Name="id_formulario_estandar" ColumnName="id_formulario_estandar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_Sumar_Hombres_Mujeres" FunctionName="PesoxPeso_model.Store.spr_Sumar_Hombres_Mujeres">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Sumar_Hombres_Mujeres_Result">
+                <ScalarProperty Name="Hombres" ColumnName="Hombres" />
+                <ScalarProperty Name="Mujeres" ColumnName="Mujeres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="Detalle_Poblacion_Atendida">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Detalle_Poblacion_Atendida">
+              <MappingFragment StoreEntitySet="Detalle_Poblacion_Atendida">
+                <ScalarProperty Name="cantidad_mujeres" ColumnName="cantidad_mujeres" />
+                <ScalarProperty Name="cantidad_hombres" ColumnName="cantidad_hombres" />
+                <ScalarProperty Name="id_poblacion_atendida" ColumnName="id_poblacion_atendida" />
+                <ScalarProperty Name="id_formulario" ColumnName="id_formulario" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Detalles_Oficinas_Operativas">
+            <EntityTypeMapping TypeName="PesoxPeso_model.Detalles_Oficinas_Operativas">
+              <MappingFragment StoreEntitySet="Detalles_Oficinas_Operativas">
+                <ScalarProperty Name="horarios" ColumnName="horarios" />
+                <ScalarProperty Name="telelefono_oficinas_operativas" ColumnName="telelefono_oficinas_operativas" />
+                <ScalarProperty Name="id_municipio_oficinas_operativas" ColumnName="id_municipio_oficinas_operativas" />
+                <ScalarProperty Name="entre_calles_oficina_operativa" ColumnName="entre_calles_oficina_operativa" />
+                <ScalarProperty Name="cp_oficina_operativa" ColumnName="cp_oficina_operativa" />
+                <ScalarProperty Name="colonia_oficina_operativa" ColumnName="colonia_oficina_operativa" />
+                <ScalarProperty Name="numero_oficina_operativa" ColumnName="numero_oficina_operativa" />
+                <ScalarProperty Name="calle_oficina_operativa" ColumnName="calle_oficina_operativa" />
+                <ScalarProperty Name="id_formulario" ColumnName="id_formulario" />
+                <ScalarProperty Name="id_oficina_operativa" ColumnName="id_oficina_operativa" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

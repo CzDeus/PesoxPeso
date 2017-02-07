@@ -28,8 +28,8 @@ public partial class Consulta_Documentos : System.Web.UI.Page
 
         if (!IsPostBack)
         {
-            int id = Convert.ToInt32(Session["id_registro"]);
-            var institucion = (from seleccion in contexto.Registro_Usuarios where seleccion.id_registro == id select seleccion).First();
+            //int id = Convert.ToInt32(Session["id_registro"]);
+            var institucion = (from seleccion in contexto.Registro_Usuarios where seleccion.id_registro == id_usuario select seleccion).First();
             Nombre_Institucion_Encabezado_Label.Text = institucion.nombre_institucion + " " + institucion.sucursal;
         }
         else

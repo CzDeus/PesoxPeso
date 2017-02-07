@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d75e34d0e52a4c09a1c23c373d130f7f" Name="Diagram1" ZoomLevel="112" >
+      <Diagram DiagramId="d75e34d0e52a4c09a1c23c373d130f7f" Name="Diagram1" ZoomLevel="45" >
         <EntityTypeShape EntityType="PesoxPeso_model.Catalogo_Entidad_Federativa" Width="1.5" PointX="2.125" PointY="0.5" />
         <EntityTypeShape EntityType="PesoxPeso_model.Catalogo_Instituciones" Width="1.5" PointX="11.875" PointY="0.5" />
         <EntityTypeShape EntityType="PesoxPeso_model.tb_Generales_Accesos" Width="1.5" PointX="8.625" PointY="0.5" />
@@ -18,6 +18,8 @@
         <EntityTypeShape EntityType="PesoxPeso_model.Registro_Usuarios" Width="1.5" PointX="3.75" PointY="0.5" />
         <EntityTypeShape EntityType="PesoxPeso_model.Observaciones_Verificacion" Width="1.5" PointX="2.125" PointY="3.875" />
         <EntityTypeShape EntityType="PesoxPeso_model.Formulario_Estandar" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Detalle_Poblacion_Atendida" Width="1.5" PointX="5.375" PointY="4.375" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Detalles_Oficinas_Operativas" Width="1.5" PointX="2.125" PointY="6.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

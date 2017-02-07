@@ -158,7 +158,7 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
                         Email.correoDestinatario = Correo_Verificar_TextBox.Text;
                         Email.nombreMostrar = datos_correo.correo_nombreMostrar;
                         Email.asunto = "Sistema Peso por Peso - Registro de Contraseña";
-                        Email.mensaje = "Dar click <a href='http://localhost:60980/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
+                        Email.mensaje = "Dar click <a href='http://localhost:60997/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
                         //Email.mensaje = "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
 
                         if ((new csEmailHandler()).SendEmail(Email))
@@ -304,6 +304,8 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
                         //formulario.clave_registro = "";
                         formulario.impuesto_federal = 0;
                         formulario.adeudos_fiscales = 0;
+                        formulario.volumen_num_escritura = "";
+                        formulario.volumen_registro_propiedad = "";
 
                         contexto.Formulario_Estandar.Add(formulario);
                         contexto.SaveChanges();

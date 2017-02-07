@@ -32,7 +32,7 @@ public partial class _Default : System.Web.UI.Page
             }
             else
             {
-                id_registro = Convert.ToInt32( Session["sist_Id_Usuario"].ToString());
+                id_registro = Convert.ToInt32(Session["sist_Id_Usuario"].ToString());
                 Nombre_Intitucion_Label.Text = Desplegar_Nombre();
                 Cambiar_Institucion_Button.Visible = false;
             }

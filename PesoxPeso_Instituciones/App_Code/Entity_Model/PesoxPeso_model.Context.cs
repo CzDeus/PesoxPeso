@@ -40,6 +40,8 @@ namespace Entity_Model
         public virtual DbSet<Registro_Usuarios> Registro_Usuarios { get; set; }
         public virtual DbSet<Observaciones_Verificacion> Observaciones_Verificacion { get; set; }
         public virtual DbSet<Formulario_Estandar> Formulario_Estandar { get; set; }
+        public virtual DbSet<Detalle_Poblacion_Atendida> Detalle_Poblacion_Atendida { get; set; }
+        public virtual DbSet<Detalles_Oficinas_Operativas> Detalles_Oficinas_Operativas { get; set; }
     
         public virtual ObjectResult<sp_Buscar_Instituciones_Result> sp_Buscar_Instituciones(string nombre_buscar_institucion)
         {
@@ -332,6 +334,15 @@ namespace Entity_Model
                 new ObjectParameter("contraseña", typeof(string));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Valida_Acceso_Sistema_Usuario_Institucion_Result>("sp_Valida_Acceso_Sistema_Usuario_Institucion", correoParameter, contraseñaParameter);
+        }
+    
+        public virtual ObjectResult<spr_Sumar_Hombres_Mujeres_Result> spr_Sumar_Hombres_Mujeres(Nullable<int> id_formulario)
+        {
+            var id_formularioParameter = id_formulario.HasValue ?
+                new ObjectParameter("id_formulario", id_formulario) :
+                new ObjectParameter("id_formulario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_Sumar_Hombres_Mujeres_Result>("spr_Sumar_Hombres_Mujeres", id_formularioParameter);
         }
     }
 }

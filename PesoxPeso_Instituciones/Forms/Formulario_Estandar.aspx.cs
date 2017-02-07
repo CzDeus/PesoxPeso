@@ -24,15 +24,19 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     decimal v_kwh_base = 0;
     decimal v_kwh_base2 = 0;
+    decimal v_kwh_base3 = 0;
 
     bool valor;
+
+    static bool nueva_Of_Operativa = true;
+    static int id_oficina = 0;
 
     private List<object> listCampos = null;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         //Costo_Estimado_Programa_GridView.DataBind();
-        //id_registro = Convert.ToInt32(Session["sist_Id_Usuario"].ToString());
+        id_registro = Convert.ToInt32(Session["sist_Id_Usuario"].ToString());
 
         int a = Convert.ToInt32(Session["sist_Id_Usuario"].ToString());
 
@@ -40,6 +44,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
         estado_registro = usuario.estatu_actual_registro;
         institucion = Convert.ToInt32(Session["id_institucion"].ToString());
+
+        if(id_oficina == 0)
+        {
+            Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
+        }
 
         if (!IsPostBack)
         {
@@ -62,6 +71,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         else
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "ejecuta_javascript", "ejecuta_javascript();", true);
+            //Poblacion_Atendida_GridView.DataBind();
         }
     }
 
@@ -529,11 +539,9 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     private void guardar_div_situacion_financiera_P3()
     {
-        int id_formulario = Convert.ToInt32(Id_Formulario_HiddenField.Value);
-        var FE = (from buscar in contexto.Formulario_Estandar where buscar.id_formulario_estandar == id_formulario select buscar).First();
-
-
-        contexto.SaveChanges();
+        //int id_formulario = Convert.ToInt32(Id_Formulario_HiddenField.Value);
+        //var FE = (from buscar in contexto.Formulario_Estandar where buscar.id_formulario_estandar == id_formulario select buscar).First();
+        //contexto.SaveChanges();
     }
 
     private void guardar_div_cumplimiento_P1()
@@ -597,14 +605,46 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 Num_Personas_Laborando_TextBox.Text = FE.num_personas_laborando.ToString();
             }
 
-            Remunerados_TextBox.Text = FE.remunerados.ToString();
-            Voluntarios_TextBox.Text = FE.voluntarios.ToString();
+            if (FE.remunerados != 0)
+            {
+                Remunerados_TextBox.Text = FE.remunerados.ToString();
+            }
+            else
+            {
+                Remunerados_TextBox.Text = "";
+            }
+
+            if (FE.voluntarios != 0)
+            {
+                Voluntarios_TextBox.Text = FE.voluntarios.ToString();
+            }
+            else
+            {
+                Voluntarios_TextBox.Text = "";
+            }
+
             Areas_atencion_TextBox.Text = FE.areas_atencion;
             Areas_Apoyo_TextBox.Text = FE.areas_apoyo;
 
-            ///*P2*/
-            Año_Actual_TextBox.Text = FE.año_actual.ToString();
-            Año_Anterior_TextBox.Text = FE.año_anterior.ToString();
+            ///*P2*//
+
+            if (FE.año_actual != 0)
+            {
+                Año_Actual_TextBox.Text = FE.año_actual.ToString();
+            }
+            else
+            {
+                Año_Actual_TextBox.Text = "";
+            }
+
+            if (FE.año_anterior != 0)
+            {
+                Año_Anterior_TextBox.Text = FE.año_anterior.ToString();
+            }
+            else
+            {
+                Año_Anterior_TextBox.Text = "";
+            }
 
 
             if (FE.total_ingresos == 0)
@@ -662,7 +702,19 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Telefonos_TextBox.Text = FE.telefonos;
             Correo_Domicilio_Fiscal.Text = FE.correo_dom_fiscal;
             Personalidad_Juridica_DropDownList.SelectedIndex = FE.id_personalidad_juridica;
-            Otro_Personalidad_Juridica_TextBox.Text = FE.otro_personalidad_juridica;
+
+            if (FE.id_personalidad_juridica == 2)
+            {
+                Otro_Personalidad_Juridica_TextBox.Text = FE.otro_personalidad_juridica;
+                Otro_Personalidad_Juridica_TextBox.ReadOnly = false;
+                Otro_Personalidad_Juridica_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
+            }
+            else
+            {
+                Otro_Personalidad_Juridica_TextBox.ReadOnly = true;
+                Otro_Personalidad_Juridica_TextBox.BackColor = Color.LightGray;
+                Otro_Personalidad_Juridica_TextBox.Text = "";
+            }
 
             ///*P4*/
             Num_Escritura_TextBox.Text = FE.num_escritura.ToString();
@@ -676,7 +728,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Fecha_Registro_Propiedad_TextBox.Text = Obtener_Fecha(FE.fecha_registro_propiedad);
             Permiso_Expedir_Recibos_DropDownList.SelectedIndex = FE.permiso_expedir_recibos;
 
-            if(FE.permiso_expedir_recibos == 1)
+            if (FE.permiso_expedir_recibos == 1)
             {
                 fecha_permiso.Visible = false;
             }
@@ -713,9 +765,33 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
             ///*P8*/
             Justificacion_Programa_TextBox.Text = FE.justificacion_programa;
-            poblacion_Minima_TextBox.Text = FE.poblacion_minima.ToString();
-            poblacion_Maxima_TextBox.Text = FE.poblacion_maxima.ToString();
-            poblacion_Actual_TextBox.Text = FE.poblacion_actual.ToString();
+
+            if (FE.poblacion_minima != 0)
+            {
+                poblacion_Minima_TextBox.Text = FE.poblacion_minima.ToString();
+            }
+            else
+            {
+                poblacion_Minima_TextBox.Text = "";
+            }
+
+            if (FE.poblacion_maxima != 0)
+            {
+                poblacion_Maxima_TextBox.Text = FE.poblacion_maxima.ToString();
+            }
+            else
+            {
+                poblacion_Maxima_TextBox.Text = "";
+            }
+
+            if (FE.poblacion_actual != 0)
+            {
+                poblacion_Actual_TextBox.Text = FE.poblacion_actual.ToString();
+            }
+            else
+            {
+                poblacion_Actual_TextBox.Text = "";
+            }
 
             ///*P9*/
 
@@ -723,29 +799,75 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Tipo_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.tipo_ingreso_poblacion;
             Nivel_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.nivel_ingreso_poblacion;
             Rezago_Educativo_DropDownList.SelectedIndex = FE.rezago_educativo;
-            Porcentaje_Poblacion_Atendida_TextBox.Text = FE.porcentaje_poblacion_atendida.ToString();
+
+            if (FE.porcentaje_poblacion_atendida != 0)
+            {
+                Porcentaje_Poblacion_Atendida_TextBox.Text = FE.porcentaje_poblacion_atendida.ToString();
+
+            }
+            else
+            {
+                Porcentaje_Poblacion_Atendida_TextBox.Text = "";
+            }
 
             Personas_hasta_15_DropDownList.SelectedIndex = FE.personas_hasta_15;
             Personas_antes_1982_DropDownList.SelectedIndex = FE.personas_hasta_1982;
             Personas_Apartir_1982_DropDownList.SelectedIndex = FE.personas_apartir_1982;
 
-            ///*P11*/
-            Promedio_Personas_Vivienda_TextBox.Text = FE.promedio_personas_viviendo.ToString();
-            Num_Habitaciones_TextBox.Text = FE.num_habitaciones.ToString();
+            ///*P11*//
+            if (FE.promedio_personas_viviendo != 0)
+            {
+                Promedio_Personas_Vivienda_TextBox.Text = FE.promedio_personas_viviendo.ToString();
+            }
+            else
+            {
+                Promedio_Personas_Vivienda_TextBox.Text = "";
+            }
+
+            if (FE.num_habitaciones != 0)
+            {
+                Num_Habitaciones_TextBox.Text = FE.num_habitaciones.ToString();
+            }
+            else
+            {
+                Num_Habitaciones_TextBox.Text = "";
+            }
 
             ///*P12*/
             Observaciones_Acceso_TextBox.Text = FE.observaciones_acceso;
 
-            ///*P13*/
-            Valor_Aproximado_Inmuebles_TextBox.Text = FE.valor_aproximado_inmuebles.ToString("N");
-            Valor_Aproximado_Inversiones_TextBox.Text = FE.valor_aproximado_inversiones.ToString("N");
-            Valor_Aproximados_Fideicomisos_TextBox.Text = FE.valor_aproximado_fideicomisos.ToString("N");
+            ///*P13*//
+            if (FE.valor_aproximado_inmuebles != 0)
+            {
+                Valor_Aproximado_Inmuebles_TextBox.Text = FE.valor_aproximado_inmuebles.ToString("N");
+            }
+            else
+            {
+                Valor_Aproximado_Inmuebles_TextBox.Text = "";
+            }
+
+            if (FE.valor_aproximado_inversiones != 0)
+            {
+                Valor_Aproximado_Inversiones_TextBox.Text = FE.valor_aproximado_inversiones.ToString("N");
+            }
+            else
+            {
+                Valor_Aproximado_Inversiones_TextBox.Text = "";
+            }
+
+            if (FE.valor_aproximado_fideicomisos != 0)
+            {
+                Valor_Aproximados_Fideicomisos_TextBox.Text = FE.valor_aproximado_fideicomisos.ToString("N");
+            }
+            else
+            {
+                Valor_Aproximados_Fideicomisos_TextBox.Text = "";
+            }
 
             ///*P14*/
             ((TextBox)Piso_GridView.FooterRow.FindControl("Piso_Otros_TextBox")).Text = FE.piso_otro.ToString();
             ((TextBox)Techo_GridView.FooterRow.FindControl("Techo_Otros_TextBox")).Text = FE.techo_otro.ToString();
             ((TextBox)Muro_GridView.FooterRow.FindControl("Muro_Otros_TextBox")).Text = FE.muro_otro.ToString();
-
 
             ///*P15*/
 
@@ -1088,10 +1210,10 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 Params[2] = new SqlParameter("@concepto", Convert.ToString(concepto.Text));
                 Params[2].SqlDbType = SqlDbType.VarChar;
 
-                if (monto.Text == "")
-                {
-                    monto.Text = "0";
-                }
+                //if (monto.Text == "")
+                //{
+                //    monto.Text = "0";
+                //}
 
                 Params[3] = new SqlParameter("@monto", Convert.ToDouble(monto.Text));
                 Params[3].SqlDbType = SqlDbType.Float;
@@ -1116,7 +1238,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Agregar_Costo_Button_Click(object sender, EventArgs e)
     {
-        Detalle_Costo_Estimado();
+        v_kwh_base = 0;
         Data objData = new Data();
         string strStoreProcedure = "spr_agregar_detalle_costo_estimado";
 
@@ -1141,14 +1263,35 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             objData = null;
         }
         Costo_Estimado_Programa_GridView.DataBind();
+
+        //Detalle_Costo_Estimado();
+
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P5", "$('#div_presentacion_P5').modal('show');", true);
+    }
+
+    protected void Costo_Estimado_Programa_GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.DataRow)
+        {
+            TextBox KWH_Base_Label = (TextBox)e.Row.FindControl("Detalle_Monto_TextBox");
+            if (KWH_Base_Label.Text != "")
+            {
+                v_kwh_base += Decimal.Parse(KWH_Base_Label.Text);
+                //v_kwh_base += Convert.ToDouble(KWH_Base_Label.Text);
+            }
+        }
+        if (e.Row.RowType == DataControlRowType.Footer)
+        {
+            TextBox KWH_Base_Label = (TextBox)e.Row.FindControl("Total_Costo_Estimado_TextBox");
+            KWH_Base_Label.Text = v_kwh_base.ToString("##,##0.00");
+        }
     }
 
     protected void Eliminar_Costo_Button_Click(object sender, EventArgs e)
     {
 
-        Detalle_Costo_Estimado();
+        //Detalle_Costo_Estimado();
         GridViewRow gr = ((Control)sender).NamingContainer as GridViewRow;
 
         Data objData = new Data();
@@ -1742,6 +1885,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Params[1] = new SqlParameter("@id_principal_egreso", Principales_Egresos_GridView.DataKeys[gr.RowIndex].Value);
             Params[1].SqlDbType = SqlDbType.Int;
 
+            if (importe.Text == "")
+            {
+                importe.Text = "0";
+            }
+
             Params[2] = new SqlParameter("@importe_egresos", Convert.ToDouble(importe.Text));
             Params[2].SqlDbType = SqlDbType.Float;
 
@@ -1760,8 +1908,9 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             objData = null;
         }
         Principales_Egresos_GridView.DataBind();
+
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
-        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P2", "$('#div_situacion_financiera_P3').modal('show');", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P3", "$('#div_situacion_financiera_P3').modal('show');", true);
     }
 
     protected void Agregar_Oficinas_Relacion_Button_Click(object sender, EventArgs e)
@@ -1866,20 +2015,32 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Agregar_Oficina_Operativa_Button_Click(object sender, EventArgs e)
     {
-        TextBox campo_texto = sender as TextBox;
-
-        if (Calle_Oficinas_Operativas_TextBox.Text != "" && Numero_Oficinas_Operativas_TextBox.Text != "" && Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
-            && Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
-        {
+    //    if (Calle_Oficinas_Operativas_TextBox.Text != "" && Numero_Oficinas_Operativas_TextBox.Text != "" && Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
+    //&& Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
+    //    {
+            TextBox campo_texto = sender as TextBox;
 
             Data objData = new Data();
-            string strStoreProcedure = "spr_agrega_detalle_oficinas_operativas";
+
+            string strStoreProcedure = "";
+            int num_param = 0;
+
+            if (id_oficina == 0)
+            {
+                strStoreProcedure = "spr_agrega_detalle_oficinas_operativas";
+                num_param = 9;
+            }
+            else
+            {
+                strStoreProcedure = "sp_actualiza_oficina_operativa";
+                num_param = 10;
+            }
 
             try
             {
                 objData.OpenConnection();
 
-                SqlParameter[] Params = new SqlParameter[9];
+                SqlParameter[] Params = new SqlParameter[num_param];
 
                 Params[0] = new SqlParameter("@id_formulario", Convert.ToInt32(Id_Formulario_HiddenField.Value));
                 Params[0].SqlDbType = SqlDbType.Int;
@@ -1890,8 +2051,8 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 Params[2] = new SqlParameter("@numero", Numero_Oficinas_Operativas_TextBox.Text);
                 Params[2].SqlDbType = SqlDbType.NVarChar;
 
-                Params[3] = new SqlParameter("@colonia", Convert.ToInt32(Colonia_Oficinas_Operativas_DropDownList.SelectedIndex));
-                Params[3].SqlDbType = SqlDbType.Int;
+                Params[3] = new SqlParameter("@colonia", Colonia_Oficinas_Operativas_TextBox.Text);
+                Params[3].SqlDbType = SqlDbType.NVarChar;
 
                 Params[4] = new SqlParameter("@cp", CP_Oficina_Operativa_TextBox.Text);
                 Params[4].SqlDbType = SqlDbType.NVarChar;
@@ -1908,6 +2069,12 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 Params[8] = new SqlParameter("@horarios", Horario_Oficina_Operativa_TextBox.Text);
                 Params[8].SqlDbType = SqlDbType.NVarChar;
 
+                if (nueva_Of_Operativa == false)
+                {
+                    Params[9] = new SqlParameter("@id_oficina", id_oficina);
+                    Params[9].SqlDbType = SqlDbType.NVarChar;
+                }
+
                 objData.ExecuteSPNonQuery(Params, strStoreProcedure);
             }
             catch (Exception ex)
@@ -1919,7 +2086,101 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 objData.CloseConnection();
                 objData = null;
             }
+
             Oficinas_Operativas_GridView.DataBind();
+
+            Calle_Oficinas_Operativas_TextBox.Text = "";
+            Numero_Oficinas_Operativas_TextBox.Text = "";
+            Entre_Calles_Oficinas_Operativas_TextBox.Text = "";
+            Telefono_Oficina_Operativa_TextBox.Text = "";
+            Horario_Oficina_Operativa_TextBox.Text = "";
+            CP_Oficina_Operativa_TextBox.Text = "";
+            Colonia_Oficinas_Operativas_TextBox.Text = "";
+
+            Mensaje_Incompleto.Visible = false;
+            nueva_Of_Operativa = true;
+            id_oficina = 0;
+        //}
+
+    }
+
+    protected void Agregar_Oficina_Operativa_Button_Command(object sender, CommandEventArgs e)
+    {
+        TextBox campo_texto = sender as TextBox;
+
+        if (Calle_Oficinas_Operativas_TextBox.Text != "" && Numero_Oficinas_Operativas_TextBox.Text != "" && Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
+            && Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
+        {
+
+            Data objData = new Data();
+            string strStoreProcedure = "";
+            int num_param = 0;
+
+            if (id_oficina == 0)
+            {
+                strStoreProcedure = "spr_agrega_detalle_oficinas_operativas";
+                num_param = 9;
+            }
+            else
+            {
+                strStoreProcedure = "sp_actualiza_oficina_operativa";
+                num_param = 10;
+            }
+
+            try
+            {
+                objData.OpenConnection();
+
+                SqlParameter[] Params = new SqlParameter[num_param];
+
+                Params[0] = new SqlParameter("@id_formulario", Convert.ToInt32(Id_Formulario_HiddenField.Value));
+                Params[0].SqlDbType = SqlDbType.Int;
+
+                Params[1] = new SqlParameter("@calle", Calle_Oficinas_Operativas_TextBox.Text);
+                Params[1].SqlDbType = SqlDbType.NVarChar;
+
+                Params[2] = new SqlParameter("@numero", Numero_Oficinas_Operativas_TextBox.Text);
+                Params[2].SqlDbType = SqlDbType.NVarChar;
+
+                Params[3] = new SqlParameter("@colonia", Colonia_Oficinas_Operativas_TextBox.Text);
+                Params[3].SqlDbType = SqlDbType.NVarChar;
+
+                Params[4] = new SqlParameter("@cp", CP_Oficina_Operativa_TextBox.Text);
+                Params[4].SqlDbType = SqlDbType.NVarChar;
+
+                Params[5] = new SqlParameter("@entre", Entre_Calles_Oficinas_Operativas_TextBox.Text);
+                Params[5].SqlDbType = SqlDbType.NVarChar;
+
+                Params[6] = new SqlParameter("@municipio", Convert.ToInt32(Id_Municipio_Oficina_Operativa_DropDownList.SelectedValue));
+                Params[6].SqlDbType = SqlDbType.Int;
+
+                Params[7] = new SqlParameter("@telefono", Telefono_Oficina_Operativa_TextBox.Text);
+                Params[7].SqlDbType = SqlDbType.NVarChar;
+
+                Params[8] = new SqlParameter("@horarios", Horario_Oficina_Operativa_TextBox.Text);
+                Params[8].SqlDbType = SqlDbType.NVarChar;
+
+                if (nueva_Of_Operativa == false)
+                {
+                    Params[9] = new SqlParameter("@id_oficina", id_oficina);
+                    Params[9].SqlDbType = SqlDbType.NVarChar;
+                }
+
+                objData.ExecuteSPNonQuery(Params, strStoreProcedure);
+            }
+            catch (Exception ex)
+            {
+                (new ObjetoBase()).Log(ex.Message + ex.StackTrace);
+            }
+            finally
+            {
+                objData.CloseConnection();
+                objData = null;
+            }
+
+            Oficinas_Operativas_GridView.DataBind();
+
+
             ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
             ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
 
@@ -1929,8 +2190,12 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Telefono_Oficina_Operativa_TextBox.Text = "";
             Horario_Oficina_Operativa_TextBox.Text = "";
             CP_Oficina_Operativa_TextBox.Text = "";
+            Colonia_Oficinas_Operativas_TextBox.Text = "";
 
             Mensaje_Incompleto.Visible = false;
+            nueva_Of_Operativa = true;
+            id_oficina = 0;
+            Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
         }
         else
         {
@@ -1972,7 +2237,42 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             objData = null;
         }
 
+        Calle_Oficinas_Operativas_TextBox.Text = "";
+        Numero_Oficinas_Operativas_TextBox.Text = "";
+        Entre_Calles_Oficinas_Operativas_TextBox.Text = "";
+        Telefono_Oficina_Operativa_TextBox.Text = "";
+        Horario_Oficina_Operativa_TextBox.Text = "";
+        CP_Oficina_Operativa_TextBox.Text = "";
+        Colonia_Oficinas_Operativas_TextBox.Text = "";
+
+        Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
         Oficinas_Operativas_GridView.DataBind();
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
+    }
+
+    protected void Ver_Info_Oficina_Operativa_Click(object sender, EventArgs e)
+    {
+        GridViewRow gr = ((Control)sender).NamingContainer as GridViewRow;
+
+        id_oficina = Convert.ToInt32(Oficinas_Operativas_GridView.DataKeys[gr.RowIndex].Value);
+
+        var leer = (from buscar in contexto.Detalles_Oficinas_Operativas where buscar.id_oficina_operativa == id_oficina select buscar).First();
+
+        Calle_Oficinas_Operativas_TextBox.Text = leer.calle_oficina_operativa;
+        Numero_Oficinas_Operativas_TextBox.Text = leer.numero_oficina_operativa;
+        Entre_Calles_Oficinas_Operativas_TextBox.Text = leer.entre_calles_oficina_operativa;
+        Telefono_Oficina_Operativa_TextBox.Text = leer.telelefono_oficinas_operativas;
+        Horario_Oficina_Operativa_TextBox.Text = leer.horarios;
+        CP_Oficina_Operativa_TextBox.Text = leer.cp_oficina_operativa;
+        Colonia_Oficinas_Operativas_TextBox.Text = leer.colonia_oficina_operativa;
+
+        Oficinas_Operativas_GridView.DataBind();
+
+        nueva_Of_Operativa = false;
+
+        Agregar_Oficina_Operativa_Button.Text = "Actualizar oficina operativa";
+
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
     }
@@ -2002,20 +2302,6 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     }
 
-    protected void Costo_Estimado_Programa_GridView_RowDataBound(object sender, GridViewRowEventArgs e)
-    {
-        if (e.Row.RowType == DataControlRowType.DataRow)
-        {
-            TextBox KWH_Base_Label = (TextBox)e.Row.FindControl("Detalle_Monto_TextBox");
-            v_kwh_base += Decimal.Parse(KWH_Base_Label.Text);
-        }
-        if (e.Row.RowType == DataControlRowType.Footer)
-        {
-            TextBox KWH_Base_Label = (TextBox)e.Row.FindControl("Total_Costo_Estimado_TextBox");
-            KWH_Base_Label.Text = v_kwh_base.ToString("##,##0.00");
-        }
-    }
-
     protected void Principales_Fuentes_GridView_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
@@ -2033,20 +2319,42 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         }
     }
 
+    protected void Poblacion_Atendida_GridView_RowDataBound(object sender, GridViewRowEventArgs e)
+    {
+        if (e.Row.RowType == DataControlRowType.Footer)
+        {
+            TextBox mujeres = (TextBox)e.Row.FindControl("Total_Mujeres");
+            TextBox hombres = (TextBox)e.Row.FindControl("Total_Hombres");
+
+            int id = Convert.ToInt32(Id_Formulario_HiddenField.Value);
+
+            var buscar = (from valor in contexto.Detalle_Poblacion_Atendida where valor.id_formulario == id select valor).Count();
+
+            if (buscar != 0)
+            {
+                var hombre_mujeres = contexto.spr_Sumar_Hombres_Mujeres(Convert.ToInt32(Id_Formulario_HiddenField.Value)).First();
+
+                hombres.Text = hombre_mujeres.Hombres.ToString();
+                mujeres.Text = hombre_mujeres.Mujeres.ToString();
+            }
+        }
+    }
+
     protected void Principales_Egresos_GridView_RowDataBound(object sender, GridViewRowEventArgs e)
     {
         if (e.Row.RowType == DataControlRowType.DataRow)
         {
-            TextBox KWH_Base_Label = (TextBox)e.Row.FindControl("Importe_Promedio_Anual_Egresos_TextBox");
-            if (KWH_Base_Label.Text != "")
+            TextBox KWH_Base_Label_2 = (TextBox)e.Row.FindControl("Importe_Promedio_Anual_Egresos_TextBox");
+
+            if (KWH_Base_Label_2.Text != "")
             {
-                v_kwh_base2 += Decimal.Parse(KWH_Base_Label.Text);
+                v_kwh_base3 += Decimal.Parse(KWH_Base_Label_2.Text);
             }
         }
         if (e.Row.RowType == DataControlRowType.Footer)
         {
-            TextBox KWH_Base_Label = (TextBox)e.Row.FindControl("Total_Costo_Estimado_TextBox");
-            KWH_Base_Label.Text = v_kwh_base2.ToString("##,##0.00");
+            TextBox KWH_Base_Label_2 = (TextBox)e.Row.FindControl("Total_Costo_Estimado_TextBox_2");
+            KWH_Base_Label_2.Text = v_kwh_base3.ToString("##,##0.00");
         }
     }
 
@@ -2134,7 +2442,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Rfc_Representante_TextBox,
             Calle_Oficinas_Operativas_TextBox,
             Numero_Oficinas_Operativas_TextBox,
-            Colonia_Oficinas_Operativas_DropDownList,
+            Colonia_Oficinas_Operativas_TextBox,
             CP_Oficina_Operativa_TextBox,
             Entre_Calles_Oficinas_Operativas_TextBox,
             Telefono_Oficina_Operativa_TextBox,
@@ -2265,12 +2573,13 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Personalidad_Juridica_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if (Personalidad_Juridica_DropDownList.SelectedValue == "3")
+        if (Personalidad_Juridica_DropDownList.SelectedIndex == 2)
         {
             guardar_div_acreditar_P2();
             Otro_Personalidad_Juridica_TextBox.ReadOnly = false;
             Otro_Personalidad_Juridica_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
-        }else
+        }
+        else
         {
             Otro_Personalidad_Juridica_TextBox.Text = "";
             guardar_div_acreditar_P2();
@@ -2284,17 +2593,128 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Permiso_Expedir_Recibos_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if(Permiso_Expedir_Recibos_DropDownList.SelectedIndex != 1)
+        if (Permiso_Expedir_Recibos_DropDownList.SelectedIndex != 1)
         {
-            guardar_div_acreditar_P5();
+            guardar_div_acreditar_P4();
             fecha_permiso.Visible = true;
-        }else
+        }
+        else
         {
-            guardar_div_acreditar_P5();
+            guardar_div_acreditar_P4();
             fecha_permiso.Visible = false;
         }
 
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "div_acreditar_P4", "$('#div_acreditar_P4').modal('show');", true);
+    }
+
+    protected void Organo_Supremo_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (Organo_Supremo_DropDownList.SelectedIndex != 3)
+        {
+            guardar_div_acreditar_P4();
+            Otro_Organo_Supremo_TextBox.ReadOnly = true;
+            Otro_Organo_Supremo_TextBox.BackColor = Color.LightGray;
+        }
+        else
+        {
+            guardar_div_acreditar_P4();
+            Otro_Organo_Supremo_TextBox.ReadOnly = false;
+            Otro_Organo_Supremo_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
+        }
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_acreditar_P4", "$('#div_acreditar_P4').modal('show');", true);
+    }
+
+    protected void Patrimonio_Institucion_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if (Patrimonio_Institucion_DropDownList.SelectedIndex == 1)
+        {
+            ocultar.Visible = false;
+        }
+        else
+        {
+            ocultar.Visible = true;
+        }
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P1", "$('#div_situacion_financiera_P1').modal('show');", true);
+    }
+
+    protected void Propiedades_Inmuebles_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Verificar_valores_drop();
+        if (Propiedades_Inmuebles_DropDownList.SelectedIndex == 1)
+        {
+            Valor_Aproximado_Inmuebles_TextBox.BackColor = Color.LightGray;
+            Valor_Aproximado_Inmuebles_TextBox.ReadOnly = true;
+        }
+        else
+        {
+            Valor_Aproximado_Inmuebles_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
+            Valor_Aproximado_Inmuebles_TextBox.ReadOnly = false;
+        }
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P1", "$('#div_situacion_financiera_P1').modal('show');", true);
+    }
+
+    protected void Inversiones_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Verificar_valores_drop();
+        if (Inversiones_DropDownList.SelectedIndex == 1)
+        {
+            Valor_Aproximado_Inversiones_TextBox.BackColor = Color.LightGray;
+            Valor_Aproximado_Inversiones_TextBox.ReadOnly = true;
+        }
+        else
+        {
+            Valor_Aproximado_Inversiones_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
+            Valor_Aproximado_Inversiones_TextBox.ReadOnly = false;
+        }
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P1", "$('#div_situacion_financiera_P1').modal('show');", true);
+    }
+
+    protected void Fideicomisos_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        Verificar_valores_drop();
+
+        if (Fideicomisos_DropDownList.SelectedIndex == 1)
+        {
+            Valor_Aproximados_Fideicomisos_TextBox.BackColor = Color.LightGray;
+            Valor_Aproximados_Fideicomisos_TextBox.ReadOnly = true;
+        }
+        else
+        {
+            Valor_Aproximados_Fideicomisos_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
+            Valor_Aproximados_Fideicomisos_TextBox.ReadOnly = false;
+        }
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P1", "$('#div_situacion_financiera_P1').modal('show');", true);
+    }
+
+    protected void Verificar_valores_drop()
+    {
+        if (Fideicomisos_DropDownList.SelectedIndex == 1 && Inversiones_DropDownList.SelectedIndex == 1 && Propiedades_Inmuebles_DropDownList.SelectedIndex == 1)
+        {
+            Patrimonio_Institucion_DropDownList.SelectedIndex = 1;
+            ocultar.Visible = false;
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "div_situacion_financiera_P1", "$('#div_situacion_financiera_P1').modal('show');", true);
+        }
+    }
+
+    protected void Poblacion_Atendida_Hombres_TextBox_TextChanged(object sender, EventArgs e)
+    {
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P7", "$('#div_presentacion_P7').modal('show');", true);
+
+        this.Guardar_Poblacion_Atendida();
+
+        Poblacion_Atendida_GridView.DataBind();
     }
 }
