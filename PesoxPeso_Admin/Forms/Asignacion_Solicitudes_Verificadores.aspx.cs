@@ -60,23 +60,29 @@ public partial class Forms_Asignacion_Solicitudes_Verificadores : System.Web.UI.
         estatus.estatus = westatus;
         contexto.Estatus_Registros.Add(estatus);
 
-        //contexto.SaveChanges();
+        var verificar = (from buscar in contexto.Observaciones_Verificacion where buscar.id_verificador == id_verificador && buscar.fecha_obsevaciones == DateTime.Today && buscar.estatus == true select buscar).ToList();
 
-        var año = (from seleccionar in contexto.tb_Generales_Parametros select seleccionar).First();
-        int año_general = año.año_registro;
-        var id_formulario = (from buscar in contexto.Formulario_Estandar where buscar.id_institucion == asignar_verificador.id_institucion && buscar.año_registro == año_general select buscar).First();
+        if (verificar.Count == 0)
+        {
 
-        Observaciones_Verificacion observaciones = new Observaciones_Verificacion();
-        observaciones.id_formulario = id_formulario.id_formulario_estandar;
-        observaciones.fecha_obsevaciones = DateTime.Today;
-        observaciones.observaciones = "";
-        observaciones.id_verificador = asignar_verificador.id_verificador;
-        observaciones.estatus = true;
-        observaciones.tipo_persona = "Verificador";
-        
-        contexto.Observaciones_Verificacion.Add(observaciones);
+            var año = (from seleccionar in contexto.tb_Generales_Parametros select seleccionar).First();
+            int año_general = año.año_registro;
+            var id_formulario = (from buscar in contexto.Formulario_Estandar where buscar.id_institucion == asignar_verificador.id_institucion && buscar.año_registro == año_general select buscar).First();
 
-         contexto.SaveChanges();
+            contexto.spr_Elimina_Observaciones_Vacias(id_formulario.id_formulario_estandar);
+
+            Observaciones_Verificacion observaciones = new Observaciones_Verificacion();
+            observaciones.id_formulario = id_formulario.id_formulario_estandar;
+            observaciones.fecha_obsevaciones = DateTime.Today;
+            observaciones.observaciones = "";
+            observaciones.id_verificador = asignar_verificador.id_verificador;
+            observaciones.estatus = true;
+            observaciones.tipo_persona = "Verificador";
+
+            contexto.Observaciones_Verificacion.Add(observaciones);
+        }
+
+        contexto.SaveChanges();
 
         Registros_Completos_GridView.DataBind();
         Asignados_Verificadores_GridView.DataBind();
@@ -86,18 +92,20 @@ public partial class Forms_Asignacion_Solicitudes_Verificadores : System.Web.UI.
     {
         int valor = 0;
 
-        if(Estado_Registro != null)
+        if (Estado_Registro != null)
         {
-            if(Estado_Registro.SelectedItem.Value == "No_Asignados")
+            if (Estado_Registro.SelectedItem.Value == "No_Asignados")
             {
                 Id_Estatus_Buscar_HiddenField.Value = "2";
 
-            }else if(Estado_Registro.SelectedItem.Value == "Asignados")
+            }
+            else if (Estado_Registro.SelectedItem.Value == "Asignados")
             {
                 Id_Estatus_Buscar_HiddenField.Value = "3";
                 valor = 1;
 
-            }else if (Estado_Registro.SelectedItem.Value == "Todos")
+            }
+            else if (Estado_Registro.SelectedItem.Value == "Todos")
             {
                 Id_Estatus_Buscar_HiddenField.Value = "7";
             }
@@ -105,7 +113,7 @@ public partial class Forms_Asignacion_Solicitudes_Verificadores : System.Web.UI.
             Registros_Completos_GridView.DataBind();
         }
 
-        if(valor == 1)
+        if (valor == 1)
         {
             Registros_Asignados_GridView.Columns[1].Visible = false;
         }

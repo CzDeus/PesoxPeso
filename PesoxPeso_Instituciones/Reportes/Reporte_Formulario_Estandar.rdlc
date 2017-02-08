@@ -1190,8 +1190,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Nombre_Institucion</rd:DefaultName>
-                <Top>0.70584cm</Top>
-                <Left>2.61005cm</Left>
+                <Top>0.81021cm</Top>
+                <Left>2.57476cm</Left>
                 <Height>0.38833cm</Height>
                 <Width>15.7914cm</Width>
                 <ZIndex>1</ZIndex>
@@ -1240,7 +1240,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Left>0.04411cm</Left>
+                <Top>0.02749cm</Top>
+                <Left>0.06178cm</Left>
                 <Height>0.49417cm</Height>
                 <Width>6.33645cm</Width>
                 <Style>
@@ -1303,8 +1304,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0.17639cm</Top>
-                <Left>12.88049cm</Left>
+                <Left>12.91578cm</Left>
                 <Height>0.57736cm</Height>
                 <Width>5.48569cm</Width>
                 <ZIndex>2</ZIndex>
@@ -1495,7 +1495,7 @@
             <KeepTogether>true</KeepTogether>
             <Top>5.7676cm</Top>
             <Left>0.42732cm</Left>
-            <Height>1.79855cm</Height>
+            <Height>1.79854cm</Height>
             <Width>19.25695cm</Width>
             <ZIndex>6</ZIndex>
             <Style>

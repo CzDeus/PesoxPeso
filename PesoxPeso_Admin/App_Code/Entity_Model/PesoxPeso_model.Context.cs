@@ -315,5 +315,14 @@ namespace Entity_Model
         {
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_contar_asignados1_Result>("sp_contar_asignados1");
         }
+    
+        public virtual int spr_Elimina_Observaciones_Vacias(Nullable<int> id_formulario)
+        {
+            var id_formularioParameter = id_formulario.HasValue ?
+                new ObjectParameter("id_formulario", id_formulario) :
+                new ObjectParameter("id_formulario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_Elimina_Observaciones_Vacias", id_formularioParameter);
+        }
     }
 }

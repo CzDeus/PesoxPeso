@@ -325,6 +325,9 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <Parameter Name="rfc" Type="nvarchar" Mode="In" />
           <Parameter Name="sucursal" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="spr_Elimina_Observaciones_Vacias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_formulario" Type="int" Mode="In" />
+        </Function>
         <Function Name="spr_Generales_agrega_acceso_por_usuario" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id_General_Usuario" Type="int" Mode="In" />
           <Parameter Name="id_General_Acceso" Type="int" Mode="In" />
@@ -520,6 +523,9 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <EntitySet Name="Observaciones_Administrador" EntityType="PesoxPeso_model.Observaciones_Administrador" />
           <EntitySet Name="Registro_Usuarios" EntityType="PesoxPeso_model.Registro_Usuarios" />
           <EntitySet Name="Formulario_Estandar" EntityType="PesoxPeso_model.Formulario_Estandar" />
+          <FunctionImport Name="spr_Elimina_Observaciones_Vacias">
+            <Parameter Name="id_formulario" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Catalogo_Entidad_Federativa">
           <Key>
@@ -1249,6 +1255,7 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_Elimina_Observaciones_Vacias" FunctionName="PesoxPeso_model.Store.spr_Elimina_Observaciones_Vacias" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -1,6 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="Formulario_Estandar.aspx.cs" Inherits="Forms_Formulario_Estandar" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
+    <style type="text/css">
+        .btn-warning {}
+    </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="Server">
@@ -47,7 +50,7 @@
                     <div id="botones_verificador" runat="server" class="col-lg-12">
                         <br />
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                            <asp:Button ID="Regresar_Institucion_Button" runat="server" Text="Regresar a Institucion" CssClass="btn btn-danger" CommandName="" CommandArgument="" OnCommand="Regresar_Institucion_Button_Command" />
+                            <asp:Button ID="Regresar_Institucion_Button" runat="server" Text="Regresar a Institucion" CssClass="btn btn-danger" CommandName="" CommandArgument="" OnCommand="Regresar_Institucion_Button_Command"/>
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <asp:Button ID="Button45" runat="server" CssClass="btn btn-primary" Text="Historial Observaciones" OnClick="Historial_Observaciones_Button_Click" />
@@ -75,7 +78,7 @@
                             <asp:Button ID="Revision_Documentos_Button" runat="server" CssClass="btn btn-info btn-md" Text="Revisar documentos" OnClick="Revision_Documentos_Click" />
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-1">
-                            <asp:Button ID="Button" runat="server" Text="Salir" CssClass="btn btn-warning" CommandName="" CommandArgument="" />
+                            <asp:Button ID="Button" runat="server" Text="Salir" CssClass="btn btn-warning" CommandName="" CommandArgument="" Height="26px" />
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
                             <asp:Button ID="Autorizar_Button" runat="server" Text="Autorizado" CssClass="btn btn-success" CommandName="" CommandArgument="Guardar_Todo" OnCommand="Autorizar_Button_Command" />

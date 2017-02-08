@@ -968,12 +968,15 @@
 
                                 <div class="row col-lg-12">
                                     <br />
-                                    <div class="col-lg-9" style="text-align: left">
+                                    <div class="col-lg-7" style="text-align: justify">
                                         <asp:Label ID="Mensaje_Incompleto" runat="server" Text="*Quedan campos vacios" ForeColor="Red" Visible="false"></asp:Label>
                                         <asp:Label ID="Label116" runat="server" Text="*Debera llenar los campos para agregar por lo menos una oficina operativa, en caso en que el proyecto se desarrolle individualmente en otro domicilio, favor de repetir el proceso."></asp:Label>
                                     </div>
-                                    <div class="col-lg-3" style="text-align: right">
-                                        <asp:Button ID="Agregar_Oficina_Operativa_Button" runat="server" Text="Agregar oficina operativa" CssClass="btn btn-success" OnCommand="Agregar_Oficina_Operativa_Button_Command" />
+                                    <div class="col-lg-2" style="text-align: center">
+                                        <asp:Button ID="Limpiar_Button" runat="server" Text="Limpiar" CssClass="btn btn-warning" Visible="false" OnClick="Limpiar_Button_Click"/>
+                                    </div>
+                                    <div class="col-lg-3" style="text-align: center">
+                                        <asp:Button ID="Agregar_Oficina_Operativa_Button" runat="server" Text="Agregar oficina operativa" CssClass="btn btn-success" OnCommand="Agregar_Oficina_Operativa_Button_Command"/>
                                     </div>
                                 </div>
 

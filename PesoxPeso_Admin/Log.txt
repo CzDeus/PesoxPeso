@@ -642,3 +642,94 @@
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
    en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Login.aspx.cs:línea 47
+
+7/2/2017 8:42. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Login.aspx.cs:línea 47
+
+7/2/2017 9:37. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Login.aspx.cs:línea 47
+
+7/2/2017 10:03. Procedure or function 'sp_valida_correo_usuario_institucion' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter Parameter, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 163
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1471
+
+7/2/2017 10:12. Procedure or function 'sp_valida_correo_usuario_institucion' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter Parameter, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 163
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1473
+
+7/2/2017 10:13. Procedure or function 'sp_valida_correo_usuario_institucion' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter Parameter, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 163
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1473
+
+7/2/2017 10:14. Procedure or function 'sp_valida_correo_usuario_institucion' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter Parameter, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 163
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1473
+
+7/2/2017 10:21. Procedure or function 'sp_valida_correo_usuario_institucion' expects parameter '@id_registro', which was not supplied.   en Data.ExecuteSPQuery(SqlParameter Parameter, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 163
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1473
+
+7/2/2017 10:30. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 108.177.9.109 (108.177.9.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\Handlers\csEmailHandler.cs:línea 102
+
+7/2/2017 10:31. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 108.177.9.109 (108.177.9.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\Handlers\csEmailHandler.cs:línea 102
+
+7/2/2017 10:31. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 108.177.9.109 (108.177.9.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\Handlers\csEmailHandler.cs:línea 102
+
+7/2/2017 10:32. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 108.177.9.109 (108.177.9.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\Handlers\csEmailHandler.cs:línea 102
+
+7/2/2017 10:33. El servicio no está disponible, cerrando el canal de transmisión. La respuesta del servidor fue: Cannot connect to SMTP server 108.177.9.109 (108.177.9.109:25), connect error 10060   en System.Net.Mail.SmtpConnection.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpTransport.GetConnection(ServicePoint servicePoint)
+   en System.Net.Mail.SmtpClient.GetConnection()
+   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\Handlers\csEmailHandler.cs:línea 102
+
+7/2/2017 10:45. Procedure or function spr_Valida_Correo has too many arguments specified.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 144
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1482
+
+7/2/2017 10:48. Procedure or function spr_Valida_Correo has too many arguments specified.   en Data.ExecuteSPQuery(SqlParameter[] Parameters, String SPName) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\App_Code\SQLConnection\Data.cs:línea 144
+   en Forms_Formulario_Estandar.ReenviarCorreo(String correo, String observaciones, Int32 valor) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Forms\Formulario_Estandar.aspx.cs:línea 1485
+
+7/2/2017 11:16. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Login.aspx.cs:línea 47
+
+7/2/2017 11:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Login.aspx.cs:línea 47
+
+8/2/2017 8:22. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Admin\Login.aspx.cs:línea 47

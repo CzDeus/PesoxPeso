@@ -211,7 +211,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             ///*P14*/
             //total_importe_promedio_anual_TextBox.Text = FE.total_principales_fuentes.ToString();
 
-            
+
 
             ///*P15*/
             //Total_Principales_Egresos_TextBox.Text = FE.total_principales_egresos.ToString();
@@ -1300,10 +1300,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
             string tipo_persona = "";
 
-            if(tipo_formulario == "V")
+            if (tipo_formulario == "V")
             {
                 tipo_persona = "Verificador";
-            }else
+            }
+            else
             {
                 tipo_persona = "Autorizador";
             }
@@ -1326,8 +1327,8 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     {
         //if (tipo_formulario == "V")
         //{
-            var observaciones = (from seleccionar in contexto.Observaciones_Verificacion where seleccionar.id_formulario == id_formulario && seleccionar.id_verificador == id_usuario && seleccionar.estatus == true select seleccionar).First();
-            observaciones.observaciones = Observaciones_TextBox.Text;
+        var observaciones = (from seleccionar in contexto.Observaciones_Verificacion where seleccionar.id_formulario == id_formulario && seleccionar.id_verificador == id_usuario && seleccionar.estatus == true select seleccionar).First();
+        observaciones.observaciones = Observaciones_TextBox.Text;
         //}else if(tipo_formulario == "A")
         //{
         //    var observaciones = (from seleccionar in contexto.Observaciones_Administrador where seleccionar.id_formulario == id_formulario && seleccionar.id_admin == id_usuario && seleccionar.estatus == true select seleccionar).First();
@@ -1367,18 +1368,20 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
         if (estado_observaciones.Count != 0)
         {
-
-            estado_observaciones[0].estatus = false;
-
             var institucion = (from leer in contexto.Formulario_Estandar where leer.id_formulario_estandar == id_formulario select leer).First();
-
             var estado_registro = (from devolver in contexto.Registro_Usuarios where devolver.id_institucion == institucion.id_institucion && devolver.id_formulario_estandar == id_formulario select devolver).First();
-            estado_registro.estatu_actual_registro = 1;
 
             //ENVIAR CORREO ELECTRONICO
-            ReenviarCorreo(estado_registro.correo, "Dar click < a href = 'http://localhost:18658/Default.aspx' y favor de revisar los siguientes puntos de su formulario estandar: " + estado_observaciones[0].observaciones, 0);
+            bool verificar = ReenviarCorreo(estado_registro.correo, "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/' y favor de revisar los siguientes puntos de su formulario estandar: " + estado_observaciones[0].observaciones, 0);
 
-            contexto.SaveChanges();
+            if (verificar == true)
+            {
+                estado_observaciones[0].estatus = false;
+                estado_registro.estatu_actual_registro = 1;
+                contexto.SaveChanges();
+
+                Observaciones_GridView.DataBind();
+            }
         }
         else
         {
@@ -1393,20 +1396,23 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
         if (estado_observaciones.Count != 0)
         {
-
-            estado_observaciones[0].estatus = false;
-
             var institucion = (from leer in contexto.Formulario_Estandar where leer.id_formulario_estandar == id_formulario select leer).First();
 
             var estado_registro = (from devolver in contexto.Registro_Usuarios where devolver.id_institucion == institucion.id_institucion && devolver.id_formulario_estandar == id_formulario select devolver).First();
-            estado_registro.estatu_actual_registro = 3;
 
             var correo_verificador = (from buscar in contexto.tb_Generales_Usuarios where buscar.id_General_Usuario == estado_registro.id_verificador select buscar).First();
 
             //ENVIAR CORREO ELECTRONICO
-            ReenviarCorreo(correo_verificador.correo, estado_observaciones[0].observaciones, 0);
+            bool verificar = ReenviarCorreo(correo_verificador.correo, "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/' y favor de revisar los siguientes puntos de su formulario estandar: " + estado_observaciones[0].observaciones, 0);
 
-            contexto.SaveChanges();
+            if(verificar == true)
+            {
+                estado_observaciones[0].estatus = false;
+                estado_registro.estatu_actual_registro = 3;
+                contexto.SaveChanges();
+
+                Observaciones_GridView.DataBind();
+            }
         }
         else
         {
@@ -1429,8 +1435,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     }
 
     //METODO DE ENVIO DE CORREO TANTO A LA INSTITUCION COMO AL VERIFICADOR
-    protected void ReenviarCorreo(string correo, string observaciones, int valor)
+    protected bool ReenviarCorreo(string correo, string observaciones, int valor)
     {
+
+        bool guardar = false; 
+
         Data objData = new Data();
 
         string strStoreProcedure;
@@ -1438,12 +1447,15 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         string id_GUI;
         string id;
 
+         int num_param = 0;
+
         if (tipo_formulario == "V" && valor == 0 || tipo_formulario == "A" && valor == 1)
         {
             strStoreProcedure = "sp_valida_correo_usuario_institucion";
             store_cambio_GUI = "sp_Realiza_Cambio_GUID_Institucion";
             id_GUI = "@id_registro";
             id = "id_registro";
+            num_param = 2;
         }
         else if (tipo_formulario == "A" && valor == 0)
         {
@@ -1451,7 +1463,9 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             store_cambio_GUI = "spr_Realiza_Cambio_GUID";
             id_GUI = "@id_general_usuario";
             id = "id_General_Usuario";
-        }else
+            num_param = 1;
+        }
+        else
         {
             strStoreProcedure = "";
             store_cambio_GUI = "";
@@ -1465,8 +1479,16 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         {
             objData.OpenConnection();
 
-            SqlParameter Param = new SqlParameter("@correo", correo);
-            Param.SqlDbType = SqlDbType.NVarChar;
+            SqlParameter[] Param = new SqlParameter[num_param];
+
+            Param[0] = new SqlParameter("@correo", correo);
+            Param[0].SqlDbType = SqlDbType.NVarChar;
+
+            if (num_param == 2)
+            {
+                Param[1] = new SqlParameter("@id_registro", id_formulario);
+                Param[1].SqlDbType = SqlDbType.Int;
+            }
 
             DataTable dt = objData.ExecuteSPQuery(Param, strStoreProcedure);
             if (dt.Rows.Count != 0)
@@ -1499,7 +1521,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 Email.nombreMostrar = datos_correo.correo_nombreMostrar;
                 Email.asunto = "Sistema Peso por Peso - Observaciones";
                 //Email.mensaje = observaciones;
-                Email.mensaje = "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/' y favor de revisar los siguientes puntos de su formulario estandar: " + observaciones;
+                Email.mensaje = observaciones;
 
                 if ((new csEmailHandler()).SendEmail(Email))
                 {
@@ -1508,10 +1530,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Se envio correo a la institucion para corregir sus datos');", true);
+                    guardar = true;
                 }
             }
-            else
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('El correo no es valido');", true);
+            //else
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('El correo no es valido');", true);
         }
         catch (Exception ex)
         {
@@ -1525,7 +1548,12 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         }
 
         if (error)
+        {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Ocurrio un error. Pongase en contacto con sistemas');", true);
+            guardar = false;
+        }
+
+        return guardar;
     }
 
     protected void Historial_Observaciones_Button_Click(object sender, EventArgs e)
@@ -1537,5 +1565,4 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     {
         Response.Redirect("Documentos_Institucion.aspx");
     }
-
 }

@@ -21,6 +21,8 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
     int id_registro;
     int id_institucion = 0;
 
+    static int ver = 0;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         Instituciones_GridView.DataSource = Instituciones_SqlDataSource;
@@ -56,6 +58,11 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
 
             registro_principal.Visible = false;
             Verificar_Registros.Visible = true;
+
+            if (Estado_Registro.SelectedItem.Text != "Pendientes")
+            {
+                asignar_institucion.Visible = false;
+            }
         }
     }
 
@@ -378,6 +385,7 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
 
         registro_principal.Visible = true;
         Verificar_Registros.Visible = false;
+        Estado_Registro.SelectedValue = "Pendientes";
     }
 
     protected void Buscar_Button_Click(object sender, EventArgs e)
@@ -405,7 +413,7 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
     {
         if (tipo == 1)
         {
-            var buscar = (from pendientes in contexto.Registro_Usuarios where pendientes.id_institucion == 0 select pendientes).ToList();
+            var buscar = (from pendientes in contexto.Registro_Usuarios where pendientes.id_institucion == 0 && pendientes.estatu_actual_registro == 0 select pendientes).ToList();
             this.FillTable_Registros(buscar);
 
             Registros_Pendientes_GridView.Columns[4].Visible = true;
@@ -414,14 +422,15 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
         }
         else if (tipo == 2)
         {
-            var buscar = (from pendientes in contexto.Registro_Usuarios where pendientes.id_institucion != 0 select pendientes).ToList();
+            var buscar = (from pendientes in contexto.Registro_Usuarios where pendientes.id_institucion != 0 && pendientes.estatu_actual_registro == 1 select pendientes).ToList();
 
             this.FillTable_Registros(buscar);
+            Registros_Pendientes_GridView.Columns[4].Visible = true;
             Registros_Pendientes_GridView.Columns[5].Visible = false;
         }
         else if (tipo == 3)
         {
-            var buscar = (from pendientes in contexto.Registro_Usuarios select pendientes).ToList();
+            var buscar = (from pendientes in contexto.Registro_Usuarios where pendientes.estatu_actual_registro <= 2 select pendientes).ToList();
             this.FillTable_Registros(buscar);
             Registros_Pendientes_GridView.Columns[4].Visible = false;
             Registros_Pendientes_GridView.Columns[5].Visible = false;
@@ -446,7 +455,7 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
             dr["rfc_institucion"] = buscar[x].rfc_institucion;
             dr["nombre_institucion"] = buscar[x].nombre_institucion;
             dr["sucursal"] = buscar[x].sucursal;
-                 
+
             dt.Rows.Add(dr);
         }
 

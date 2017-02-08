@@ -147,58 +147,60 @@
                         </fieldset>
                     </div>
 
-                    <div class="col-lg-12">
-                        <br />
-                        <fieldset>
-                            <legend>Instituciones Registradas</legend>
-                            <div class="col-lg-12">
-                                <br />
-                                <div class="col-lg-2" style="align-items: center; display: flex">
+                    <div id="asignar_institucion" runat="server">
+                        <div class="col-lg-12">
+                            <br />
+                            <fieldset>
+                                <legend>Instituciones Registradas</legend>
+                                <div class="col-lg-12">
                                     <br />
-                                    <asp:Label ID="Label6" runat="server" Text="Institución:"></asp:Label>
+                                    <div class="col-lg-2" style="align-items: center; display: flex">
+                                        <br />
+                                        <asp:Label ID="Label6" runat="server" Text="Institución:"></asp:Label>
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <asp:TextBox ID="Nombre_Institucion_Buscar_TextBox" runat="server" class="form-control"></asp:TextBox>
+                                    </div>
+                                    <div class="col-lg-2">
+                                        <asp:Button ID="Buscar_Institucion_Catalogo_Button" runat="server" Text="Buscar" class="btn btn-success" OnClick="Buscar_Institucion_Catalogo_Button_Click" />
+                                    </div>
                                 </div>
-                                <div class="col-lg-8">
-                                    <asp:TextBox ID="Nombre_Institucion_Buscar_TextBox" runat="server" class="form-control"></asp:TextBox>
+                                <div class="col-lg-12">
+                                    <div class="col-lg-12" style="text-align: center">
+                                        <br />
+                                        <asp:Button ID="Agregar_Catalogo_Button" CommandName="AgregarCatalogo" runat="server" Text="Registrar Institución" Class="btn btn-primary" OnCommand="Agregar_Catalogo_Button_Command" />
+                                    </div>
                                 </div>
-                                <div class="col-lg-2">
-                                    <asp:Button ID="Buscar_Institucion_Catalogo_Button" runat="server" Text="Buscar" class="btn btn-success" OnClick="Buscar_Institucion_Catalogo_Button_Click" />
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="col-lg-12" style="text-align: center">
-                                    <br />
-                                    <asp:Button ID="Agregar_Catalogo_Button" CommandName="AgregarCatalogo" runat="server" Text="Registrar Institución" Class="btn btn-primary" OnCommand="Agregar_Catalogo_Button_Command" />
-                                </div>
-                            </div>
-                        </fieldset>
-                    </div>
+                            </fieldset>
+                        </div>
 
-                    <div class="col-lg-12" style="text-align: center">
-                        <br />
-                        <asp:GridView ID="Instituciones_GridView"
-                            runat="server"
-                            AllowPaging="True"
-                            AutoGenerateColumns="False"
-                            BorderStyle="None"
-                            HorizontalAlign="Center"
-                            CssClass="table table-bordered table-striped"
-                            DataKeyNames="id_institucion"
-                            EmptyDataText="No hay Instituciones Registradas..."
-                            Width="90%"
-                            OnRowCommand="Instituciones_GridView_RowCommand"
-                            PageSize="5">
-                            <Columns>
-                                <asp:BoundField DataField="nombre_institucion" HeaderText="NOMBRE INSTITUCIÓN" HeaderStyle-HorizontalAlign="Center" SortExpression="nombre_institucion" />
-                                <asp:BoundField DataField="sucursal" HeaderText="Sucursal" InsertVisible="False" ReadOnly="True" SortExpression="sucursal" />
-                                <asp:ButtonField ButtonType="Button"
-                                    CommandName="Asignar_Institucion"
-                                    HeaderText=""
-                                    Text="Asignar   ">
-                                    <ControlStyle CssClass="btn btn-info" />
-                                    <ItemStyle Width="20%" />
-                                </asp:ButtonField>
-                            </Columns>
-                        </asp:GridView>
+                        <div class="col-lg-12" style="text-align: center">
+                            <br />
+                            <asp:GridView ID="Instituciones_GridView"
+                                runat="server"
+                                AllowPaging="True"
+                                AutoGenerateColumns="False"
+                                BorderStyle="None"
+                                HorizontalAlign="Center"
+                                CssClass="table table-bordered table-striped"
+                                DataKeyNames="id_institucion"
+                                EmptyDataText="No hay Instituciones Registradas..."
+                                Width="90%"
+                                OnRowCommand="Instituciones_GridView_RowCommand"
+                                PageSize="5">
+                                <Columns>
+                                    <asp:BoundField DataField="nombre_institucion" HeaderText="NOMBRE INSTITUCIÓN" HeaderStyle-HorizontalAlign="Center" SortExpression="nombre_institucion" />
+                                    <asp:BoundField DataField="sucursal" HeaderText="Sucursal" InsertVisible="False" ReadOnly="True" SortExpression="sucursal" />
+                                    <asp:ButtonField ButtonType="Button"
+                                        CommandName="Asignar_Institucion"
+                                        HeaderText=""
+                                        Text="Asignar   ">
+                                        <ControlStyle CssClass="btn btn-info" />
+                                        <ItemStyle Width="20%" />
+                                    </asp:ButtonField>
+                                </Columns>
+                            </asp:GridView>
+                        </div>
                     </div>
 
                     <%--</div>--%>
@@ -209,7 +211,8 @@
                     <div class="row col-lg-12">
                         <div class="col-lg-4">
                         </div>
-                        <div class="col-lg-12" style="text-align:center">
+                        <div class="col-lg-12" style="text-align: center">
+                            <br />
                             <asp:Button ID="Salir_Button" runat="server" Text="Salir" class="btn btn-danger" data-dismiss="modal" OnClick="Salir_Button_Click" />
                         </div>
                         <div class="col-lg-4">

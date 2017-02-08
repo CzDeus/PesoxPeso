@@ -45,7 +45,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         estado_registro = usuario.estatu_actual_registro;
         institucion = Convert.ToInt32(Session["id_institucion"].ToString());
 
-        if(id_oficina == 0)
+        if (id_oficina == 0)
         {
             Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
         }
@@ -330,7 +330,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         var FE = (from buscar in contexto.Formulario_Estandar where buscar.id_formulario_estandar == id_formulario select buscar).First();
 
         FE.calle_numero = Calle_Numero_TextBox.Text;
-        FE.id_municipio = Convert.ToInt32(Municipio_DropDownList.SelectedIndex);
+        FE.id_municipio = Convert.ToInt32(Municipio_DropDownList.SelectedValue);
         FE.colonia = Colonia_TextBox.Text;
 
         FE.correo_dom_fiscal = Correo_Domicilio_Fiscal.Text;
@@ -338,7 +338,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         FE.celular = Celular_TextBox.Text;
         FE.telefonos = Telefonos_TextBox.Text;
 
-        FE.id_personalidad_juridica = Convert.ToInt32(Personalidad_Juridica_DropDownList.SelectedIndex);
+        FE.id_personalidad_juridica = Convert.ToInt32(Personalidad_Juridica_DropDownList.SelectedValue);
         FE.otro_personalidad_juridica = Otro_Personalidad_Juridica_TextBox.Text;
 
         contexto.SaveChanges();
@@ -386,7 +386,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         FE.calle_representante_legal = Calle_Representante_Legal_TextBox.Text;
         FE.numero_representante_legal = Numero_Representante_Legal_TextBox.Text;
         FE.colonia_representante_legal = Colonia_Representante_Legal_TextBox.Text;
-        FE.id_ciudad_representante_legal = Convert.ToInt32(Ciudad_Representante_Legal_DropDownList.SelectedIndex);
+        FE.id_ciudad_representante_legal = Convert.ToInt32(Ciudad_Representante_Legal_DropDownList.SelectedValue);
         FE.telefono_representante_legal = Telefono_Representante_Legal_TextBox.Text;
         FE.celular_representante_legal = Celular_Representante_Legal_TextBox.Text;
         FE.correo_representante = Correo_Representante_TextBox.Text;
@@ -2015,9 +2015,9 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Agregar_Oficina_Operativa_Button_Click(object sender, EventArgs e)
     {
-    //    if (Calle_Oficinas_Operativas_TextBox.Text != "" && Numero_Oficinas_Operativas_TextBox.Text != "" && Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
-    //&& Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
-    //    {
+        if (Calle_Oficinas_Operativas_TextBox.Text != "" || Numero_Oficinas_Operativas_TextBox.Text != "" || Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
+    || Telefono_Oficina_Operativa_TextBox.Text != "" || Horario_Oficina_Operativa_TextBox.Text != "" || CP_Oficina_Operativa_TextBox.Text != "")
+        {
             TextBox campo_texto = sender as TextBox;
 
             Data objData = new Data();
@@ -2100,7 +2100,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Mensaje_Incompleto.Visible = false;
             nueva_Of_Operativa = true;
             id_oficina = 0;
-        //}
+        }
 
     }
 
@@ -2108,9 +2108,9 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     {
         TextBox campo_texto = sender as TextBox;
 
-        if (Calle_Oficinas_Operativas_TextBox.Text != "" && Numero_Oficinas_Operativas_TextBox.Text != "" && Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
-            && Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
-        {
+        //if (Calle_Oficinas_Operativas_TextBox.Text != "" && Numero_Oficinas_Operativas_TextBox.Text != "" && Entre_Calles_Oficinas_Operativas_TextBox.Text != ""
+        //    && Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
+        //{
 
             Data objData = new Data();
             string strStoreProcedure = "";
@@ -2196,14 +2196,14 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             nueva_Of_Operativa = true;
             id_oficina = 0;
             Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
-        }
-        else
-        {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
+        //}
+        //else
+        //{
+        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        //    ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
 
-            Mensaje_Incompleto.Visible = true;
-        }
+        //    Mensaje_Incompleto.Visible = true;
+        //}
     }
 
     protected void Eliminar_Oficina_Operativa_Button_Click(object sender, EventArgs e)
@@ -2272,6 +2272,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         nueva_Of_Operativa = false;
 
         Agregar_Oficina_Operativa_Button.Text = "Actualizar oficina operativa";
+        Limpiar_Button.Visible = true;
 
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
@@ -2716,5 +2717,27 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         this.Guardar_Poblacion_Atendida();
 
         Poblacion_Atendida_GridView.DataBind();
+    }
+
+    protected void Limpiar_Button_Click(object sender, EventArgs e)
+    {
+
+        Calle_Oficinas_Operativas_TextBox.Text = "";
+        Numero_Oficinas_Operativas_TextBox.Text = "";
+        Entre_Calles_Oficinas_Operativas_TextBox.Text = "";
+        Telefono_Oficina_Operativa_TextBox.Text = "";
+        Horario_Oficina_Operativa_TextBox.Text = "";
+        CP_Oficina_Operativa_TextBox.Text = "";
+        Colonia_Oficinas_Operativas_TextBox.Text = "";
+
+        Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
+
+        id_oficina = 0;
+        nueva_Of_Operativa = true;
+
+        Limpiar_Button.Visible = false;
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
     }
 }
