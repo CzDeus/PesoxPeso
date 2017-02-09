@@ -70,7 +70,7 @@
                             <asp:Button ID="Terminar_Registro_Button" runat="server" Text="Terminar Registro" CssClass="btn btn-danger" CommandName="" CommandArgument="Guardar_Todo" OnCommand="Terminar_Registro_Button_Click" />
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                            <asp:Button ID="Imprimir_Button" runat="server" Text="imprimir" CssClass="btn btn - outline btn - default" Enabled="false" OnClick="Imprimir_Click" />
+                            <asp:Button ID="Imprimir_Button" runat="server" Text="imprimir" CssClass="btn btn-info btn-md" OnClick="Imprimir_Click" />
                         </div>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <asp:Label ID="Objetivo_Social_Label" runat="server" Text="Objetivo social:"></asp:Label>
-                                    <asp:TextBox ID="Objetivo_Social_Programa_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="4" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                    <asp:TextBox ID="Objetivo_Social_Programa_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="4"></asp:TextBox>
                                 </div>
 
                                 <div class="col-lg-12">
@@ -224,11 +224,11 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <asp:Label ID="Label4" runat="server" Text="Mencionar las áreas de atención en la institución:"></asp:Label>
-                                        <asp:TextBox ID="Areas_atencion_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="4" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Areas_atencion_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="4"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-12">
                                         <asp:Label ID="Label5" runat="server" Text="Mencionar las áreas de apoyo administrativo de la institución:"></asp:Label>
-                                        <asp:TextBox ID="Areas_Apoyo_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="4" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Areas_Apoyo_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="4"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -605,11 +605,11 @@
                                 <div class="row col-lg-12">
                                     <div class="col-lg-4">
                                         <asp:Label ID="Label27" runat="server" Text="No. registro Público de la Propiedad:"></asp:Label>
-                                        <asp:TextBox ID="Registro_Propiedad_TextBox" runat="server" class="form-control" BackColor="#ffffea" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Registro_Propiedad_TextBox" runat="server" class="form-control" BackColor="#ffffea" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-4">
                                         <asp:Label ID="Label120" runat="server" Text="Volumen:"></asp:Label>
-                                        <asp:TextBox ID="Volumen_Registro_Propiedad_TextBox" runat="server" class="form-control" BackColor="#ffffea" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Volumen_Registro_Propiedad_TextBox" runat="server" class="form-control" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" BackColor="#ffffea" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
@@ -991,7 +991,7 @@
                                     <asp:GridView ID="Oficinas_Operativas_GridView" runat="server" AutoGenerateColumns="False" DataSourceID="Detalles_Oficinas_Operativas_SqlDataSource"
                                         CssClass="table table-hover table-bordered" DataKeyNames="id_oficina_operativa" onkeydown="return (event.keyCode!=13);">
                                         <Columns>
-                                            <asp:BoundField DataField="Oficinas Operativas" HeaderText="Oficinas Operativas" ReadOnly="True" SortExpression="Oficinas Operativas" />
+                                            <asp:BoundField DataField="Oficinas_Operativas" HeaderText="Oficinas Operativas" ReadOnly="True" SortExpression="Oficinas_Operativas" />
                                             <asp:TemplateField HeaderStyle-Width="10%">
                                                 <ItemTemplate>
                                                     <asp:Button ID="Ver_Info_Oficina_Operativa" runat="server" Text="Ver" CssClass="btn btn-info" OnClick="Ver_Info_Oficina_Operativa_Click" />
@@ -1044,7 +1044,7 @@
                                 <div class="row col-lg-12">
                                     <br />
                                     <div class="col-lg-12">
-                                        <asp:TextBox ID="Descripcion_Programa_TextBox" runat="server" class="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="30" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Descripcion_Programa_TextBox" runat="server" class="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="30"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -1086,7 +1086,7 @@
                                 <div class="row col-lg-12">
                                     <br />
                                     <div class="col-lg-12">
-                                        <asp:TextBox ID="Meta_Programa_TextBox" runat="server" class="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="12" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Meta_Programa_TextBox" runat="server" class="form-control" BackColor="#ffffea" TextMode="MultiLine" Rows="12"></asp:TextBox>
                                     </div>
                                 </div>
                                 <div class="row col-lg-12" style="text-align: center">
@@ -1097,7 +1097,7 @@
                                 <div class="row col-lg-12">
                                     <br />
                                     <div class="col-lg-12">
-                                        <asp:TextBox ID="Diagnostico_Situacional_TextBox" runat="server" TextMode="MultiLine" Rows="12" BackColor="#ffffea" Width="100%" placeholder="(Descripción breve de sus necesidades y problemáticas)" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Diagnostico_Situacional_TextBox" runat="server" TextMode="MultiLine" Rows="12" BackColor="#ffffea" Width="100%" placeholder="(Descripción breve de sus necesidades y problemáticas)"></asp:TextBox>
                                     </div>
                                 </div>
                             </div>
@@ -1145,7 +1145,7 @@
 
                                     <div class="col-lg-3">
                                         <asp:Label ID="Label118" runat="server" Text="Teléfono:"></asp:Label>
-                                        <asp:TextBox ID="Telefono_Enlace_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" MaxLength="10" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Telefono_Enlace_TextBox" runat="server" CssClass="form-control" BackColor="#ffffea" MaxLength="10" onkeydown="return (event.keyCode!=13);" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"></asp:TextBox>
                                     </div>
 
                                     <div class="col-lg-3">
@@ -1259,7 +1259,7 @@
                                 <div class="row col-lg-12">
                                     <br />
                                     <div class="col-lg-12">
-                                        <asp:TextBox ID="Justificacion_Programa_TextBox" runat="server" TextMode="MultiLine" Rows="3" BackColor="#ffffea" Width="100%" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                        <asp:TextBox ID="Justificacion_Programa_TextBox" runat="server" TextMode="MultiLine" Rows="3" BackColor="#ffffea" Width="100%"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -1455,6 +1455,7 @@
                                             OnRowDataBound="Poblacion_Atendida_GridView_RowDataBound" onkeydown="return (event.keyCode!=13);">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_poblacion_atendida" HeaderText="Edad" SortExpression="nombre_poblacion_atendida" />
+                                                
                                                 <asp:TemplateField HeaderText="Hombres (Cantidad)">
                                                     <ItemTemplate>
                                                         <asp:TextBox ID="Poblacion_Atendida_Hombres_TextBox" runat="server" Text='<%# Bind("cantidad_hombres") %>'
@@ -1576,17 +1577,15 @@
                                     <br />
                                     <div class="col-lg-6" style="text-align: left">
                                         <asp:Label ID="Label35" runat="server" Text="¿La poblacion que atiende está en edad escolar?"></asp:Label>
-                                        <asp:DropDownList ID="Rezago_Educativo_DropDownList" runat="server" class="form-control" BackColor="#ffffea">
+                                        <asp:DropDownList ID="Rezago_Educativo_DropDownList" runat="server" class="form-control" BackColor="#ffffea" OnSelectedIndexChanged="Rezago_Educativo_DropDownList_SelectedIndexChanged" AutoPostBack="true">
                                             <asp:ListItem>Sí</asp:ListItem>
                                             <asp:ListItem>No</asp:ListItem>
                                             <asp:ListItem>Varía</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
 
-                                    <div class="col-lg-6">
-                                        <asp:Label ID="Label76" runat="server" Text="% de población atendida en edad escolar"></asp:Label>
-
-
+                                    <div class="col-lg-6" id="Porcentaje_Poblacion_Atendida" runat="server">
+                                        <asp:Label ID="Porcentaje_Poblacion_Atendida_Label" runat="server" Text="% de población atendida en edad escolar"></asp:Label>
                                         <div class="input-group m-b">
                                             <asp:TextBox ID="Porcentaje_Poblacion_Atendida_TextBox" runat="server" class="form-control" BackColor="#ffffea" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                             <span class="input-group-addon">%</span>
@@ -2410,7 +2409,7 @@
                                 </div>
                                 <div class="col-lg-12">
                                     <br />
-                                    <asp:Label ID="Label98" runat="server" Text="¿Ha presentado en tiempo y forma las declaraciones del ejercicio por impuestos federales que corresponden a los últimos tres ejercicios fiscales, 
+                                    <asp:Label ID="Mensaje_Final_Label" runat="server" Text="¿Ha presentado en tiempo y forma las declaraciones del ejercicio por impuestos federales que corresponden a los últimos tres ejercicios fiscales, 
                                         así como la declaraciones de pagos provisionales correspondientes a__ y__; por los últimos impuestos, o siendo de nueva creación, ha dado cumplimiento a las obligaciones fiscales?:"></asp:Label>
                                 </div>
 

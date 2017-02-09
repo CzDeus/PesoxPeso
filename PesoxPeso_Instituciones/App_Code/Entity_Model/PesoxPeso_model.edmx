@@ -515,11 +515,11 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <EntitySet Name="Registro_Usuarios" EntityType="PesoxPeso_model.Registro_Usuarios" />
           <EntitySet Name="Observaciones_Verificacion" EntityType="PesoxPeso_model.Observaciones_Verificacion" />
           <EntitySet Name="Formulario_Estandar" EntityType="PesoxPeso_model.Formulario_Estandar" />
-          <FunctionImport Name="spr_Sumar_Hombres_Mujeres" ReturnType="Collection(PesoxPeso_model.spr_Sumar_Hombres_Mujeres_Result)">
-          <Parameter Name="id_formulario" Mode="In" Type="Int32" />
-          </FunctionImport>
           <EntitySet Name="Detalle_Poblacion_Atendida" EntityType="PesoxPeso_model.Detalle_Poblacion_Atendida" />
           <EntitySet Name="Detalles_Oficinas_Operativas" EntityType="PesoxPeso_model.Detalles_Oficinas_Operativas" />
+          <FunctionImport Name="spr_Sumar_Hombres_Mujeres" ReturnType="Collection(PesoxPeso_model.spr_Sumar_Hombres_Mujeres_Result1)">
+            <Parameter Name="id_formulario" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="Catalogo_Entidad_Federativa">
           <Key>
@@ -835,6 +835,10 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
           <Property Name="telelefono_oficinas_operativas" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="horarios" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
+        <ComplexType Name="spr_Sumar_Hombres_Mujeres_Result1">
+          <Property Type="Int64" Name="Hombres" Nullable="true" />
+          <Property Type="Int64" Name="Mujeres" Nullable="true" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1181,14 +1185,6 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="spr_Sumar_Hombres_Mujeres" FunctionName="PesoxPeso_model.Store.spr_Sumar_Hombres_Mujeres">
-            <ResultMapping>
-              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Sumar_Hombres_Mujeres_Result">
-                <ScalarProperty Name="Hombres" ColumnName="Hombres" />
-                <ScalarProperty Name="Mujeres" ColumnName="Mujeres" />
-              </ComplexTypeMapping>
-            </ResultMapping>
-          </FunctionImportMapping>
           <EntitySetMapping Name="Detalle_Poblacion_Atendida">
             <EntityTypeMapping TypeName="PesoxPeso_model.Detalle_Poblacion_Atendida">
               <MappingFragment StoreEntitySet="Detalle_Poblacion_Atendida">
@@ -1215,6 +1211,14 @@ warning 6002: The table/view 'db_Peso_x_Peso.dbo.tb_Generales_Parametros' does n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="spr_Sumar_Hombres_Mujeres" FunctionName="PesoxPeso_model.Store.spr_Sumar_Hombres_Mujeres">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PesoxPeso_model.spr_Sumar_Hombres_Mujeres_Result1">
+                <ScalarProperty Name="Hombres" ColumnName="Hombres" />
+                <ScalarProperty Name="Mujeres" ColumnName="Mujeres" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

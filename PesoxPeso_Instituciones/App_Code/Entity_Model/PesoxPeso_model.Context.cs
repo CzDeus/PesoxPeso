@@ -336,13 +336,13 @@ namespace Entity_Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_Valida_Acceso_Sistema_Usuario_Institucion_Result>("sp_Valida_Acceso_Sistema_Usuario_Institucion", correoParameter, contraseñaParameter);
         }
     
-        public virtual ObjectResult<spr_Sumar_Hombres_Mujeres_Result> spr_Sumar_Hombres_Mujeres(Nullable<int> id_formulario)
+        public virtual ObjectResult<spr_Sumar_Hombres_Mujeres_Result1> spr_Sumar_Hombres_Mujeres(Nullable<int> id_formulario)
         {
             var id_formularioParameter = id_formulario.HasValue ?
                 new ObjectParameter("id_formulario", id_formulario) :
                 new ObjectParameter("id_formulario", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_Sumar_Hombres_Mujeres_Result>("spr_Sumar_Hombres_Mujeres", id_formularioParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_Sumar_Hombres_Mujeres_Result1>("spr_Sumar_Hombres_Mujeres", id_formularioParameter);
         }
     }
 }

@@ -55,9 +55,6 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             cargar_formulario();
             if (estado_registro != 1)
             {
-                Imprimir_Button.CssClass = "btn btn-info btn-md";
-                Imprimir_Button.Enabled = true;
-
                 Terminar_Registro_Button.CssClass = "btn btn - outline btn - default";
                 Terminar_Registro_Button.Enabled = false;
 
@@ -745,7 +742,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Nombre_Representante_Legal_TextBox.Text = FE.nombre_representante_legal;
             Calle_Representante_Legal_TextBox.Text = FE.calle_representante_legal;
             Numero_Representante_Legal_TextBox.Text = FE.numero_representante_legal;
-            Colonia_Representante_Legal_TextBox.Text = FE.colonia;
+            Colonia_Representante_Legal_TextBox.Text = FE.colonia_representante_legal;
             Descripcion_Objeto_Social_TextBox.Text = FE.objetivo_social_programa;
             Ciudad_Representante_Legal_DropDownList.SelectedIndex = FE.id_ciudad_representante_legal;
             Telefono_Representante_Legal_TextBox.Text = FE.telefono_representante_legal;
@@ -800,14 +797,21 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
             Nivel_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.nivel_ingreso_poblacion;
             Rezago_Educativo_DropDownList.SelectedIndex = FE.rezago_educativo;
 
-            if (FE.porcentaje_poblacion_atendida != 0)
+            if (Rezago_Educativo_DropDownList.SelectedIndex == 1)
             {
-                Porcentaje_Poblacion_Atendida_TextBox.Text = FE.porcentaje_poblacion_atendida.ToString();
-
+                Porcentaje_Poblacion_Atendida.Visible = false;
             }
             else
             {
-                Porcentaje_Poblacion_Atendida_TextBox.Text = "";
+                if (FE.porcentaje_poblacion_atendida != 0)
+                {
+                    Porcentaje_Poblacion_Atendida_TextBox.Text = FE.porcentaje_poblacion_atendida.ToString();
+
+                }
+                else
+                {
+                    Porcentaje_Poblacion_Atendida_TextBox.Text = "";
+                }
             }
 
             Personas_hasta_15_DropDownList.SelectedIndex = FE.personas_hasta_15;
@@ -879,6 +883,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
             Impuesto_Federal_DropDownList.SelectedIndex = FE.impuesto_federal;
             Adeudos_Fiscales_DropDownList.SelectedIndex = FE.adeudos_fiscales;
+
         }
         catch (Exception)
         { }
@@ -2112,90 +2117,91 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         //    && Telefono_Oficina_Operativa_TextBox.Text != "" && Horario_Oficina_Operativa_TextBox.Text != "" && CP_Oficina_Operativa_TextBox.Text != "")
         //{
 
-            Data objData = new Data();
-            string strStoreProcedure = "";
-            int num_param = 0;
+        Data objData = new Data();
+        string strStoreProcedure = "";
+        int num_param = 0;
 
-            if (id_oficina == 0)
+        if (id_oficina == 0)
+        {
+            strStoreProcedure = "spr_agrega_detalle_oficinas_operativas";
+            num_param = 9;
+        }
+        else
+        {
+            strStoreProcedure = "sp_actualiza_oficina_operativa";
+            num_param = 10;
+        }
+
+        try
+        {
+            objData.OpenConnection();
+
+            SqlParameter[] Params = new SqlParameter[num_param];
+
+            Params[0] = new SqlParameter("@id_formulario", Convert.ToInt32(Id_Formulario_HiddenField.Value));
+            Params[0].SqlDbType = SqlDbType.Int;
+
+            Params[1] = new SqlParameter("@calle", Calle_Oficinas_Operativas_TextBox.Text);
+            Params[1].SqlDbType = SqlDbType.NVarChar;
+
+            Params[2] = new SqlParameter("@numero", Numero_Oficinas_Operativas_TextBox.Text);
+            Params[2].SqlDbType = SqlDbType.NVarChar;
+
+            Params[3] = new SqlParameter("@colonia", Colonia_Oficinas_Operativas_TextBox.Text);
+            Params[3].SqlDbType = SqlDbType.NVarChar;
+
+            Params[4] = new SqlParameter("@cp", CP_Oficina_Operativa_TextBox.Text);
+            Params[4].SqlDbType = SqlDbType.NVarChar;
+
+            Params[5] = new SqlParameter("@entre", Entre_Calles_Oficinas_Operativas_TextBox.Text);
+            Params[5].SqlDbType = SqlDbType.NVarChar;
+
+            Params[6] = new SqlParameter("@municipio", Convert.ToInt32(Id_Municipio_Oficina_Operativa_DropDownList.SelectedValue));
+            Params[6].SqlDbType = SqlDbType.Int;
+
+            Params[7] = new SqlParameter("@telefono", Telefono_Oficina_Operativa_TextBox.Text);
+            Params[7].SqlDbType = SqlDbType.NVarChar;
+
+            Params[8] = new SqlParameter("@horarios", Horario_Oficina_Operativa_TextBox.Text);
+            Params[8].SqlDbType = SqlDbType.NVarChar;
+
+            if (nueva_Of_Operativa == false)
             {
-                strStoreProcedure = "spr_agrega_detalle_oficinas_operativas";
-                num_param = 9;
-            }
-            else
-            {
-                strStoreProcedure = "sp_actualiza_oficina_operativa";
-                num_param = 10;
-            }
-
-            try
-            {
-                objData.OpenConnection();
-
-                SqlParameter[] Params = new SqlParameter[num_param];
-
-                Params[0] = new SqlParameter("@id_formulario", Convert.ToInt32(Id_Formulario_HiddenField.Value));
-                Params[0].SqlDbType = SqlDbType.Int;
-
-                Params[1] = new SqlParameter("@calle", Calle_Oficinas_Operativas_TextBox.Text);
-                Params[1].SqlDbType = SqlDbType.NVarChar;
-
-                Params[2] = new SqlParameter("@numero", Numero_Oficinas_Operativas_TextBox.Text);
-                Params[2].SqlDbType = SqlDbType.NVarChar;
-
-                Params[3] = new SqlParameter("@colonia", Colonia_Oficinas_Operativas_TextBox.Text);
-                Params[3].SqlDbType = SqlDbType.NVarChar;
-
-                Params[4] = new SqlParameter("@cp", CP_Oficina_Operativa_TextBox.Text);
-                Params[4].SqlDbType = SqlDbType.NVarChar;
-
-                Params[5] = new SqlParameter("@entre", Entre_Calles_Oficinas_Operativas_TextBox.Text);
-                Params[5].SqlDbType = SqlDbType.NVarChar;
-
-                Params[6] = new SqlParameter("@municipio", Convert.ToInt32(Id_Municipio_Oficina_Operativa_DropDownList.SelectedValue));
-                Params[6].SqlDbType = SqlDbType.Int;
-
-                Params[7] = new SqlParameter("@telefono", Telefono_Oficina_Operativa_TextBox.Text);
-                Params[7].SqlDbType = SqlDbType.NVarChar;
-
-                Params[8] = new SqlParameter("@horarios", Horario_Oficina_Operativa_TextBox.Text);
-                Params[8].SqlDbType = SqlDbType.NVarChar;
-
-                if (nueva_Of_Operativa == false)
-                {
-                    Params[9] = new SqlParameter("@id_oficina", id_oficina);
-                    Params[9].SqlDbType = SqlDbType.NVarChar;
-                }
-
-                objData.ExecuteSPNonQuery(Params, strStoreProcedure);
-            }
-            catch (Exception ex)
-            {
-                (new ObjetoBase()).Log(ex.Message + ex.StackTrace);
-            }
-            finally
-            {
-                objData.CloseConnection();
-                objData = null;
+                Params[9] = new SqlParameter("@id_oficina", id_oficina);
+                Params[9].SqlDbType = SqlDbType.NVarChar;
             }
 
-            Oficinas_Operativas_GridView.DataBind();
+            objData.ExecuteSPNonQuery(Params, strStoreProcedure);
+        }
+        catch (Exception ex)
+        {
+            (new ObjetoBase()).Log(ex.Message + ex.StackTrace);
+        }
+        finally
+        {
+            objData.CloseConnection();
+            objData = null;
+        }
+
+        Oficinas_Operativas_GridView.DataBind();
 
 
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
 
-            Calle_Oficinas_Operativas_TextBox.Text = "";
-            Numero_Oficinas_Operativas_TextBox.Text = "";
-            Entre_Calles_Oficinas_Operativas_TextBox.Text = "";
-            Telefono_Oficina_Operativa_TextBox.Text = "";
-            Horario_Oficina_Operativa_TextBox.Text = "";
-            CP_Oficina_Operativa_TextBox.Text = "";
-            Colonia_Oficinas_Operativas_TextBox.Text = "";
+        Calle_Oficinas_Operativas_TextBox.Text = "";
+        Numero_Oficinas_Operativas_TextBox.Text = "";
+        Entre_Calles_Oficinas_Operativas_TextBox.Text = "";
+        Telefono_Oficina_Operativa_TextBox.Text = "";
+        Horario_Oficina_Operativa_TextBox.Text = "";
+        CP_Oficina_Operativa_TextBox.Text = "";
+        Colonia_Oficinas_Operativas_TextBox.Text = "";
 
-            Mensaje_Incompleto.Visible = false;
-            nueva_Of_Operativa = true;
-            id_oficina = 0;
-            Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
+        Mensaje_Incompleto.Visible = false;
+        nueva_Of_Operativa = true;
+        id_oficina = 0;
+        Agregar_Oficina_Operativa_Button.Text = "Agregar Oficina Operativa";
+        Limpiar_Button.Visible = false;
         //}
         //else
         //{
@@ -2280,23 +2286,25 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Calcular_Total_Personas_Laborando(object sender, EventArgs e)
     {
-
-        if (Remunerados_TextBox.Text == "")
+        int remunerados = 0, voluntarios = 0;
+        if (Remunerados_TextBox.Text != "")
         {
-            Remunerados_TextBox.Text = "0";
+            //Remunerados_TextBox.Text = "0";
+
+            remunerados = Convert.ToInt32(Remunerados_TextBox.Text);
+
         }
 
-        if (Voluntarios_TextBox.Text == "")
+        if (Voluntarios_TextBox.Text != "")
         {
-            Voluntarios_TextBox.Text = "0";
+            //Voluntarios_TextBox.Text = "0";
+            voluntarios = Convert.ToInt32(Voluntarios_TextBox.Text);
         }
-
-        int remunerados = Convert.ToInt32(Remunerados_TextBox.Text);
-        int voluntarios = Convert.ToInt32(Voluntarios_TextBox.Text);
 
         int suma = remunerados + voluntarios;
 
         Num_Personas_Laborando_TextBox.Text = suma.ToString();
+
 
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "div_registro_P2", "$('#div_registro_P2').modal('show');", true);
@@ -2364,11 +2372,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         csParametro[] SPR_Params = new csParametro[1];
         SPR_Params[0] = new csParametro("@id_formulario", Id_Formulario_HiddenField.Value, DbType.Int32);
 
-        csStoreProcedure[] StoreProcedure = new csStoreProcedure[20];
+        csStoreProcedure[] StoreProcedure = new csStoreProcedure[21];
         StoreProcedure[0] = new csStoreProcedure(SPR_Params, "spr_lee_formulario_estandar", "DataSet_Formulario_Estandar");
         StoreProcedure[1] = new csStoreProcedure(SPR_Params, "spr_Reporte_Sector_Rubros", "DataSet_Reporte_Sector_Rubros");
         StoreProcedure[2] = new csStoreProcedure(SPR_Params, "spr_Reporte_Reformas_Constitutivas", "DataSet_Reporte_Reformas_Constitutivas");
-        StoreProcedure[3] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_oficinas_operativas", "DataSet_Reporte_Oficinas_Operativas");
+        StoreProcedure[3] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_oficinas_operativas", "DataSet_Oficina_Operativo");
         StoreProcedure[4] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_tiempo_estimado", "DataSet_Reporte_Tiempo_Estimado");
         StoreProcedure[5] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_costo_estimado", "DataSet_Reporte_Costo_Estimado");
         StoreProcedure[6] = new csStoreProcedure(SPR_Params, "spr_Reporte_Tipo_Poblacion", "DataSet_Reporte_Tipo_Poblacion");
@@ -2385,6 +2393,8 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         StoreProcedure[17] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_principales_fuentes", "DataSet_Reporte_Principales_Fuentes");
         StoreProcedure[18] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_principales_egresos", "DataSet_Reporte_Principales_Egresos");
         StoreProcedure[19] = new csStoreProcedure(SPR_Params, "spr_Reporte_Personalidad_Juridica", "DataSet_Reporte_Personalidad_Juridica");
+        StoreProcedure[20] = new csStoreProcedure(SPR_Params, "spr_Totales_Poblacion_Atendida", "DataSet_Totales_Hombres_Mujeres");
+
 
         csReporte Reporte = new csReporte();
         Reporte.Formato = "PDF";
@@ -2739,5 +2749,19 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
         ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P1", "$('#div_presentacion_P1').modal('show');", true);
+    }
+
+    protected void Rezago_Educativo_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
+    {
+        if(Rezago_Educativo_DropDownList.SelectedIndex == 1)
+        {
+            Porcentaje_Poblacion_Atendida.Visible = false;
+        }else
+        {
+            Porcentaje_Poblacion_Atendida.Visible = true;
+        }
+
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "div_presentacion_P9", "$('#div_presentacion_P9').modal('show');", true);
     }
 }

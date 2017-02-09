@@ -419,6 +419,16 @@ namespace Entity_Model
 {
     using System;
     
+    public partial class spr_Sumar_Hombres_Mujeres_Result1
+    {
+        public Nullable<long> Hombres { get; set; }
+        public Nullable<long> Mujeres { get; set; }
+    }
+}
+namespace Entity_Model
+{
+    using System;
+    
     public partial class spr_Valida_Acceso_Sistema_Result
     {
         public int id_General_Usuario { get; set; }

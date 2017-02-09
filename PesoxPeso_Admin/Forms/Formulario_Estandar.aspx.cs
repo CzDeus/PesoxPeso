@@ -1523,7 +1523,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                 //Email.mensaje = observaciones;
                 Email.mensaje = observaciones;
 
-                if ((new csEmailHandler()).SendEmail(Email))
+                if ((new csEmailHandler()).SendEmail_DIF(Email))
                 {
                     error = true;
                 }
