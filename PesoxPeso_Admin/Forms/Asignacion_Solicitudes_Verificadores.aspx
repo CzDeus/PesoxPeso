@@ -14,19 +14,19 @@
         <ContentTemplate>
 
             <div class="col-lg-12">
-                <h1 style="background: #CCCCCC; text-align: center"><b>ASIGNACION DE SOLICITUDES A VERIFICADORES</b></h1>
+                <h1 style="background: #CCCCCC; text-align: center"><b>ASIGNACIÓN DE SOLICITUDES A VERIFICADORES</b></h1>
             </div>
 
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12" style="text-align: center">
+                <%--<div class="row">--%>
+                    <div class="row col-lg-12" style="text-align: center">
                         <div class="ibox">
                             <h2 class="ibox-title"><b>Listado de verificadores</b></h2>
                             <div class="ibox-content">
                                 <asp:SqlDataSource ID="Solicitudes_SqlDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:db_Peso_x_Peso_ConnectionString %>" SelectCommand="sp_contar_asignados" SelectCommandType="StoredProcedure"></asp:SqlDataSource>
                                 <asp:GridView ID="Asignados_Verificadores_GridView" runat="server" AutoGenerateColumns="False"
                                     DataSourceID="Solicitudes_SqlDataSource" DataKeyNames="id_General_Usuario" CssClass="table table-hover table-bordered"
-                                    EmptyDataText="No se han registrado solicitudes..." AllowPaging="True" BorderStyle="None" Width="90%" PageSize="5"
+                                    EmptyDataText="No se han asignado solicitudes..." AllowPaging="True" BorderStyle="None" Width="90%" PageSize="5"
                                     OnRowCommand="Asignados_Verificadores_GridView_RowCommand">
                                     <Columns>
                                         <asp:BoundField DataField="nombre" HeaderText="Nombre Usuario" />
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                <%--</div>--%>
 
                 <div class="row">
                     <div class="col-lg-12" style="text-align: center">
@@ -131,7 +131,7 @@
                             <asp:GridView ID="Registros_Asignados_GridView" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered"
                                 DataKeyNames="id_registro" DataSourceID="Ver_Registros_Asignados_SqlDataSource">
                                 <Columns>
-                                    <asp:BoundField DataField="nombre_institucion" HeaderText="Institucion" SortExpression="nombre_institucion" />
+                                    <asp:BoundField DataField="nombre_institucion" HeaderText="Institución" SortExpression="nombre_institucion" />
                                     <asp:BoundField DataField="rfc_institucion" HeaderText="RFC" SortExpression="rfc_institucion" />
                                     <asp:BoundField DataField="Fecha Registro" HeaderText="Fecha Registro" ReadOnly="True" SortExpression="Fecha Registro" />
                                 </Columns>

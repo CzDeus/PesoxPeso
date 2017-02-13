@@ -2,7 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="Server">
     <style type="text/css">
-        .btn-warning {}
+        .btn-warning {
+        }
     </style>
 </asp:Content>
 
@@ -50,7 +51,7 @@
                     <div id="botones_verificador" runat="server" class="col-lg-12">
                         <br />
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                            <asp:Button ID="Regresar_Institucion_Button" runat="server" Text="Regresar a Institucion" CssClass="btn btn-danger" CommandName="" CommandArgument="" OnCommand="Regresar_Institucion_Button_Command"/>
+                            <asp:Button ID="Regresar_Institucion_Button" runat="server" Text="Regresar a Institucion" CssClass="btn btn-danger" CommandName="" CommandArgument="" OnCommand="Regresar_Institucion_Button_Command" />
                         </div>
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <asp:Button ID="Button45" runat="server" CssClass="btn btn-primary" Text="Historial Observaciones" OnClick="Historial_Observaciones_Button_Click" />
@@ -58,11 +59,11 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <asp:Button ID="Button46" runat="server" Text="Revisar documentos" CssClass="btn btn-info btn-md" OnClick="Revision_Documentos_Click" />
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-1">
+                        <%--                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-1">
                             <asp:Button ID="Salir_Sin_Guardar_Button" runat="server" CssClass="btn btn-warning" Text="Salir" CommandName="" CommandArgument="" />
-                        </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-                            <asp:Button ID="Validar_Verificado_Button" runat="server" Text="Verificado" CssClass="btn btn-success" CommandName="" CommandArgument="Guardar_Todo" OnCommand="Validar_Verificado_Button_Command" />
+                        </div>--%>
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            <asp:Button ID="Validar_Verificado_Button" runat="server" Text="Verificado" CssClass="btn btn-success" CommandName="" CommandArgument="Guardar_Todo" OnCommand="Confirmar_Verificador_Autorizador_Command" />
                         </div>
                     </div>
 
@@ -77,11 +78,11 @@
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <asp:Button ID="Revision_Documentos_Button" runat="server" CssClass="btn btn-info btn-md" Text="Revisar documentos" OnClick="Revision_Documentos_Click" />
                         </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-1">
-                            <asp:Button ID="Button" runat="server" Text="Salir" CssClass="btn btn-warning" CommandName="" CommandArgument="" Height="26px" />
-                        </div>
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2">
-                            <asp:Button ID="Autorizar_Button" runat="server" Text="Autorizado" CssClass="btn btn-success" CommandName="" CommandArgument="Guardar_Todo" OnCommand="Autorizar_Button_Command" />
+                        <%--                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-1">
+                            <asp:Button ID="Button" runat="server" Text="Salir" CssClass="btn btn-warning" CommandName="" CommandArgument=""/>
+                        </div>--%>
+                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                            <asp:Button ID="Autorizar_Button" runat="server" Text="Autorizado" CssClass="btn btn-success" CommandName="" CommandArgument="Guardar_Todo" OnCommand="Confirmar_Verificador_Autorizador_Command" />
                         </div>
                     </div>
                 </div>
@@ -453,7 +454,7 @@
                     <div class="modal-content">
 
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -581,18 +582,22 @@
 
                                 <div class="row col-lg-12">
                                     <br />
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-12">
                                         <asp:Label ID="Label24" runat="server" Text="No. de la escritura pública en la que consta su acta constitutiva, como IAP, IAC u otra institución no gubernamental:"></asp:Label>
                                         <asp:TextBox ID="Num_Escritura_TextBox" runat="server" class="form-control" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"
-                                            ReadOnly="True"></asp:TextBox>
+                                            onkeydown="return (event.keyCode!=13);" ReadOnly="true"></asp:TextBox>
                                     </div>
-                                    <div class="col-lg-4">
-                                        <br />
+                                    <div class="col-lg-6">
+                                        <asp:Label ID="Label117" runat="server" Text="Volumen:"></asp:Label>
+                                        <asp:TextBox ID="Volumen_Num_Escritura_TextBox" runat="server" class="form-control" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"
+                                            onkeydown="return (event.keyCode!=13);" ReadOnly="true"></asp:TextBox>
+                                    </div>
+                                    <div class="col-lg-6">
                                         <div class="form-group">
                                             <asp:Label ID="Label26" runat="server" Text="Fecha:"></asp:Label>
                                             <div class="input-group date">
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                <asp:TextBox ID="Fecha_Escritura_TextBox" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+                                                <asp:TextBox ID="Fecha_Escritura_TextBox" runat="server" CssClass="form-control" onkeydown="return (event.keyCode!=13);" ReadOnly="true"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -617,16 +622,20 @@
                                 </div>
 
                                 <div class="row col-lg-12">
-                                    <div class="col-lg-8">
+                                    <div class="col-lg-4">
                                         <asp:Label ID="Label27" runat="server" Text="No. registro Público de la Propiedad:"></asp:Label>
-                                        <asp:TextBox ID="Registro_Propiedad_TextBox" runat="server" class="form-control" ReadOnly="True"></asp:TextBox>
+                                        <asp:TextBox ID="Registro_Propiedad_TextBox" runat="server" class="form-control" ReadOnly="true" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <asp:Label ID="Label120" runat="server" Text="Volumen:"></asp:Label>
+                                        <asp:TextBox ID="Volumen_Registro_Propiedad_TextBox" runat="server" class="form-control" ReadOnly="true" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                     </div>
                                     <div class="col-lg-4">
                                         <div class="form-group">
                                             <asp:Label ID="Label112" runat="server" Text="Fecha:"></asp:Label>
                                             <div class="input-group date">
                                                 <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
-                                                <asp:TextBox ID="Fecha_Registro_Propiedad_TextBox" runat="server" CssClass="form-control" ReadOnly="True"></asp:TextBox>
+                                                <asp:TextBox ID="Fecha_Registro_Propiedad_TextBox" runat="server" CssClass="form-control" ReadOnly="true" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                             </div>
                                         </div>
                                     </div>
@@ -702,7 +711,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -727,7 +736,7 @@
                                             <asp:ListItem>En trámite</asp:ListItem>
                                         </asp:DropDownList>
                                     </div>
-                                    <div class="col-lg-4">
+                                    <div class="col-lg-4" id="fecha_permiso" runat="server">
                                         <div class="form-group">
                                             <asp:Label ID="Label33" runat="server" Text="¿Desde qué fecha?"></asp:Label>
                                             <div class="input-group date">
@@ -807,7 +816,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -941,9 +950,7 @@
                                     </div>
                                     <div class="col-lg-4">
                                         <asp:Label ID="Label39" runat="server" Text="Colonia:"></asp:Label>
-                                        <asp:DropDownList ID="Colonia_Oficinas_Operativas_DropDownList" runat="server" class="form-control" ReadOnly="True">
-                                            <asp:ListItem>Balderrama</asp:ListItem>
-                                        </asp:DropDownList>
+                                        <asp:TextBox ID="Colonia_Oficinas_Operativas_TextBox" runat="server" class="form-control" ReadOnly="true" onkeydown="return (event.keyCode!=13);"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -994,10 +1001,10 @@
                                     <asp:GridView ID="Oficinas_Operativas_GridView" runat="server" AutoGenerateColumns="False" DataSourceID="Detalles_Oficinas_Operativas_SqlDataSource"
                                         CssClass="table table-hover table-bordered" DataKeyNames="id_oficina_operativa">
                                         <Columns>
-                                            <asp:BoundField DataField="Oficinas Operativas" HeaderText="Oficinas Operativas" ReadOnly="True" SortExpression="Oficinas Operativas" />
+                                            <asp:BoundField DataField="Oficinas_Operativas" HeaderText="Oficinas Operativas" ReadOnly="True" SortExpression="Oficinas_Operativas" />
                                             <asp:TemplateField HeaderStyle-Width="10%">
                                                 <ItemTemplate>
-                                                    <asp:Button ID="Eliminar_Oficina_Operativa_Button" runat="server" Text="Eliminar" CssClass="btn btn-danger" OnClick="Eliminar_Oficina_Operativa_Button_Click" />
+                                                    <asp:Button ID="Ver_Info_Oficina_Operativa" runat="server" Text="Revisar" CssClass="btn btn-info" OnClick="Ver_Info_Oficina_Operativa_Click" />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
                                         </Columns>
@@ -1267,7 +1274,7 @@
                                 <div class="row col-lg-12">
                                     <br />
                                     <div class="col-lg-12">
-                                        <asp:TextBox ID="Justificacion_Programa_TextBox" runat="server" TextMode="MultiLine" Rows="3" ReadOnly="true" Width="100%"></asp:TextBox>
+                                        <asp:TextBox ID="Justificacion_Programa_TextBox" runat="server" TextMode="MultiLine" Rows="3" ReadOnly="true" Width="100%" BackColor="LightGray"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -1288,7 +1295,7 @@
                                         </asp:SqlDataSource>
 
                                         <asp:GridView ID="Costo_Estimado_Programa_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_costo_estimado"
-                                            DataSourceID="Detalle_Costo_Estimado_SqlDataSource" CssClass="table table-hover table-bordered" ShowFooter="true">
+                                            DataSourceID="Detalle_Costo_Estimado_SqlDataSource" CssClass="table table-hover table-bordered" ShowFooter="True" OnRowDataBound="Costo_Estimado_Programa_GridView_RowDataBound">
                                             <Columns>
                                                 <asp:TemplateField HeaderText="Conceptos ">
                                                     <ItemTemplate>
@@ -1304,8 +1311,7 @@
                                                         <div class="input-group m-b">
                                                             <span class="input-group-addon">$</span>
                                                             <asp:TextBox ID="Detalle_Monto_TextBox" runat="server" Text='<%# Bind("monto") %>'
-                                                                AutoPostBack="True" class="form-control" ReadOnly="True"
-                                                                OnTextChanged="Detalle_Costo_Estimado_TextBox_TextChanged" onkeyup="this.value=cpf(this.value);"></asp:TextBox>
+                                                                AutoPostBack="True" class="form-control" ReadOnly="True" onkeyup="this.value=cpf(this.value);"></asp:TextBox>
                                                             <span class="input-group-addon">.00</span>
                                                         </div>
                                                     </ItemTemplate>
@@ -1460,20 +1466,30 @@
                                             </SelectParameters>
                                         </asp:SqlDataSource>
 
-                                        <asp:GridView ID="Poblacion_Atendida_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_poblacion_atendida" DataSourceID="Detalle_Poblacion_Atendida_SqlDataSource" CssClass="table table-hover table-bordered">
+                                        <asp:GridView ID="Poblacion_Atendida_GridView" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center"
+                                            DataKeyNames="id_poblacion_atendida" DataSourceID="Detalle_Poblacion_Atendida_SqlDataSource"
+                                            OnRowDataBound="Poblacion_Atendida_GridView_RowDataBound" CssClass="table table-hover table-bordered" ShowFooter="true">
                                             <Columns>
                                                 <asp:BoundField DataField="nombre_poblacion_atendida" HeaderText="Edad" SortExpression="nombre_poblacion_atendida" />
                                                 <asp:TemplateField HeaderText="Hombres ">
                                                     <ItemTemplate>
                                                         <asp:TextBox ID="Poblacion_Atendida_Hombres_TextBox" runat="server" Text='<%# Bind("cantidad_hombres") %>'
-                                                            ReadOnly="True" class="form-control"></asp:TextBox>
+                                                            ReadOnly="True" class="form-control" Style="text-align: center"></asp:TextBox>
                                                     </ItemTemplate>
+                                                    <FooterTemplate>
+                                                        <asp:TextBox ID="Total_Hombres" runat="server" class="form-control"
+                                                            ReadOnly="True" Style="text-align: center"></asp:TextBox>
+                                                    </FooterTemplate>
                                                 </asp:TemplateField>
                                                 <asp:TemplateField HeaderText="Mujeres ">
                                                     <ItemTemplate>
                                                         <asp:TextBox ID="Poblacion_Atendida_Mujeres_TextBox" runat="server" Text='<%# Bind("cantidad_mujeres") %>'
-                                                            ReadOnly="True" class="form-control"></asp:TextBox>
+                                                            ReadOnly="True" class="form-control" Style="text-align: center"></asp:TextBox>
                                                     </ItemTemplate>
+                                                    <FooterTemplate>
+                                                        <asp:TextBox ID="Total_Mujeres" runat="server" class="form-control"
+                                                            ReadOnly="True" Style="text-align: center"></asp:TextBox>
+                                                    </FooterTemplate>
                                                 </asp:TemplateField>
                                             </Columns>
                                         </asp:GridView>
@@ -1503,7 +1519,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -1539,7 +1555,7 @@
                                     <br />
                                     <div class="col-lg-12">
                                         <asp:DropDownList ID="Nivel_Ingreso_Poblacion_DropDownList" runat="server" class="form-control" ReadOnly="True">
-                                            <asp:ListItem>Ato-Medio: Ingreso mensual superior al costo de la canaste básica completa.</asp:ListItem>
+                                            <asp:ListItem>Ato-Medio: Ingreso mensual superior al costo de la canasta básica completa.</asp:ListItem>
                                             <asp:ListItem>Bajo: Ingreso mensual al costo de la canasta básica completa.</asp:ListItem>
                                             <asp:ListItem>Muy Bajo: Ingreso mensual menos al costo de la canasta básica alimentaria.</asp:ListItem>
                                         </asp:DropDownList>
@@ -1568,7 +1584,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -1584,10 +1600,10 @@
 
                                 <div class="row col-lg-12" style="text-align: center">
                                     <br />
-                                    <asp:Label ID="Label35" runat="server" Text="¿La poblacion que atiende está en edad escolar?"></asp:Label>
+
                                     <div class="col-lg-6" style="text-align: left">
-                                        <br />
-                                        <br />
+
+                                        <asp:Label ID="Label35" runat="server" Text="¿La poblacion que atiende está en edad escolar?"></asp:Label>
                                         <asp:DropDownList ID="Rezago_Educativo_DropDownList" runat="server" class="form-control" ReadOnly="True">
                                             <asp:ListItem>Sí</asp:ListItem>
                                             <asp:ListItem>No</asp:ListItem>
@@ -1595,10 +1611,8 @@
                                         </asp:DropDownList>
                                     </div>
 
-                                    <div class="col-lg-6">
+                                    <div class="col-lg-6" id="Porcentaje_Poblacion_Atendida" runat="server">
                                         <asp:Label ID="Label76" runat="server" Text="% de población atendida en edad escolar"></asp:Label>
-
-
                                         <div class="input-group m-b">
                                             <asp:TextBox ID="Porcentaje_Poblacion_Atendida_TextBox" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
                                             <span class="input-group-addon">%</span>
@@ -1680,7 +1694,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -1772,7 +1786,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -1950,7 +1964,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -2018,11 +2032,11 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-lg-12" style="text-align: center">
+                                <div class="col-lg-12" style="text-align: center">
                                     <br />
                                     <asp:Label ID="Label104" runat="server" Text="Observaciones:"></asp:Label>
                                     <br />
-                                    <asp:TextBox ID="Observaciones_Acceso_TextBox" runat="server" TextMode="MultiLine" Rows="3" Width="75%" ReadOnly="true" class="form-control"></asp:TextBox>
+                                    <asp:TextBox ID="Observaciones_Acceso_TextBox" runat="server" TextMode="MultiLine" Rows="3" Width="100%" ReadOnly="true" class="form-control"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -2047,7 +2061,7 @@
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <div class="col-lg-10">
+                            <div class="col-lg-10" style="text-align: center">
                                 <h2><b>FORMULARIO ESTÁNDAR</b></h2>
                             </div>
                             <div class="col-lg-2">
@@ -2138,75 +2152,77 @@
                                     </div>
                                 </div>
 
-                                <div class="row col-lg-12" style="text-align: center">
-                                    <br />
-                                    <div class="col-lg-offset-2 col-lg-8">
-                                        <asp:Label ID="Label88" runat="server" Text="4.2 En propiedades inmuebles." CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
+                                <div id="ocultar" runat="server">
+                                    <div class="row col-lg-12" style="text-align: center">
                                         <br />
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-offset-2 col-lg-8">
+                                            <asp:Label ID="Label88" runat="server" Text="4.2 En propiedades inmuebles." CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
                                             <br />
-                                            <asp:DropDownList ID="Propiedades_Inmuebles_DropDownList" runat="server" class="form-control" ReadOnly="true">
-                                                <asp:ListItem>Sí</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
-                                            </asp:DropDownList>
+                                            <div class="col-lg-5">
+                                                <br />
+                                                <asp:DropDownList ID="Propiedades_Inmuebles_DropDownList" runat="server" class="form-control" ReadOnly="true">
+                                                    <asp:ListItem>Sí</asp:ListItem>
+                                                    <asp:ListItem>No</asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <asp:Label ID="Label89" runat="server" Text="Valor aproximado:"></asp:Label>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon">$</span>
+                                                    <asp:TextBox ID="Valor_Aproximado_Inmuebles_TextBox" runat="server"
+                                                        onkeyup="this.value=cpf(this.value);" MaxLength="10"
+                                                        class="form-control" ReadOnly="true"></asp:TextBox>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="col-lg-7">
-                                            <asp:Label ID="Label89" runat="server" Text="Valor aproximado:"></asp:Label>
-                                            <div class="input-group m-b">
-                                                <span class="input-group-addon">$</span>
-                                                <asp:TextBox ID="Valor_Aproximado_Inmuebles_TextBox" runat="server"
-                                                    onkeyup="this.value=cpf(this.value);" MaxLength="10"
-                                                    class="form-control" ReadOnly="true"></asp:TextBox>
+
+                                    </div>
+
+                                    <div class="row col-lg-12" style="text-align: center">
+                                        <br />
+                                        <div class="col-lg-offset-2 col-lg-8">
+                                            <asp:Label ID="Label90" runat="server" Text="4.3 En Inversiones." CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
+                                            <br />
+                                            <div class="col-lg-5">
+                                                <br />
+                                                <asp:DropDownList ID="Inversiones_DropDownList" runat="server" class="form-control" ReadOnly="true">
+                                                    <asp:ListItem>Sí</asp:ListItem>
+                                                    <asp:ListItem>No</asp:ListItem>
+                                                </asp:DropDownList>
+                                            </div>
+                                            <div class="col-lg-7">
+                                                <asp:Label ID="Label91" runat="server" Text="Valor aproximado:"></asp:Label>
+
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon">$</span>
+                                                    <asp:TextBox ID="Valor_Aproximado_Inversiones_TextBox" runat="server"
+                                                        onkeyup="this.value=cpf(this.value);" MaxLength="10"
+                                                        class="form-control" ReadOnly="true"></asp:TextBox>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-
-                                </div>
-
-                                <div class="row col-lg-12" style="text-align: center">
-                                    <br />
-                                    <div class="col-lg-offset-2 col-lg-8">
-                                        <asp:Label ID="Label90" runat="server" Text="4.3 En Inversiones." CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
+                                    <div class="row col-lg-12" style="text-align: center">
                                         <br />
-                                        <div class="col-lg-5">
+                                        <div class="col-lg-offset-2 col-lg-8">
+                                            <asp:Label ID="Label92" runat="server" Text="4.4 En fideicomisos." CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
                                             <br />
-                                            <asp:DropDownList ID="Inversiones_DropDownList" runat="server" class="form-control" ReadOnly="true">
-                                                <asp:ListItem>Sí</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <asp:Label ID="Label91" runat="server" Text="Valor aproximado:"></asp:Label>
-
-                                            <div class="input-group m-b">
-                                                <span class="input-group-addon">$</span>
-                                                <asp:TextBox ID="Valor_Aproximado_Inversiones_TextBox" runat="server"
-                                                    onkeyup="this.value=cpf(this.value);" MaxLength="10"
-                                                    class="form-control" ReadOnly="true"></asp:TextBox>
+                                            <div class="col-lg-5">
+                                                <br />
+                                                <asp:DropDownList ID="Fideicomisos_DropDownList" runat="server" class="form-control" ReadOnly="false">
+                                                    <asp:ListItem>Sí</asp:ListItem>
+                                                    <asp:ListItem>No</asp:ListItem>
+                                                </asp:DropDownList>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row col-lg-12" style="text-align: center">
-                                    <br />
-                                    <div class="col-lg-offset-2 col-lg-8">
-                                        <asp:Label ID="Label92" runat="server" Text="4.4 En fideicomisos." CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
-                                        <br />
-                                        <div class="col-lg-5">
-                                            <br />
-                                            <asp:DropDownList ID="Fideicomisos_DropDownList" runat="server" class="form-control" ReadOnly="false">
-                                                <asp:ListItem>Sí</asp:ListItem>
-                                                <asp:ListItem>No</asp:ListItem>
-                                            </asp:DropDownList>
-                                        </div>
-                                        <div class="col-lg-7">
-                                            <asp:Label ID="Label93" runat="server" Text="Valor aproximado:"></asp:Label>
+                                            <div class="col-lg-7">
+                                                <asp:Label ID="Label93" runat="server" Text="Valor aproximado:"></asp:Label>
 
-                                            <div class="input-group m-b">
-                                                <span class="input-group-addon">$</span>
-                                                <asp:TextBox ID="Valor_Aproximados_Fideicomisos_TextBox" runat="server"
-                                                    onkeyup="this.value=cpf(this.value);" MaxLength="10"
-                                                    class="form-control" ReadOnly="true"></asp:TextBox>
+                                                <div class="input-group m-b">
+                                                    <span class="input-group-addon">$</span>
+                                                    <asp:TextBox ID="Valor_Aproximados_Fideicomisos_TextBox" runat="server"
+                                                        onkeyup="this.value=cpf(this.value);" MaxLength="10"
+                                                        class="form-control" ReadOnly="true"></asp:TextBox>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -2261,7 +2277,8 @@
                                         </asp:SqlDataSource>
 
                                         <asp:GridView ID="Principales_Fuentes_GridView" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered"
-                                            ShowFooter="True" DataKeyNames="id_principales_fuentes" DataSourceID="Detalle_Principales_FuentesSqlDataSource">
+                                            ShowFooter="True" DataKeyNames="id_principales_fuentes" DataSourceID="Detalle_Principales_FuentesSqlDataSource"
+                                            OnRowDataBound="Principales_Fuentes_GridView_RowDataBound">
                                             <Columns>
                                                 <asp:TemplateField HeaderText="Concepto">
                                                     <ItemTemplate>
@@ -2277,7 +2294,7 @@
                                                         <div class="input-group m-b">
                                                             <span class="input-group-addon">$</span>
                                                             <asp:TextBox ID="Importe_Promedio_Anual_TextBox" runat="server" Text='<%# Eval("importe_promedio") %>'
-                                                                BackColor="#ffffea" class="form-control" onkeyup="this.value=cpf(this.value);" MaxLength="10" AutoPostBack="true"></asp:TextBox>
+                                                                class="form-control" MaxLength="10" AutoPostBack="true" ReadOnly="true"></asp:TextBox>
                                                         </div>
                                                     </ItemTemplate>
                                                     <FooterTemplate>
@@ -2337,7 +2354,7 @@
                         <div class="modal-body">
                             <div class="row">
                                 <div class="col-lg-12" style="text-align: center">
-                                    <asp:Label ID="Label109" runat="server" Text="4.6 Principales egresos de la institucion (utilizar el promedio anual de los tres últimos años)" CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
+                                    <asp:Label ID="Label109" runat="server" Text="4.6 Principales egresos de la institución (utilizar el promedio anual de los tres últimos años)" CssClass="form-control" BackColor="#CCCCCC"></asp:Label>
                                 </div>
                                 <div class="row col-lg-12">
                                     <br />
@@ -2351,7 +2368,8 @@
                                         </asp:SqlDataSource>
 
                                         <asp:GridView ID="Principales_Egresos_GridView" runat="server" AutoGenerateColumns="False" DataKeyNames="id_principales_egreso"
-                                            DataSourceID="Detalle_Principales_Egresos_SqlDataSource" CssClass="table table-hover table-bordered" ShowFooter="True">
+                                            DataSourceID="Detalle_Principales_Egresos_SqlDataSource" CssClass="table table-hover table-bordered" ShowFooter="True"
+                                            OnRowDataBound="Principales_Egresos_GridView_RowDataBound">
                                             <Columns>
 
                                                 <asp:TemplateField HeaderText="Concepto">
@@ -2368,13 +2386,17 @@
                                                         <div class="input-group m-b">
                                                             <span class="input-group-addon">$</span>
                                                             <asp:TextBox ID="Importe_Promedio_Anual_Egresos_TextBox" runat="server" Text='<%# Eval("importe_egresos") %>'
-                                                                BackColor="#ffffea" CssClass="form-control"
-                                                                onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;"></asp:TextBox>
+                                                                CssClass="form-control" onkeypress="if(event.keyCode<48 || event.keyCode>57)event.returnValue=false;" ReadOnly="true"></asp:TextBox>
                                                         </div>
 
                                                     </ItemTemplate>
                                                     <FooterTemplate>
-                                                        <asp:TextBox ID="Total_Costo_Estimado_TextBox" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
+                                                        <itemtemplate>
+                                                            <div class="input-group m-b">
+                                                                <span class="input-group-addon">$</span>
+                                                                <asp:TextBox ID="Total_Costo_Estimado_TextBox_2" runat="server" class="form-control" ReadOnly="true"></asp:TextBox>
+                                                            </div>
+                                                        </itemtemplate>
                                                     </FooterTemplate>
                                                 </asp:TemplateField>
 
@@ -2454,7 +2476,7 @@
 
                                 <div class="col-lg-offset-5 col-lg-2" style="text-align: center">
                                     <br />
-                                    <asp:DropDownList ID="Impuesto_Federal_DropDownList" runat="server" class="form-control" BackColor="#ffffea">
+                                    <asp:DropDownList ID="Impuesto_Federal_DropDownList" runat="server" class="form-control" ReadOnly="true">
                                         <asp:ListItem>Si</asp:ListItem>
                                         <asp:ListItem>No</asp:ListItem>
                                     </asp:DropDownList>
@@ -2467,7 +2489,7 @@
 
                                 <div class="col-lg-offset-5 col-lg-2" style="text-align: center">
                                     <br />
-                                    <asp:DropDownList ID="Adeudos_Fiscales_DropDownList" runat="server" class="form-control" BackColor="#ffffea">
+                                    <asp:DropDownList ID="Adeudos_Fiscales_DropDownList" runat="server" class="form-control" ReadOnly="true">
                                         <asp:ListItem>Si</asp:ListItem>
                                         <asp:ListItem>No</asp:ListItem>
                                     </asp:DropDownList>
@@ -2505,7 +2527,7 @@
                         <div class="modal-footer">
                             <div class="col-lg-12" style="text-align: center">
                                 <div class="col-lg-6">
-                                    <button type="button" class="btn btn-success" data-dismiss="modal" onclick="hideModal()" style="width: 30%">Si</button>
+                                    <asp:Button ID="Verificar_Autorizar" runat="server" class="btn btn-success" Style="width: 30%" Text="Si" OnClick="Verificar_Autorizar_Click" />
                                 </div>
                                 <div class="col-lg-6">
                                     <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="hideModal()" style="width: 30%">No</button>
@@ -2543,8 +2565,6 @@
                 </div>
             </div>
 
-
-
             <%-- Modal Ver Observaciones --%>
             <div class="modal fade" role="dialog" id="div_ver_observaciones" data-backdrop="static">
                 <div class="modal-dialog modal-lg">
@@ -2574,7 +2594,6 @@
                     </div>
                 </div>
             </div>
-
 
             <!-- Modal Mensajes -->
             <div class="modal fade" tabindex="-1" role="dialog" id="div_alertas" data-backdrop="static">

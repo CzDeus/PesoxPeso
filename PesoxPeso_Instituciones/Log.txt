@@ -3104,3 +3104,651 @@ Nombre del parámetro: value   en Data.ExecuteSPNonQuery(SqlParameter[] Paramete
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
    en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
    en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 8:29. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 9:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 9:59. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Detalle_Costo_Estimado() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1230
+
+10/2/2017 10:03. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+10/2/2017 10:03. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+10/2/2017 10:03. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+10/2/2017 10:03. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+10/2/2017 10:03. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+10/2/2017 10:16. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 10:21. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 10:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 13:33. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 14:08. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+10/2/2017 14:09. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 8:13. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1773
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1858
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1858
+
+11/2/2017 8:19. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1858
+
+11/2/2017 8:56. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 9:00. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 9:53. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 9:58. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 10:31. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 11:50. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 11:57. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 12:43. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 14:08. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+11/2/2017 14:48. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 8:08. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 8:21. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:21. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:21. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:21. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:21. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:22. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:22. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:22. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:22. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:22. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:25. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:26. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:26. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:26. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:26. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:26. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:28. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:28. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:28. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:28. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:28. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:29. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:29. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:29. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:29. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:29. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:30. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:30. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:30. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:30. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:30. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:31. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:31. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:31. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:31. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:31. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1784
+
+13/2/2017 8:32. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1787
+
+13/2/2017 8:32. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1787
+
+13/2/2017 8:32. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1787
+
+13/2/2017 8:32. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1787
+
+13/2/2017 8:32. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1787
+
+13/2/2017 9:00. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:00. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 9:01. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:01. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 10:27. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Ingresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1805
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1890
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1890
+
+13/2/2017 10:33. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1890
+
+13/2/2017 10:34. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1890
+
+13/2/2017 10:34. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1890
+
+13/2/2017 10:34. La cadena de entrada no tiene el formato correcto.   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Convert.ToDouble(String value)
+   en Forms_Formulario_Estandar.Guardar_Principales_Egresos() en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Forms\Formulario_Estandar.aspx.cs:línea 1890
+
+13/2/2017 12:56. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 12:56. Error al enviar correo.   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/2/2017 12:57. Error al enviar correo.   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/2/2017 12:57. Error al enviar correo.   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/2/2017 12:57. Error al enviar correo.   en System.Net.Mail.SmtpClient.Send(MailMessage message)
+   en csEmailHandler.SendEmail_DIF(csEmail Email) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\Handlers\csEmailHandler.cs:línea 101
+
+13/2/2017 13:07. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 14:08. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 14:45. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49
+
+13/2/2017 14:46. Subproceso anulado.   en System.Threading.Thread.AbortInternal()
+   en System.Threading.Thread.Abort(Object stateInfo)
+   en System.Web.HttpResponse.AbortCurrentThread()
+   en System.Web.HttpResponse.End()
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   en System.Web.HttpResponse.Redirect(String url, Boolean endResponse)
+   en Login.btnAcceso_Click(Object sender, EventArgs e) en c:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\Login.aspx.cs:línea 49

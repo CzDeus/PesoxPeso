@@ -541,7 +541,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -1536,7 +1535,7 @@
                                     <br />
                                     <div class="col-lg-12">
                                         <asp:DropDownList ID="Nivel_Ingreso_Poblacion_DropDownList" runat="server" class="form-control" BackColor="#ffffea">
-                                            <asp:ListItem>Ato-Medio: Ingreso mensual superior al costo de la canaste básica completa.</asp:ListItem>
+                                            <asp:ListItem>Ato-Medio: Ingreso mensual superior al costo de la canasta básica completa.</asp:ListItem>
                                             <asp:ListItem>Bajo: Ingreso mensual al costo de la canasta básica completa.</asp:ListItem>
                                             <asp:ListItem>Muy Bajo: Ingreso mensual menos al costo de la canasta básica alimentaria.</asp:ListItem>
                                         </asp:DropDownList>
@@ -2444,7 +2443,7 @@
                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                                 </div>
                                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                                    <asp:Button ID="Button18" runat="server" Text="Salir" class="btn btn-danger" data-dismiss="modal" />
+                                    <asp:Button ID="Button18" runat="server" Text="Salir" class="btn btn-danger"  CommandName="div_cumplimiento_P1" OnCommand="Botones_Click" />
                                 </div>
                             </div>
                         </div>

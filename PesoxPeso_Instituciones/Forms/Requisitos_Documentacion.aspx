@@ -131,7 +131,7 @@
                     <div class="col-lg-12">
                         <br />
                         <div class="col-lg-9">
-                            <asp:Label ID="Label22" runat="server" Text="10. Organigrama y documento que contenga o describa las funciones y/o actividades del personal remunerado y voluntario (manual operativo, o manual de organizacion, o reglamento interno u otro)"></asp:Label>
+                            <asp:Label ID="Label22" runat="server" Text="10. Organigrama y documento que contenga o describa las funciones y/o actividades del personal remunerado y voluntario (manual operativo, o manual de organización, o reglamento interno u otro)"></asp:Label>
                         </div>
                         <div class="col-lg-3" style="text-align: center">
                             <asp:Button ID="Organigrama_Button" runat="server" Text="Adjuntar" CommandArgument="10" OnCommand="Prueba_Click" />
@@ -141,7 +141,7 @@
                     <div class="col-lg-12">
                         <br />
                         <div class="col-lg-9">
-                            <asp:Label ID="Label23" runat="server" Text="11. Base de datos de la población beneficiada en ese ejercicio que al menos incluya: nombre, edad, domicilio y beneficio otorgado, entre otros. Agregar al menos 6 imagenes fotograficas o video como evidencia de los beneficios otorgados."></asp:Label>
+                            <asp:Label ID="Label23" runat="server" Text="11. Base de datos de la población beneficiada en ese ejercicio que al menos incluya: nombre, edad, domicilio y beneficio otorgado, entre otros. Agregar al menos 6 imágenes fotograficas o video como evidencia de los beneficios otorgados."></asp:Label>
                         </div>
                         <div class="col-lg-3" style="text-align: center">
                             <asp:Button ID="Bd_Poblacion_Button" runat="server" Text="Adjuntar" CommandArgument="11" OnCommand="Prueba_Click" />
@@ -151,14 +151,14 @@
                     <div class="col-lg-12">
                         <br />
                         <div class="col-lg-10">
-                            <asp:Label ID="Label24" runat="server" Text="12. Presentar en papel membretado del Organismo debidamente firmada la carta manifiesto para asegurar el cumplimiento de los criterios de evaluación y selección de las bases para la participación establecidad en la convocatoria vigentes, Incisos b) y c)."></asp:Label>
+                            <asp:Label ID="Label24" runat="server" Text="12. Presentar en papel membretado del Organismo debidamente firmada la carta manifiesto para asegurar el cumplimiento de los criterios de evaluación y selección de las bases para la participación establecida en la convocatoria vigentes, Incisos b) y c)."></asp:Label>
                         </div>
                     </div>
 
                     <div class="col-lg-12">
                         <br />
                         <div class="col-lg-10">
-                            <asp:Label ID="Label25" runat="server" Text="13. Para OSC de nuevo ingreso. Los documentos que se requieren, deberán presentarse claramente impresos (legibles), en carpeta de vinil de 3 pulgadas, (con bolsa exterior) color blanco para organismos del municipios de Hermosillo y negra para Organismos ubicados en municipio foráneos, debiendo acomodar en el orden indciado cada hoja de los documentos en una bolsa protectora y en 20 bolsas protectoras de hojas mas pra la documentación que se agrega posteriormente."></asp:Label>
+                            <asp:Label ID="Label25" runat="server" Text="13. Para OSC de nuevo ingreso. Los documentos que se requieren, deberán presentarse claramente impresos (legibles), en carpeta de vinil de 3 pulgadas, (con bolsa exterior) color blanco para organismos del municipios de Hermosillo y negra para Organismos ubicados en municipio foráneos, debiendo acomodar en el orden indicado cada hoja de los documentos en una bolsa protectora y en 20 bolsas protectoras de hojas más pra la documentación que se agrega posteriormente."></asp:Label>
                         </div>
                     </div>
 
@@ -176,6 +176,10 @@
                         </div>
                     </div>
 
+                    <div class="col-lg-12" style="text-align:center">
+                        <br />
+                        <asp:Button ID="btn_salir" runat="server" Text="Salir" CssClass="btn btn-danger" OnClick="btn_salir_Click"/>
+                    </div>
 
                 </fieldset>
             </div>

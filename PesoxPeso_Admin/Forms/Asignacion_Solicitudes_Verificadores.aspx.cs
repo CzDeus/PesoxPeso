@@ -64,7 +64,6 @@ public partial class Forms_Asignacion_Solicitudes_Verificadores : System.Web.UI.
 
         if (verificar.Count == 0)
         {
-
             var año = (from seleccionar in contexto.tb_Generales_Parametros select seleccionar).First();
             int año_general = año.año_registro;
             var id_formulario = (from buscar in contexto.Formulario_Estandar where buscar.id_institucion == asignar_verificador.id_institucion && buscar.año_registro == año_general select buscar).First();
@@ -123,5 +122,4 @@ public partial class Forms_Asignacion_Solicitudes_Verificadores : System.Web.UI.
     {
         Registros_Completos_GridView.DataBind();
     }
-
 }

@@ -111,6 +111,38 @@ namespace Entity_Model
     using System;
     using System.Collections.Generic;
     
+    public partial class Detalle_Poblacion_Atendida
+    {
+        public int id_formulario { get; set; }
+        public int id_poblacion_atendida { get; set; }
+        public string cantidad_hombres { get; set; }
+        public string cantidad_mujeres { get; set; }
+    }
+}
+namespace Entity_Model
+{
+    using System;
+    using System.Collections.Generic;
+    
+    public partial class Detalles_Oficinas_Operativas
+    {
+        public int id_oficina_operativa { get; set; }
+        public int id_formulario { get; set; }
+        public string calle_oficina_operativa { get; set; }
+        public string numero_oficina_operativa { get; set; }
+        public string colonia_oficina_operativa { get; set; }
+        public string cp_oficina_operativa { get; set; }
+        public string entre_calles_oficina_operativa { get; set; }
+        public int id_municipio_oficinas_operativas { get; set; }
+        public string telelefono_oficinas_operativas { get; set; }
+        public string horarios { get; set; }
+    }
+}
+namespace Entity_Model
+{
+    using System;
+    using System.Collections.Generic;
+    
     public partial class Documentos_Consulta
     {
         public int id_documento_consulta { get; set; }
@@ -392,11 +424,11 @@ namespace Entity_Model
 {
     using System;
     
-    public partial class sp_contar_asignados1_Result
+    public partial class sp_contar_asignados_Result
     {
-        public Nullable<int> id_General_Usuario { get; set; }
-        public string Nombre_Usuario { get; set; }
-        public Nullable<int> No_Trabajos_Asignados { get; set; }
+        public int id_General_Usuario { get; set; }
+        public string nombre { get; set; }
+        public Nullable<int> cantidad { get; set; }
     }
 }
 namespace Entity_Model
@@ -442,6 +474,16 @@ namespace Entity_Model
     {
         public int id_General_Usuario { get; set; }
         public string nombre { get; set; }
+    }
+}
+namespace Entity_Model
+{
+    using System;
+    
+    public partial class spr_Sumar_Hombres_Mujeres_Result
+    {
+        public Nullable<long> Hombres { get; set; }
+        public Nullable<long> Mujeres { get; set; }
     }
 }
 namespace Entity_Model

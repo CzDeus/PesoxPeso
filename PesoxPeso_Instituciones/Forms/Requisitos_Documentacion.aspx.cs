@@ -108,7 +108,8 @@ public partial class Forms_Requisitos_Documentacion : System.Web.UI.Page
 
         //creamos el directorio
 
-        string vdiretorio = MapPath("~/archivos_registro");
+        //string vdiretorio = MapPath("~/archivos_registro");
+        string vdiretorio = "Z:\\Documentos";
 
         if (Directory.Exists(vdiretorio) == false)
         {
@@ -117,9 +118,9 @@ public partial class Forms_Requisitos_Documentacion : System.Web.UI.Page
         }
         //string vdiretorio = MapPath("\\192.168.1.77\\Prueba");
 
+        //vdiretorio = MapPath("~/Documentos/institucion_" + institucion.ToString() + "_" + año_actual.año_registro);
 
-
-        vdiretorio = MapPath("~/archivos_registro/institucion_" + institucion.ToString() + "_" + año_actual.año_registro);
+        vdiretorio = "Z:\\Documentos\\institucion_" + institucion.ToString() + "_" + año_actual.año_registro;
 
         if (Directory.Exists(vdiretorio) == false)
         {
@@ -183,6 +184,7 @@ public partial class Forms_Requisitos_Documentacion : System.Web.UI.Page
         }
         else
         {
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
             ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Seleccione archivo...');", true);
         }
 
@@ -230,5 +232,10 @@ public partial class Forms_Requisitos_Documentacion : System.Web.UI.Page
     protected void Home_Click(object sender, EventArgs e)
     {
         Response.Redirect("/Default.aspx");
+    }
+
+    protected void btn_salir_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Formulario_Estandar.aspx");
     }
 }

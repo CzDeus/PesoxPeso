@@ -38,12 +38,12 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         //Costo_Estimado_Programa_GridView.DataBind();
         id_registro = Convert.ToInt32(Session["sist_Id_Usuario"].ToString());
 
-        int a = Convert.ToInt32(Session["sist_Id_Usuario"].ToString());
-
-        var usuario = (from seleccionar in contexto.Registro_Usuarios where seleccionar.id_registro == a select seleccionar).First();
+        var usuario = (from seleccionar in contexto.Registro_Usuarios where seleccionar.id_registro == id_registro select seleccionar).First();
 
         estado_registro = usuario.estatu_actual_registro;
         institucion = Convert.ToInt32(Session["id_institucion"].ToString());
+
+
 
         if (id_oficina == 0)
         {
@@ -72,12 +72,376 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         }
     }
 
+    protected void cargar_formulario()
+    {
+        var c_año = (from años in contexto.tb_Generales_Parametros select años).First();
+        int año = Convert.ToInt32(c_año.año_registro);
+
+        try
+        {
+            var select = (from rfc in contexto.Catalogo_Instituciones where rfc.id_institucion == institucion select rfc).First();
+            string rfc_institucion = select.rfc;
+            string nombre_institucion = select.nombre_institucion;
+
+            var FE = (from llenar in contexto.Formulario_Estandar where llenar.id_institucion == institucion && llenar.año_registro == año select llenar).First();
+
+            string fecha_actual = DateTime.Now.ToString("dd-MM-yyyy");
+
+            Id_Formulario_HiddenField.Value = FE.id_formulario_estandar.ToString();
+
+            /*P1*/
+
+            Nombre_Institucion_Encabezado_Label.Text = select.nombre_institucion + " " + select.sucursal;
+
+            Nombre_Dominio_TextBox.Text = nombre_institucion;
+            Nombre_Programa_TextBox.Text = FE.nombre_programa;
+
+            Nombre_Programa_2_TextBox.Text = Nombre_Programa_TextBox.Text;
+
+
+            Objetivo_Social_Programa_TextBox.Text = FE.objetivo_social_programa;
+            Objetivo_Social_TextBox.Text = FE.objetivo_social_programa;
+            Registro_contribuyente_TextBox.Text = rfc_institucion;
+            Fecha_Constitucion_TextBox.Text = Obtener_Fecha(FE.fecha_constitucion);
+
+            if (FE.num_personas_laborando == 0)
+            {
+                Num_Personas_Laborando_TextBox.Text = "";
+            }
+            else
+            {
+                Num_Personas_Laborando_TextBox.Text = FE.num_personas_laborando.ToString();
+            }
+
+            if (FE.remunerados != 0)
+            {
+                Remunerados_TextBox.Text = FE.remunerados.ToString();
+            }
+            else
+            {
+                Remunerados_TextBox.Text = "";
+            }
+
+            if (FE.voluntarios != 0)
+            {
+                Voluntarios_TextBox.Text = FE.voluntarios.ToString();
+            }
+            else
+            {
+                Voluntarios_TextBox.Text = "";
+            }
+
+            Areas_atencion_TextBox.Text = FE.areas_atencion;
+            Areas_Apoyo_TextBox.Text = FE.areas_apoyo;
+
+            ///*P2*//
+
+            if (FE.año_actual != 0)
+            {
+                Año_Actual_TextBox.Text = FE.año_actual.ToString();
+            }
+            else
+            {
+                Año_Actual_TextBox.Text = "";
+            }
+
+            if (FE.año_anterior != 0)
+            {
+                Año_Anterior_TextBox.Text = FE.año_anterior.ToString();
+            }
+            else
+            {
+                Año_Anterior_TextBox.Text = "";
+            }
+
+
+            if (FE.total_ingresos == 0)
+            {
+                Total_Ingresos_TextBox.Text = "";
+            }
+            else
+            {
+                Total_Ingresos_TextBox.Text = FE.total_ingresos.ToString("N");
+            }
+
+            if (FE.total_ingresos == 0)
+            {
+                Total_Donativos_TextBox.Text = "";
+            }
+            else
+            {
+                Total_Donativos_TextBox.Text = FE.total_donativos.ToString("N");
+            }
+
+            if (FE.total_ingresos == 0)
+            {
+                Total_Egresos_TextBox.Text = "";
+            }
+            else
+            {
+                Total_Egresos_TextBox.Text = FE.total_egresos.ToString("N");
+            }
+
+            if (FE.total_ingresos == 0)
+            {
+                Monto_Solicitado_TextBox.Text = "";
+            }
+            else
+            {
+                Monto_Solicitado_TextBox.Text = FE.monto_solicitado.ToString("N");
+            }
+
+            ///*P3*///
+            var nom_institucion = (from seleccion in contexto.Catalogo_Instituciones where seleccion.id_institucion == institucion select seleccion.nombre_institucion).First();
+            Nombre_Institucion_TextBox.Text = FE.denominacion;
+
+            Denominacion_TextBox.Text = nom_institucion;
+            Siglas_TextBox.Text = FE.siglas;
+
+            Telefono_TextBox.Text = FE.telefono;
+            Correo_electronico_TextBox.Text = FE.correo_electronico;
+            Pagina_Web_TextBox.Text = FE.pagina_web;
+            Red_Social_TextBox.Text = FE.red_social_institucion;
+            Calle_Numero_TextBox.Text = FE.calle_numero;
+
+            if (FE.id_municipio != 0)
+            {
+                Municipio_DropDownList.SelectedValue = FE.id_municipio.ToString();
+            }
+            Colonia_TextBox.Text = FE.colonia;
+            CP_TextBox.Text = FE.CP;
+            Celular_TextBox.Text = FE.celular;
+            Telefonos_TextBox.Text = FE.telefonos;
+            Correo_Domicilio_Fiscal.Text = FE.correo_dom_fiscal;
+
+            if (FE.id_personalidad_juridica != 0)
+            {
+                Personalidad_Juridica_DropDownList.SelectedValue = FE.id_personalidad_juridica.ToString();
+            }
+
+            if (FE.id_personalidad_juridica == 3)
+            {
+                Otro_Personalidad_Juridica_TextBox.Text = FE.otro_personalidad_juridica;
+                Otro_Personalidad_Juridica_TextBox.ReadOnly = false;
+                Otro_Personalidad_Juridica_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
+            }
+            else
+            {
+                Otro_Personalidad_Juridica_TextBox.ReadOnly = true;
+                Otro_Personalidad_Juridica_TextBox.BackColor = Color.LightGray;
+                Otro_Personalidad_Juridica_TextBox.Text = "";
+            }
+
+            ///*P4*/
+            Num_Escritura_TextBox.Text = FE.num_escritura.ToString();
+            Volumen_Num_Escritura_TextBox.Text = FE.volumen_num_escritura;
+            Fecha_Escritura_TextBox.Text = Obtener_Fecha(FE.fecha_escritura);
+            Nombre_Notario_Pulico_TextBox.Text = FE.nombre_notario_publico;
+            Numero_Notario_TextBox.Text = FE.numero_notario_publico;
+            Lugar_Notario_TextBox.Text = FE.lugar_notario_publico;
+            Registro_Propiedad_TextBox.Text = FE.registro_propiedad;
+            Volumen_Registro_Propiedad_TextBox.Text = FE.volumen_registro_propiedad;
+            Fecha_Registro_Propiedad_TextBox.Text = Obtener_Fecha(FE.fecha_registro_propiedad);
+            Permiso_Expedir_Recibos_DropDownList.SelectedIndex = FE.permiso_expedir_recibos;
+
+            if (FE.permiso_expedir_recibos == 1)
+            {
+                fecha_permiso.Visible = false;
+            }
+            ////////////////////////////////////////////////////////////////////////////////////
+
+            Fecha_Permisos_TextBox.Text = Obtener_Fecha(FE.fecha_permiso);
+            Fecha_Ultima_Publicacion_TextBox.Text = Obtener_Fecha(FE.fecha_ultima_publicacion);
+            Seccion_TextBox.Text = FE.seccion;
+            Pagina_TextBox.Text = FE.pagina;
+
+            ///*P5*/
+            //id organo
+            Otro_Organo_Supremo_TextBox.Text = FE.otro_organo_supremo;
+            Nombre_Representante_Legal_TextBox.Text = FE.nombre_representante_legal;
+            Calle_Representante_Legal_TextBox.Text = FE.calle_representante_legal;
+            Numero_Representante_Legal_TextBox.Text = FE.numero_representante_legal;
+            Colonia_Representante_Legal_TextBox.Text = FE.colonia_representante_legal;
+            Descripcion_Objeto_Social_TextBox.Text = FE.objetivo_social_programa;
+
+            if (FE.id_ciudad_representante_legal != 0)
+            {
+                Ciudad_Representante_Legal_DropDownList.SelectedValue = FE.id_ciudad_representante_legal.ToString();
+            }
+
+            Telefono_Representante_Legal_TextBox.Text = FE.telefono_representante_legal;
+            Celular_Representante_Legal_TextBox.Text = FE.celular_representante_legal;
+            Correo_Representante_TextBox.Text = FE.correo_representante;
+            Rfc_Representante_TextBox.Text = FE.rfc_representante;
+
+            ///*P6*/
+            Descripcion_Programa_TextBox.Text = FE.descripcion_programa;
+            Meta_Programa_TextBox.Text = FE.meta_programa;
+
+            ///*P7*/
+            Diagnostico_Situacional_TextBox.Text = FE.diagnostico_situacional;
+            Nombre_Enlace_TextBox.Text = FE.nombre_enlace;
+            Telefono_Enlace_TextBox.Text = FE.telefono_enlace;
+            Correo_Enlace_TextBox.Text = FE.correo_enlace;
+
+            ///*P8*/
+            Justificacion_Programa_TextBox.Text = FE.justificacion_programa;
+
+            if (FE.poblacion_minima != 0)
+            {
+                poblacion_Minima_TextBox.Text = FE.poblacion_minima.ToString();
+            }
+            else
+            {
+                poblacion_Minima_TextBox.Text = "";
+            }
+
+            if (FE.poblacion_maxima != 0)
+            {
+                poblacion_Maxima_TextBox.Text = FE.poblacion_maxima.ToString();
+            }
+            else
+            {
+                poblacion_Maxima_TextBox.Text = "";
+            }
+
+            if (FE.poblacion_actual != 0)
+            {
+                poblacion_Actual_TextBox.Text = FE.poblacion_actual.ToString();
+            }
+            else
+            {
+                poblacion_Actual_TextBox.Text = "";
+            }
+
+            ///*P9*/
+
+            ///*P10*/
+            Tipo_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.tipo_ingreso_poblacion;
+            Nivel_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.nivel_ingreso_poblacion;
+            Rezago_Educativo_DropDownList.SelectedIndex = FE.rezago_educativo;
+
+            if (Rezago_Educativo_DropDownList.SelectedIndex == 1)
+            {
+                Porcentaje_Poblacion_Atendida.Visible = false;
+            }
+            else
+            {
+                if (FE.porcentaje_poblacion_atendida != 0)
+                {
+                    Porcentaje_Poblacion_Atendida_TextBox.Text = FE.porcentaje_poblacion_atendida.ToString();
+
+                }
+                else
+                {
+                    Porcentaje_Poblacion_Atendida_TextBox.Text = "";
+                }
+            }
+
+            Personas_hasta_15_DropDownList.SelectedIndex = FE.personas_hasta_15;
+            Personas_antes_1982_DropDownList.SelectedIndex = FE.personas_hasta_1982;
+            Personas_Apartir_1982_DropDownList.SelectedIndex = FE.personas_apartir_1982;
+
+            ///*P11*//
+            if (FE.promedio_personas_viviendo != 0)
+            {
+                Promedio_Personas_Vivienda_TextBox.Text = FE.promedio_personas_viviendo.ToString();
+            }
+            else
+            {
+                Promedio_Personas_Vivienda_TextBox.Text = "";
+            }
+
+            if (FE.num_habitaciones != 0)
+            {
+                Num_Habitaciones_TextBox.Text = FE.num_habitaciones.ToString();
+            }
+            else
+            {
+                Num_Habitaciones_TextBox.Text = "";
+            }
+
+            ///*P12*/
+            Observaciones_Acceso_TextBox.Text = FE.observaciones_acceso;
+
+            ///*P13*//
+            Propiedades_Inmuebles_DropDownList.SelectedIndex = FE.propiedades_inmuebles;
+            if (FE.propiedades_inmuebles == 1)
+            {
+                Valor_Aproximado_Inmuebles_TextBox.Text = "";
+                Valor_Aproximado_Inmuebles_TextBox.BackColor = Color.LightGray;
+                Valor_Aproximado_Inmuebles_TextBox.ReadOnly = true;
+            }
+            Inversiones_DropDownList.SelectedIndex = FE.inversiones;
+            if(FE.inversiones == 1)
+            {
+                Valor_Aproximado_Inversiones_TextBox.Text = "";
+                Valor_Aproximado_Inversiones_TextBox.BackColor = Color.LightGray;
+                Valor_Aproximado_Inversiones_TextBox.ReadOnly = true;
+            }
+            Fideicomisos_DropDownList.SelectedIndex = FE.fideicomisos;
+            if(FE.fideicomisos == 1)
+            {
+                Valor_Aproximados_Fideicomisos_TextBox.Text = "";
+                Valor_Aproximados_Fideicomisos_TextBox.BackColor = Color.LightGray;
+                Valor_Aproximados_Fideicomisos_TextBox.ReadOnly = true;
+            }
+            if (FE.valor_aproximado_inmuebles != 0)
+            {
+                Valor_Aproximado_Inmuebles_TextBox.Text = FE.valor_aproximado_inmuebles.ToString("N");
+            }
+            else
+            {
+                Valor_Aproximado_Inmuebles_TextBox.Text = "";
+            }
+
+            if (FE.valor_aproximado_inversiones != 0)
+            {
+                Valor_Aproximado_Inversiones_TextBox.Text = FE.valor_aproximado_inversiones.ToString("N");
+            }
+            else
+            {
+                Valor_Aproximado_Inversiones_TextBox.Text = "";
+            }
+
+            if (FE.valor_aproximado_fideicomisos != 0)
+            {
+                Valor_Aproximados_Fideicomisos_TextBox.Text = FE.valor_aproximado_fideicomisos.ToString("N");
+            }
+            else
+            {
+                Valor_Aproximados_Fideicomisos_TextBox.Text = "";
+            }
+
+            ///*P14*/
+            ((TextBox)Piso_GridView.FooterRow.FindControl("Piso_Otros_TextBox")).Text = FE.piso_otro.ToString();
+            ((TextBox)Techo_GridView.FooterRow.FindControl("Techo_Otros_TextBox")).Text = FE.techo_otro.ToString();
+            ((TextBox)Muro_GridView.FooterRow.FindControl("Muro_Otros_TextBox")).Text = FE.muro_otro.ToString();
+
+            ///*P15*/
+
+
+            ///*P16*/
+            Nombre_Razon_TextBox.Text = nombre_institucion;
+            Domicilio_Fiscal_TextBox.Text = FE.calle_numero + " " + FE.colonia + " " + FE.CP + " " + Municipio_DropDownList.SelectedItem;
+            Clave_Registro_TextBox.Text = rfc_institucion;
+
+            Impuesto_Federal_DropDownList.SelectedIndex = FE.impuesto_federal;
+            Adeudos_Fiscales_DropDownList.SelectedIndex = FE.adeudos_fiscales;
+
+        }
+        catch (Exception)
+        { }
+
+    }
+
     protected void Botones_Click(Object sender, CommandEventArgs e)
     {
         if (estado_registro == 1)
         {
             switch (e.CommandName)
             {
+                //1
                 case "div_registro_P1":
                     guardar_div_registro_P1();
                     Guarda_Sectores_Rubros();
@@ -91,6 +455,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                     guardar_div_registro_P3();
                     break;
 
+                //2
                 case "div_acreditar_P1":
                     guardar_div_acreditar_P1();
                     break;
@@ -112,6 +477,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                     guardar_div_acreditar_P5();
                     break;
 
+                //3
                 case "div_presentacion_P2":
                     guardar_div_presentacion_P2();
                     break;
@@ -170,6 +536,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                     Guardar_Oficinas_Relacion();
                     break;
 
+                //4
                 case "div_situacion_financiera_P1":
                     guardar_div_situacion_financiera_P1();
                     break;
@@ -184,6 +551,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
                     Guardar_Principales_Egresos();
                     break;
 
+                //5
                 case "div_cumplimiento_P1":
                     guardar_div_cumplimiento_P1();
                     break;
@@ -559,335 +927,6 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     protected void Adjuntar_Archivos_Button_Click(object sender, EventArgs e)
     {
         Response.Redirect("~/Forms/Requisitos_Documentacion.aspx");
-    }
-
-    protected void cargar_formulario()
-    {
-        var c_año = (from años in contexto.tb_Generales_Parametros select años).First();
-        int año = Convert.ToInt32(c_año.año_registro);
-
-        try
-        {
-            var select = (from rfc in contexto.Catalogo_Instituciones where rfc.id_institucion == institucion select rfc).First();
-            string rfc_institucion = select.rfc;
-            string nombre_institucion = select.nombre_institucion;
-
-            var FE = (from llenar in contexto.Formulario_Estandar where llenar.id_institucion == institucion && llenar.año_registro == año select llenar).First();
-
-            string fecha_actual = DateTime.Now.ToString("dd-MM-yyyy");
-
-            Id_Formulario_HiddenField.Value = FE.id_formulario_estandar.ToString();
-
-            /*P1*/
-
-            Nombre_Institucion_Encabezado_Label.Text = select.nombre_institucion + " " + select.sucursal;
-
-            Nombre_Dominio_TextBox.Text = nombre_institucion;
-            Nombre_Programa_TextBox.Text = FE.nombre_programa;
-
-            Nombre_Programa_2_TextBox.Text = Nombre_Programa_TextBox.Text;
-
-
-            Objetivo_Social_Programa_TextBox.Text = FE.objetivo_social_programa;
-            Objetivo_Social_TextBox.Text = FE.objetivo_social_programa;
-            Registro_contribuyente_TextBox.Text = rfc_institucion;
-            Fecha_Constitucion_TextBox.Text = Obtener_Fecha(FE.fecha_constitucion);
-
-            if (FE.num_personas_laborando == 0)
-            {
-                Num_Personas_Laborando_TextBox.Text = "";
-            }
-            else
-            {
-                Num_Personas_Laborando_TextBox.Text = FE.num_personas_laborando.ToString();
-            }
-
-            if (FE.remunerados != 0)
-            {
-                Remunerados_TextBox.Text = FE.remunerados.ToString();
-            }
-            else
-            {
-                Remunerados_TextBox.Text = "";
-            }
-
-            if (FE.voluntarios != 0)
-            {
-                Voluntarios_TextBox.Text = FE.voluntarios.ToString();
-            }
-            else
-            {
-                Voluntarios_TextBox.Text = "";
-            }
-
-            Areas_atencion_TextBox.Text = FE.areas_atencion;
-            Areas_Apoyo_TextBox.Text = FE.areas_apoyo;
-
-            ///*P2*//
-
-            if (FE.año_actual != 0)
-            {
-                Año_Actual_TextBox.Text = FE.año_actual.ToString();
-            }
-            else
-            {
-                Año_Actual_TextBox.Text = "";
-            }
-
-            if (FE.año_anterior != 0)
-            {
-                Año_Anterior_TextBox.Text = FE.año_anterior.ToString();
-            }
-            else
-            {
-                Año_Anterior_TextBox.Text = "";
-            }
-
-
-            if (FE.total_ingresos == 0)
-            {
-                Total_Ingresos_TextBox.Text = "";
-            }
-            else
-            {
-                Total_Ingresos_TextBox.Text = FE.total_ingresos.ToString("N");
-            }
-
-            if (FE.total_ingresos == 0)
-            {
-                Total_Donativos_TextBox.Text = "";
-            }
-            else
-            {
-                Total_Donativos_TextBox.Text = FE.total_donativos.ToString("N");
-            }
-
-            if (FE.total_ingresos == 0)
-            {
-                Total_Egresos_TextBox.Text = "";
-            }
-            else
-            {
-                Total_Egresos_TextBox.Text = FE.total_egresos.ToString("N");
-            }
-
-            if (FE.total_ingresos == 0)
-            {
-                Monto_Solicitado_TextBox.Text = "";
-            }
-            else
-            {
-                Monto_Solicitado_TextBox.Text = FE.monto_solicitado.ToString("N");
-            }
-
-            ///*P3*///
-            var nom_institucion = (from seleccion in contexto.Catalogo_Instituciones where seleccion.id_institucion == institucion select seleccion.nombre_institucion).First();
-            Nombre_Institucion_TextBox.Text = FE.denominacion;
-
-            Denominacion_TextBox.Text = nom_institucion;
-            Siglas_TextBox.Text = FE.siglas;
-
-            Telefono_TextBox.Text = FE.telefono;
-            Correo_electronico_TextBox.Text = FE.correo_electronico;
-            Pagina_Web_TextBox.Text = FE.pagina_web;
-            Red_Social_TextBox.Text = FE.red_social_institucion;
-            Calle_Numero_TextBox.Text = FE.calle_numero;
-            Municipio_DropDownList.SelectedIndex = FE.id_municipio;
-            Colonia_TextBox.Text = FE.colonia;
-            CP_TextBox.Text = FE.CP;
-            Celular_TextBox.Text = FE.celular;
-            Telefonos_TextBox.Text = FE.telefonos;
-            Correo_Domicilio_Fiscal.Text = FE.correo_dom_fiscal;
-            Personalidad_Juridica_DropDownList.SelectedIndex = FE.id_personalidad_juridica;
-
-            if (FE.id_personalidad_juridica == 2)
-            {
-                Otro_Personalidad_Juridica_TextBox.Text = FE.otro_personalidad_juridica;
-                Otro_Personalidad_Juridica_TextBox.ReadOnly = false;
-                Otro_Personalidad_Juridica_TextBox.BackColor = ColorTranslator.FromHtml("#ffffea");
-            }
-            else
-            {
-                Otro_Personalidad_Juridica_TextBox.ReadOnly = true;
-                Otro_Personalidad_Juridica_TextBox.BackColor = Color.LightGray;
-                Otro_Personalidad_Juridica_TextBox.Text = "";
-            }
-
-            ///*P4*/
-            Num_Escritura_TextBox.Text = FE.num_escritura.ToString();
-            Volumen_Num_Escritura_TextBox.Text = FE.volumen_num_escritura;
-            Fecha_Escritura_TextBox.Text = Obtener_Fecha(FE.fecha_escritura);
-            Nombre_Notario_Pulico_TextBox.Text = FE.nombre_notario_publico;
-            Numero_Notario_TextBox.Text = FE.numero_notario_publico;
-            Lugar_Notario_TextBox.Text = FE.lugar_notario_publico;
-            Registro_Propiedad_TextBox.Text = FE.registro_propiedad;
-            Volumen_Registro_Propiedad_TextBox.Text = FE.volumen_registro_propiedad;
-            Fecha_Registro_Propiedad_TextBox.Text = Obtener_Fecha(FE.fecha_registro_propiedad);
-            Permiso_Expedir_Recibos_DropDownList.SelectedIndex = FE.permiso_expedir_recibos;
-
-            if (FE.permiso_expedir_recibos == 1)
-            {
-                fecha_permiso.Visible = false;
-            }
-            ////////////////////////////////////////////////////////////////////////////////////
-
-            Fecha_Permisos_TextBox.Text = Obtener_Fecha(FE.fecha_permiso);
-            Fecha_Ultima_Publicacion_TextBox.Text = Obtener_Fecha(FE.fecha_ultima_publicacion);
-            Seccion_TextBox.Text = FE.seccion;
-            Pagina_TextBox.Text = FE.pagina;
-
-            ///*P5*/
-            //id organo
-            Otro_Organo_Supremo_TextBox.Text = FE.otro_organo_supremo;
-            Nombre_Representante_Legal_TextBox.Text = FE.nombre_representante_legal;
-            Calle_Representante_Legal_TextBox.Text = FE.calle_representante_legal;
-            Numero_Representante_Legal_TextBox.Text = FE.numero_representante_legal;
-            Colonia_Representante_Legal_TextBox.Text = FE.colonia_representante_legal;
-            Descripcion_Objeto_Social_TextBox.Text = FE.objetivo_social_programa;
-            Ciudad_Representante_Legal_DropDownList.SelectedIndex = FE.id_ciudad_representante_legal;
-            Telefono_Representante_Legal_TextBox.Text = FE.telefono_representante_legal;
-            Celular_Representante_Legal_TextBox.Text = FE.celular_representante_legal;
-            Correo_Representante_TextBox.Text = FE.correo_representante;
-            Rfc_Representante_TextBox.Text = FE.rfc_representante;
-
-            ///*P6*/
-            Descripcion_Programa_TextBox.Text = FE.descripcion_programa;
-            Meta_Programa_TextBox.Text = FE.meta_programa;
-
-            ///*P7*/
-            Diagnostico_Situacional_TextBox.Text = FE.diagnostico_situacional;
-            Nombre_Enlace_TextBox.Text = FE.nombre_enlace;
-            Telefono_Enlace_TextBox.Text = FE.telefono_enlace;
-            Correo_Enlace_TextBox.Text = FE.correo_enlace;
-
-            ///*P8*/
-            Justificacion_Programa_TextBox.Text = FE.justificacion_programa;
-
-            if (FE.poblacion_minima != 0)
-            {
-                poblacion_Minima_TextBox.Text = FE.poblacion_minima.ToString();
-            }
-            else
-            {
-                poblacion_Minima_TextBox.Text = "";
-            }
-
-            if (FE.poblacion_maxima != 0)
-            {
-                poblacion_Maxima_TextBox.Text = FE.poblacion_maxima.ToString();
-            }
-            else
-            {
-                poblacion_Maxima_TextBox.Text = "";
-            }
-
-            if (FE.poblacion_actual != 0)
-            {
-                poblacion_Actual_TextBox.Text = FE.poblacion_actual.ToString();
-            }
-            else
-            {
-                poblacion_Actual_TextBox.Text = "";
-            }
-
-            ///*P9*/
-
-            ///*P10*/
-            Tipo_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.tipo_ingreso_poblacion;
-            Nivel_Ingreso_Poblacion_DropDownList.SelectedIndex = FE.nivel_ingreso_poblacion;
-            Rezago_Educativo_DropDownList.SelectedIndex = FE.rezago_educativo;
-
-            if (Rezago_Educativo_DropDownList.SelectedIndex == 1)
-            {
-                Porcentaje_Poblacion_Atendida.Visible = false;
-            }
-            else
-            {
-                if (FE.porcentaje_poblacion_atendida != 0)
-                {
-                    Porcentaje_Poblacion_Atendida_TextBox.Text = FE.porcentaje_poblacion_atendida.ToString();
-
-                }
-                else
-                {
-                    Porcentaje_Poblacion_Atendida_TextBox.Text = "";
-                }
-            }
-
-            Personas_hasta_15_DropDownList.SelectedIndex = FE.personas_hasta_15;
-            Personas_antes_1982_DropDownList.SelectedIndex = FE.personas_hasta_1982;
-            Personas_Apartir_1982_DropDownList.SelectedIndex = FE.personas_apartir_1982;
-
-            ///*P11*//
-            if (FE.promedio_personas_viviendo != 0)
-            {
-                Promedio_Personas_Vivienda_TextBox.Text = FE.promedio_personas_viviendo.ToString();
-            }
-            else
-            {
-                Promedio_Personas_Vivienda_TextBox.Text = "";
-            }
-
-            if (FE.num_habitaciones != 0)
-            {
-                Num_Habitaciones_TextBox.Text = FE.num_habitaciones.ToString();
-            }
-            else
-            {
-                Num_Habitaciones_TextBox.Text = "";
-            }
-
-            ///*P12*/
-            Observaciones_Acceso_TextBox.Text = FE.observaciones_acceso;
-
-            ///*P13*//
-            if (FE.valor_aproximado_inmuebles != 0)
-            {
-                Valor_Aproximado_Inmuebles_TextBox.Text = FE.valor_aproximado_inmuebles.ToString("N");
-            }
-            else
-            {
-                Valor_Aproximado_Inmuebles_TextBox.Text = "";
-            }
-
-            if (FE.valor_aproximado_inversiones != 0)
-            {
-                Valor_Aproximado_Inversiones_TextBox.Text = FE.valor_aproximado_inversiones.ToString("N");
-            }
-            else
-            {
-                Valor_Aproximado_Inversiones_TextBox.Text = "";
-            }
-
-            if (FE.valor_aproximado_fideicomisos != 0)
-            {
-                Valor_Aproximados_Fideicomisos_TextBox.Text = FE.valor_aproximado_fideicomisos.ToString("N");
-            }
-            else
-            {
-                Valor_Aproximados_Fideicomisos_TextBox.Text = "";
-            }
-
-            ///*P14*/
-            ((TextBox)Piso_GridView.FooterRow.FindControl("Piso_Otros_TextBox")).Text = FE.piso_otro.ToString();
-            ((TextBox)Techo_GridView.FooterRow.FindControl("Techo_Otros_TextBox")).Text = FE.techo_otro.ToString();
-            ((TextBox)Muro_GridView.FooterRow.FindControl("Muro_Otros_TextBox")).Text = FE.muro_otro.ToString();
-
-            ///*P15*/
-
-
-            ///*P16*/
-            Nombre_Razon_TextBox.Text = nombre_institucion;
-            Domicilio_Fiscal_TextBox.Text = FE.calle_numero + " " + FE.colonia + " " + FE.CP + " " + Municipio_DropDownList.SelectedItem;
-            Clave_Registro_TextBox.Text = rfc_institucion;
-
-            Impuesto_Federal_DropDownList.SelectedIndex = FE.impuesto_federal;
-            Adeudos_Fiscales_DropDownList.SelectedIndex = FE.adeudos_fiscales;
-
-        }
-        catch (Exception)
-        { }
-
     }
 
     private string Obtener_Fecha(DateTime fecha_completa)
@@ -2376,24 +2415,25 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         StoreProcedure[0] = new csStoreProcedure(SPR_Params, "spr_lee_formulario_estandar", "DataSet_Formulario_Estandar");
         StoreProcedure[1] = new csStoreProcedure(SPR_Params, "spr_Reporte_Sector_Rubros", "DataSet_Reporte_Sector_Rubros");
         StoreProcedure[2] = new csStoreProcedure(SPR_Params, "spr_Reporte_Reformas_Constitutivas", "DataSet_Reporte_Reformas_Constitutivas");
-        StoreProcedure[3] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_oficinas_operativas", "DataSet_Oficina_Operativo");
-        StoreProcedure[4] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_tiempo_estimado", "DataSet_Reporte_Tiempo_Estimado");
-        StoreProcedure[5] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_costo_estimado", "DataSet_Reporte_Costo_Estimado");
-        StoreProcedure[6] = new csStoreProcedure(SPR_Params, "spr_Reporte_Tipo_Poblacion", "DataSet_Reporte_Tipo_Poblacion");
-        StoreProcedure[7] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_poblacion_atendida", "DataSet_Reporte_Poblacion_Atendida");
-        StoreProcedure[8] = new csStoreProcedure(SPR_Params, "spr_Reporte_Servicios_Salud", "DataSet_Reporte_Servicios_Salud");
-        StoreProcedure[9] = new csStoreProcedure(SPR_Params, "spr_Reporte_Seguridad_Social", "DataSet_Reporte_Seguridad_Social");
-        StoreProcedure[10] = new csStoreProcedure(SPR_Params, "spr_Reporte_Piso", "DataSet_Reporte_Piso");
-        StoreProcedure[11] = new csStoreProcedure(SPR_Params, "spr_Reporte_Techo", "DataSet_Reporte_Techo");
-        StoreProcedure[12] = new csStoreProcedure(SPR_Params, "spr_Reporte_Muro", "DataSet_Reporte_Muro");
-        StoreProcedure[13] = new csStoreProcedure(SPR_Params, "spr_Reporte_Servicios_Basicos", "DataSet_Reporte_Servicios_Basicos");
-        StoreProcedure[14] = new csStoreProcedure(SPR_Params, "spr_Reporte_Acceso_Alimentacion", "DataSet_Reporte_Acceso_Alimentacion");
-        StoreProcedure[15] = new csStoreProcedure(SPR_Params, "spr_Reporte_Acceso_Comunicacion", "DataSet_Reporte_Acceso_Comunicacion");
-        StoreProcedure[16] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_oficinas_relacion", "DataSet_Reporte_Oficinas_Relacion");
-        StoreProcedure[17] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_principales_fuentes", "DataSet_Reporte_Principales_Fuentes");
-        StoreProcedure[18] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_principales_egresos", "DataSet_Reporte_Principales_Egresos");
-        StoreProcedure[19] = new csStoreProcedure(SPR_Params, "spr_Reporte_Personalidad_Juridica", "DataSet_Reporte_Personalidad_Juridica");
-        StoreProcedure[20] = new csStoreProcedure(SPR_Params, "spr_Totales_Poblacion_Atendida", "DataSet_Totales_Hombres_Mujeres");
+        StoreProcedure[3] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_tiempo_estimado", "DataSet_Reporte_Tiempo_Estimado");
+        StoreProcedure[4] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_costo_estimado", "DataSet_Reporte_Costo_Estimado");
+        StoreProcedure[5] = new csStoreProcedure(SPR_Params, "spr_Reporte_Tipo_Poblacion", "DataSet_Reporte_Tipo_Poblacion");
+        StoreProcedure[6] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_poblacion_atendida", "DataSet_Reporte_Poblacion_Atendida");
+        StoreProcedure[7] = new csStoreProcedure(SPR_Params, "spr_Reporte_Servicios_Salud", "DataSet_Reporte_Servicios_Salud");
+        StoreProcedure[8] = new csStoreProcedure(SPR_Params, "spr_Reporte_Seguridad_Social", "DataSet_Reporte_Seguridad_Social");
+        StoreProcedure[9] = new csStoreProcedure(SPR_Params, "spr_Reporte_Piso", "DataSet_Reporte_Piso");
+        StoreProcedure[10] = new csStoreProcedure(SPR_Params, "spr_Reporte_Techo", "DataSet_Reporte_Techo");
+        StoreProcedure[11] = new csStoreProcedure(SPR_Params, "spr_Reporte_Muro", "DataSet_Reporte_Muro");
+        StoreProcedure[12] = new csStoreProcedure(SPR_Params, "spr_Reporte_Servicios_Basicos", "DataSet_Reporte_Servicios_Basicos");
+        StoreProcedure[13] = new csStoreProcedure(SPR_Params, "spr_Reporte_Acceso_Alimentacion", "DataSet_Reporte_Acceso_Alimentacion");
+        StoreProcedure[14] = new csStoreProcedure(SPR_Params, "spr_Reporte_Acceso_Comunicacion", "DataSet_Reporte_Acceso_Comunicacion");
+        StoreProcedure[15] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_oficinas_relacion", "DataSet_Reporte_Oficinas_Relacion");
+        StoreProcedure[16] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_principales_fuentes", "DataSet_Reporte_Principales_Fuentes");
+        StoreProcedure[17] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_principales_egresos", "DataSet_Reporte_Principales_Egresos");
+        StoreProcedure[18] = new csStoreProcedure(SPR_Params, "spr_Reporte_Personalidad_Juridica", "DataSet_Reporte_Personalidad_Juridica");
+        StoreProcedure[19] = new csStoreProcedure(SPR_Params, "spr_Totales_Poblacion_Atendida", "DataSet_Totales_Hombres_Mujeres");
+        StoreProcedure[20] = new csStoreProcedure(SPR_Params, "spr_lee_detalle_oficinas_operativas", "DataSet_Oficina_Operativo");
+
 
 
         csReporte Reporte = new csReporte();
@@ -2504,7 +2544,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
         if (valor == "Simular_Guardar")
         {
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('La informacion se ha guardado.');", true);
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('La información se ha guardado.');", true);
         }
         else if (valor == "Guardar_Todo")
         {
@@ -2656,8 +2696,10 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
     protected void Propiedades_Inmuebles_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
     {
         Verificar_valores_drop();
+        
         if (Propiedades_Inmuebles_DropDownList.SelectedIndex == 1)
         {
+            Valor_Aproximado_Inmuebles_TextBox.Text = "";
             Valor_Aproximado_Inmuebles_TextBox.BackColor = Color.LightGray;
             Valor_Aproximado_Inmuebles_TextBox.ReadOnly = true;
         }
@@ -2676,6 +2718,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
         Verificar_valores_drop();
         if (Inversiones_DropDownList.SelectedIndex == 1)
         {
+            Valor_Aproximado_Inversiones_TextBox.Text = "";
             Valor_Aproximado_Inversiones_TextBox.BackColor = Color.LightGray;
             Valor_Aproximado_Inversiones_TextBox.ReadOnly = true;
         }
@@ -2695,6 +2738,7 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
         if (Fideicomisos_DropDownList.SelectedIndex == 1)
         {
+            Valor_Aproximados_Fideicomisos_TextBox.Text = "";
             Valor_Aproximados_Fideicomisos_TextBox.BackColor = Color.LightGray;
             Valor_Aproximados_Fideicomisos_TextBox.ReadOnly = true;
         }
@@ -2753,10 +2797,11 @@ public partial class Forms_Formulario_Estandar : System.Web.UI.Page
 
     protected void Rezago_Educativo_DropDownList_SelectedIndexChanged(object sender, EventArgs e)
     {
-        if(Rezago_Educativo_DropDownList.SelectedIndex == 1)
+        if (Rezago_Educativo_DropDownList.SelectedIndex == 1)
         {
             Porcentaje_Poblacion_Atendida.Visible = false;
-        }else
+        }
+        else
         {
             Porcentaje_Poblacion_Atendida.Visible = true;
         }

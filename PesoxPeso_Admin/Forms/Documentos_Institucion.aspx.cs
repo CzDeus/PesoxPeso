@@ -124,5 +124,18 @@ public partial class Forms_Documentos_Institucion : System.Web.UI.Page
         //    Response.AddHeader("content-length", FileBuffer.Length.ToString());
         //    Response.BinaryWrite(FileBuffer);
         //}
+        GridViewRow gr = ((Control)sender).NamingContainer as GridViewRow;
+        int vid_documento_consulta = Convert.ToInt32(Archivos_Registrados_GridView.DataKeys[gr.RowIndex].Values["id_archivo_adjunto"]);
+
+        var url = (from buscar in contexto.Archivos_Adjuntos where buscar.id_archivo_adjunto == vid_documento_consulta select buscar).First();
+
+        string vurl_archivo = url.url_archivo;
+        vurl_archivo = vurl_archivo.ToString().Replace("~", "");
+        ScriptManager.RegisterStartupScript(this, this.GetType(), "abrir_documento", "window.open('" + vurl_archivo + "');", true);
+    }
+
+    protected void salir_button_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Formulario_Estandar.aspx");
     }
 }

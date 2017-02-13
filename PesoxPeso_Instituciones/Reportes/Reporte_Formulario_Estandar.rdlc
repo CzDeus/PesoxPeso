@@ -368,7 +368,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Sector_Rubros</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -381,8 +381,16 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Reforma">
-          <DataField>Reforma</DataField>
+        <Field Name="id_reforma_contitutiva">
+          <DataField>id_reforma_contitutiva</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="id_formulario">
+          <DataField>id_formulario</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="reforma">
+          <DataField>reforma</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Fecha">
@@ -392,7 +400,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Reformas_Constitutivas</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -492,7 +500,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Tipo_Poblacion</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -552,7 +560,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Servicios_Salud</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -580,7 +588,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Seguridad_Social</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -601,6 +609,10 @@
           <DataField>nombre_piso</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Otro_Piso">
+          <DataField>Otro_Piso</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="seleccionado">
           <DataField>seleccionado</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -608,7 +620,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Piso</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -629,6 +641,10 @@
           <DataField>nombre_techo</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Otro_Techo">
+          <DataField>Otro_Techo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Seleccionado">
           <DataField>Seleccionado</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -636,7 +652,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Techo</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -657,6 +673,10 @@
           <DataField>nombre_muro</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Otro_Muro">
+          <DataField>Otro_Muro</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="Seleccionado">
           <DataField>Seleccionado</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -664,7 +684,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Muro</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -692,7 +712,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Servicios_Basicos</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -720,7 +740,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Acceso_Alimentacion</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -748,7 +768,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Acceso_Comunicacion</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -780,7 +800,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_lee_detalle_oficinas_relacion</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -876,7 +896,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet_FormularioEstandar</rd:DataSetName>
-        <rd:SchemaPath>C:\SitiosWeb\PesoxPeso_Instituciones\App_Code\DataSource\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\User\Desktop\Proyectos\PesoxPeso\PesoxPeso_Instituciones\App_Code\DataSet\DataSet_FormularioEstandar.xsd</rd:SchemaPath>
         <rd:TableName>spr_Reporte_Personalidad_Juridica</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2655,8 +2675,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Año_Actual</rd:DefaultName>
-                <Top>0.6235cm</Top>
-                <Left>2.21459cm</Left>
+                <Top>0.67437cm</Top>
+                <Left>9.99496cm</Left>
                 <Height>0.49417cm</Height>
                 <Width>6.69085cm</Width>
                 <ZIndex>1</ZIndex>
@@ -2688,8 +2708,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Año_Anterior</rd:DefaultName>
-                <Top>0.6235cm</Top>
-                <Left>10.28687cm</Left>
+                <Top>0.67437cm</Top>
+                <Left>1.81254cm</Left>
                 <Height>0.49417cm</Height>
                 <Width>6.72365cm</Width>
                 <ZIndex>2</ZIndex>
@@ -5465,14 +5485,14 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Reforma">
+                        <Textbox Name="id_reforma_contitutiva">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Reforma.Value</Value>
+                                  <Value>=Fields!reforma.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -5481,7 +5501,7 @@
                               </Style>
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Reforma</rd:DefaultName>
+                          <rd:DefaultName>id_reforma_contitutiva</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -14451,21 +14471,21 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox154">
+                            <Textbox Name="Otro_Piso">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Otro_Piso.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox154</rd:DefaultName>
+                              <rd:DefaultName>Otro_Piso</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -14624,21 +14644,21 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox185">
+                            <Textbox Name="Otro_Techo">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Otro_Techo.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox185</rd:DefaultName>
+                              <rd:DefaultName>Otro_Techo</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>
@@ -14798,21 +14818,21 @@
                         </TablixCell>
                         <TablixCell>
                           <CellContents>
-                            <Textbox Name="Textbox276">
+                            <Textbox Name="Otro_Muro">
                               <CanGrow>true</CanGrow>
                               <KeepTogether>true</KeepTogether>
                               <Paragraphs>
                                 <Paragraph>
                                   <TextRuns>
                                     <TextRun>
-                                      <Value />
+                                      <Value>=Fields!Otro_Muro.Value</Value>
                                       <Style />
                                     </TextRun>
                                   </TextRuns>
                                   <Style />
                                 </Paragraph>
                               </Paragraphs>
-                              <rd:DefaultName>Textbox276</rd:DefaultName>
+                              <rd:DefaultName>Otro_Muro</rd:DefaultName>
                               <Style>
                                 <Border>
                                   <Color>LightGrey</Color>

@@ -24,6 +24,8 @@
         <EntityTypeShape EntityType="PesoxPeso_model.Observaciones_Administrador" Width="1.5" PointX="7" PointY="5.125" />
         <EntityTypeShape EntityType="PesoxPeso_model.Registro_Usuarios" Width="1.5" PointX="3.75" PointY="0.5" />
         <EntityTypeShape EntityType="PesoxPeso_model.Formulario_Estandar" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Detalle_Poblacion_Atendida" Width="1.5" PointX="3.375" PointY="8.75" />
+        <EntityTypeShape EntityType="PesoxPeso_model.Detalles_Oficinas_Operativas" Width="1.5" PointX="5.375" PointY="8.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

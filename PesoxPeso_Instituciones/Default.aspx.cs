@@ -50,7 +50,7 @@ public partial class _Default : System.Web.UI.Page
 
         string nombre = Desplegar_Nombre();
 
-        Session["id_registro"] = id_registro;
+        Session["sist_Id_Usuario"] = id_registro;
         ScriptManager.RegisterStartupScript(this, this.GetType(), "hideModal", "hideModal();", true);
     }
 

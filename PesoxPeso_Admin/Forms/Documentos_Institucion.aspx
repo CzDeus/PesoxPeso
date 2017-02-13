@@ -112,7 +112,7 @@
                     <div class="col-lg-12">
                         <br />
                         <div class="col-lg-9">
-                            <asp:Label ID="Label22" runat="server" Text="9. Organigrama y documento que contenga o describa las funciones y/o actividades del personal remunerado y voluntario (manual operativo, o manual de organizacion, o reglamento interno u otro)"></asp:Label>
+                            <asp:Label ID="Label22" runat="server" Text="9. Organigrama y documento que contenga o describa las funciones y/o actividades del personal remunerado y voluntario (manual operativo, o manual de organización, o reglamento interno u otro)"></asp:Label>
                         </div>
                         <div class="col-lg-3" style="text-align: center">
                             <asp:Button ID="Organigrama_Button" runat="server" Text="Revisar" CommandArgument="10" OnCommand="Prueba_Click" />
@@ -129,6 +129,10 @@
                         </div>
                     </div>
 
+                    <div class="col-lg-12" style="text-align: center">
+                        <br />
+                        <asp:Button ID="salir_button" runat="server" Text="Salir" CssClass="btn btn-danger" OnClick="salir_button_Click"/>
+                    </div>
                 </fieldset>
             </div>
 
@@ -145,7 +149,7 @@
             <div id="div_adjuntar" class="modal fade" tabindex="-1" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content modal-lg">
-                        <div class="modal-header" style="text-align:center">
+                        <div class="modal-header" style="text-align: center">
                             <h2><b>Archivos adjuntos por la institución</b></h2>
                         </div>
 
@@ -160,22 +164,25 @@
                                             <asp:BoundField DataField="url_archivo" HeaderText="Nombre Archivo" SortExpression="url_archivo" />
                                             <asp:TemplateField>
                                                 <ItemTemplate>
-                                                    <asp:Button ID="ver_Archivo_Button" runat="server" Text="Visualizar" CssClass="btn btn-success" OnClick="ver_Archivo_Button_Click"/>
+                                                    <asp:Button ID="ver_Archivo_Button" runat="server" Text="Visualizar" CssClass="btn btn-success" OnClick="ver_Archivo_Button_Click" />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
                                         </Columns>
                                     </asp:GridView>
                                 </div>
                             </div>
+
+
                         </div>
 
                         <div class="modal-footer" style="text-align: center">
-                            <div class="col-lg-12">
-                                <asp:Button ID="Button1" runat="server" Text="Salir" class="btn btn-danger" data-dismiss="modal" />
+                            <div class="col-lg-12" style="text-align: center">
+                                <br />
+                                <asp:Button ID="btn_salir" runat="server" Text="Salir" CssClass="btn btn-danger" />
                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             <!-- Modal Mensajes -->

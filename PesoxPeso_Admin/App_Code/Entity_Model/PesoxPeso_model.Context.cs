@@ -46,6 +46,8 @@ namespace Entity_Model
         public virtual DbSet<Observaciones_Administrador> Observaciones_Administrador { get; set; }
         public virtual DbSet<Registro_Usuarios> Registro_Usuarios { get; set; }
         public virtual DbSet<Formulario_Estandar> Formulario_Estandar { get; set; }
+        public virtual DbSet<Detalle_Poblacion_Atendida> Detalle_Poblacion_Atendida { get; set; }
+        public virtual DbSet<Detalles_Oficinas_Operativas> Detalles_Oficinas_Operativas { get; set; }
     
         public virtual ObjectResult<sp_Buscar_Instituciones_Result> sp_Buscar_Instituciones(string nombre_buscar_institucion)
         {
@@ -306,16 +308,6 @@ namespace Entity_Model
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_eliminar_organo", id_organoParameter);
         }
     
-        public virtual ObjectResult<Nullable<int>> sp_contar_asignados()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<Nullable<int>>("sp_contar_asignados");
-        }
-    
-        public virtual ObjectResult<sp_contar_asignados1_Result> sp_contar_asignados1()
-        {
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_contar_asignados1_Result>("sp_contar_asignados1");
-        }
-    
         public virtual int spr_Elimina_Observaciones_Vacias(Nullable<int> id_formulario)
         {
             var id_formularioParameter = id_formulario.HasValue ?
@@ -323,6 +315,20 @@ namespace Entity_Model
                 new ObjectParameter("id_formulario", typeof(int));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("spr_Elimina_Observaciones_Vacias", id_formularioParameter);
+        }
+    
+        public virtual ObjectResult<spr_Sumar_Hombres_Mujeres_Result> spr_Sumar_Hombres_Mujeres(Nullable<int> id_formulario)
+        {
+            var id_formularioParameter = id_formulario.HasValue ?
+                new ObjectParameter("id_formulario", id_formulario) :
+                new ObjectParameter("id_formulario", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spr_Sumar_Hombres_Mujeres_Result>("spr_Sumar_Hombres_Mujeres", id_formularioParameter);
+        }
+    
+        public virtual ObjectResult<sp_contar_asignados_Result> sp_contar_asignados()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<sp_contar_asignados_Result>("sp_contar_asignados");
         }
     }
 }

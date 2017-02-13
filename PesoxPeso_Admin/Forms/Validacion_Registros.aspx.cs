@@ -79,26 +79,38 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
             //contexto.SaveChanges();
             if (Nombre_Institucion_Registrada_TextBox.Text != "")
             {
-                Catalogo_Instituciones nueva_institucion = new Catalogo_Instituciones();
+                string sucursal_institucion = Sucursal_Institucion_TextBox.Text;
+                string rfc_institucion = Rfc_Institucion_TextBox.Text;
 
-                nueva_institucion.nombre_institucion = Nombre_Institucion_Registrada_TextBox.Text;
-                nueva_institucion.direccion = "";
-                nueva_institucion.nombre_director = "";
-                nueva_institucion.rfc = Rfc_Institucion_TextBox.Text;
-                nueva_institucion.sucursal = Sucursal_Institucion_TextBox.Text;
-                nueva_institucion.telefono = "";
+                var consultar = (from buscar in contexto.Catalogo_Instituciones where buscar.sucursal == sucursal_institucion && buscar.rfc == rfc_institucion select buscar).Count();
 
-                contexto.Catalogo_Instituciones.Add(nueva_institucion);
+                if (consultar == 0)
+                {
+                    Catalogo_Instituciones nueva_institucion = new Catalogo_Instituciones();
 
-                contexto.SaveChanges();
+                    nueva_institucion.nombre_institucion = Nombre_Institucion_Registrada_TextBox.Text;
+                    nueva_institucion.direccion = "";
+                    nueva_institucion.nombre_director = "";
+                    nueva_institucion.rfc = Rfc_Institucion_TextBox.Text;
+                    nueva_institucion.sucursal = Sucursal_Institucion_TextBox.Text;
+                    nueva_institucion.telefono = "";
 
-                Buscar_Institucion_Catalogo_Button_Click(null, null);
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Institucion Agregada Correctamente');", true);
+                    contexto.Catalogo_Instituciones.Add(nueva_institucion);
+
+                    contexto.SaveChanges();
+
+                    Buscar_Institucion_Catalogo_Button_Click(null, null);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Institución Agregada Correctamente');", true);
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('La institución se encuentra actualmente registrada');", true);
+                }
 
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Escriba el nombre de la institucion');", true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Escriba el nombre de la institución');", true);
             }
         }
     }
@@ -165,10 +177,10 @@ public partial class Forms_Validacion_Registros : System.Web.UI.Page
                         Email.correoDestinatario = Correo_Verificar_TextBox.Text;
                         Email.nombreMostrar = datos_correo.correo_nombreMostrar;
                         Email.asunto = "Sistema Peso por Peso - Registro de Contraseña";
-                        //Email.mensaje = "Dar click <a href='http://localhost:60997/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
-                        Email.mensaje = "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
+                        Email.mensaje = "Dar click <a href='http://localhost:60997/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + "'>Aquí</a> para especificar su nueva Contraseña.";
+                        //Email.mensaje = "Dar click <a href='http://instituciones_pesoxpeso.difson.gob.mx/ResetPassword.aspx?request=" + id_encrypt_usuario + "&guid=" + encrypt_guid + '">Aquí</a> para especificar su nueva Contraseña.";
 
-                        if ((new csEmailHandler()).SendEmail_DIF(Email))
+                        if ((new csEmailHandler()).SendEmail(Email))
                             error = true;
                         else
                             ScriptManager.RegisterStartupScript(this, this.GetType(), "mensaje", "despliega_aviso('Se asignó el registro al catálogo de instituciones y se envió correo al usuario');", true);
